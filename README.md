@@ -1,7 +1,7 @@
 Webstack网址导航 美化版
 ===
 
-### Demo: [3301.ml/](https://3301.ml/)
+### Demo: [3301.ml](https://3301.ml/)
 
 喜欢给个Star~
 
@@ -18,4 +18,4 @@ Webstack网址导航 美化版
 
 [https://github.com/arleycn/arleybookmarks](https://github.com/arleycn/arleybookmarks)
 
-### Demo: [➡️ bm.arley.cn/](https://bm.arley.cn/)
+### Demo: [➡️ bm.arley.cn](https://bm.arley.cn/)
