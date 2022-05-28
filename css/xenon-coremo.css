@@ -4588,8 +4588,7 @@ body.chat-open #chat {
     i {
     line-height: 1;
     font-size: 18px;
-    position: relative;
-    top: 1px;
+    position: absolute;
   }
   .page-container
     .sidebar-menu
