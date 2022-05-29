@@ -97,10 +97,12 @@ function search_click(engine){
     if (v != '') {
 
         if (engine == '') {
-            search('https://cn.bing.com/search?q=' + v)
+            search('https://fsoufsou.com/search?q=' + v)
         } else {
-            if (engine === 'bing') {
-                search('https://cn.bing.com/search?q=' + v)
+            if (engine === 'fsou') {
+                search('https://fsoufsou.com/search?q=' + v)
+            } else if (engine === 'bing') {
+                search("https://cn.bing.com/search?q=" + v)
             } else if (engine === 'google') {
                 search("https://www.google.com.hk/search?q=" + v)
             } else if (engine === 'github') {
