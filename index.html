@@ -7,7 +7,7 @@
     <meta name="author" content="Wayne">
     <title>WayneのNavigation</title>
 
-    <meta name="keywords" content="网址导航,网站导航,3301.ml"/>
+    <meta name="keywords" content="网址导航,网站导航,Wayne,Navigation"/>
     <meta name="description" content="WayneのNavigation - 收集国内外优秀网站、灵感创意网站，定时更新分享优质书签。3301.ml">
     <link rel="shortcut icon" type="image/x-icon" href="wayne.png"/>
     <script src="js/getBrowser.js"></script>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/function.js"></script>
-
+    <!-- 百度统计 -->
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -28,7 +28,6 @@
         })();
     </script>
         
-
     <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <body class="page-body">
@@ -102,7 +101,6 @@
                             <li><a href="#云端服务" class="smooth"><span class="title">云端服务</span></a></li>
                             <li><a href="#开发文档" class="smooth"><span class="title">开发文档</span></a></li>
                             <li><a href="#模板资源" class="smooth"><span class="title">模板资源</span></a></li>
-                            <li><a href="#Github" class="smooth"><span class="title">Github</span></a></li>
                         </ul>
                     </li>
                     <li><a><i class="linecons-graduation-cap"></i> <span class="title">学无止境</span></a>
@@ -151,7 +149,7 @@
             </li>
         </ul>
         <ul class="user-info-menu right-links list-inline list-unstyled">
-            <li class="hidden-sm hidden-xs"  style="padding:30px 20px">
+            <li class="hidden-sm hidden-xs text-gray" style="padding:30px 20px">
                 <i class="fa-comment"> </i>
                 <span id="jinrishici-sentence">正在加载今日诗词....</span>
                 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
@@ -164,36 +162,35 @@
                 <img src="img/banner.svg" width="90%" height="auto">
             </div>
         </div>-->
-    <!-- 内容卡片 -->
-                <div class="box" id="search"style="overflow: visible;">
-                    <div style="display: flex; justify-content: center;align-items: center; padding-top: 20px" >
-                        <div style="display: flex;width: 100%; justify-content: center;">
-                            <div style="width: 50%;position: relative;">
-                                <input id="searchText" type="text"  title="请先输入搜索内容，然后点击下面的标签~" placeholder="先输入内容然后点下面标签~" oninput ="autoFillSearch()" onblur="searchTextOnblur()"
-                                style="border: 1px solid rgba(34,36,38,.15); outline: 0; border-radius: 30px; width: 100%; height: 40px; background-color: #ffffffba; padding-left: 15px; padding-right: 15px;"/>
-                                <div id="autoFillInput" style="width: 100%; position: absolute; z-index: 99999; background: #fff; overflow: auto;">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: center;align-items: center; padding-top: 10px" >
-                        <div style="display: flex;width: 100%; justify-content: center;">
-                            <div style="justify-content: center;">
-                                <input type="button" class="search_btn" value="F搜" onclick="search_click('fsou')" />
-                                <input type="button" class="search_btn" value="必应" onclick="search_click('bing')" />
-                                <input type="button" class="search_btn" value="百度" onclick="search_click('baidu')" />
-                                <input type="button" class="search_btn" value="搜狗" onclick="search_click('sogou')" />
-                                <input type="button" class="search_btn" value="知乎" onclick="search_click('zhihu')" />
-                                <input type="button" class="search_btn" value="Bilibili" onclick="search_click('bilibili')" />
-                                <input type="button" class="search_btn" value="谷歌" onclick="search_click('google')" />
-                                <input type="button" class="search_btn" value="谷歌镜像" onclick="search_click('google-image')" />
-                                <input type="button" class="search_btn" value="github" onclick="search_click('github')" />
-                            </div>
+        <!-- 内容卡片 -->
+        <div class="box" id="search"style="overflow: visible;">
+            <div style="display: flex; justify-content: center;align-items: center; padding-top: 20px" >
+                <div style="display: flex;width: 100%; justify-content: center;">
+                    <div style="width: 50%;position: relative;">
+                        <input id="searchText" type="text"  title="请先输入搜索内容，然后点击下面的标签~" placeholder="先输入内容然后点下面标签~" oninput ="autoFillSearch()" onblur="searchTextOnblur()"
+                        style="border: 1px solid rgba(34,36,38,.15); outline: 0; border-radius: 30px; width: 100%; height: 40px; background-color: #ffffffba; padding-left: 15px; padding-right: 15px;"/>
+                        <div id="autoFillInput" style="width: 100%; position: absolute; z-index: 99999; background: #fff; overflow: auto;">
                         </div>
                     </div>
                 </div>
-    <br>
-    <br>
+            </div>
+            <div style="display: flex; justify-content: center;align-items: center; padding-top: 10px" >
+                <div style="display: flex;width: 100%; justify-content: center;">
+                    <div style="justify-content: center;">
+                        <input type="button" class="search_btn" value="F搜" onclick="search_click('fsou')" />
+                        <input type="button" class="search_btn" value="必应" onclick="search_click('bing')" />
+                        <input type="button" class="search_btn" value="百度" onclick="search_click('baidu')" />
+                        <input type="button" class="search_btn" value="搜狗" onclick="search_click('sogou')" />
+                        <input type="button" class="search_btn" value="知乎" onclick="search_click('zhihu')" />
+                        <input type="button" class="search_btn" value="Bilibili" onclick="search_click('bilibili')" />
+                        <input type="button" class="search_btn" value="谷歌" onclick="search_click('google')" />
+                        <input type="button" class="search_btn" value="谷歌镜像" onclick="search_click('google-image')" />
+                        <input type="button" class="search_btn" value="github" onclick="search_click('github')" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    <br />
     <!-- 热搜新闻 --> 
     <h4 class="text-gray">
         <i class="linecons-tag" style="margin-right:7px" id="热搜新闻"></i>热搜新闻
@@ -310,8 +307,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 热搜新闻 --> 
     <!-- 常用推荐 --> 
     <h4 class="text-gray">
@@ -447,19 +443,19 @@
             </div>
         </div>
         <div class="col-sm-3">
-            <div class="xe-widget xe-conversations box2 label-info" 
-                onclick="window.open('https://www.zgshige.com/', '_blank')" data-toggle="tooltip" 
-                data-placement="bottom" title="" data-original-title="https://www.zgshige.com/">
+            <div class="xe-widget xe-conversations box2 label-info"
+                onclick='window.open("https://www.aliyundrive.com/","_blank")' data-toggle="tooltip"
+                data-placement="bottom" data-original-title="https://www.aliyundrive.com/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
-                        <img data-src="https://www.zgshige.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
+                        <img data-src="https://gw.alicdn.com/imgextra/i3/O1CN01aj9rdD1GS0E8io11t_!!6000000000620-73-tps-16-16.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
                     </a>
-                    <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
                     <div class="xe-comment">
-                        <a href="#" class="xe-user-name overflowClip_1">
-                            <strong>中国诗歌网</strong>
+                        <a href="javascript:void();"
+                            class="xe-user-name overflowClip_1">
+                            <strong>阿里云盘</strong>
                         </a>
-                        <p class="overflowClip_2">诗歌高地，诗人家园。</p>
+                        <p class="overflowClip_2">阿里云盘是一款速度快、不打扰、够安全、易于分享的个人网盘</p>
                     </div>
                 </div>
             </div>
@@ -504,8 +500,8 @@
         </div>
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
-                onclick="window.open('https://www.landian.vip/', '_blank')" data-toggle="tooltip" 
-                data-placement="bottom" title="" data-original-title="https://www.landian.vip/">
+                onclick="window.open('https://www.landiannews.com/', '_blank')" data-toggle="tooltip" 
+                data-placement="bottom" title="" data-original-title="https://www.landiannews.com/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
                         <img data-src="https://static.lancdn.com/landian/v4.0.1/images/favicon.png" class="lozad img-circle" width="40" onerror="imgerrorfun();">
@@ -541,36 +537,19 @@
     </div>
     <div class="row">
         <div class="col-sm-3">
-            <div class="xe-widget xe-conversations box2 label-info" 
-                onclick="window.open('https://infinityfree.net/', '_blank')" data-toggle="tooltip" 
-                data-placement="bottom" title="" data-original-title="https://infinityfree.net/">
+            <div class="xe-widget xe-conversations box2 label-info"
+                onclick='window.open("https://gitee.com/","_blank")' data-toggle="tooltip"
+                data-placement="bottom" data-original-title="https://gitee.com/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
-                        <img data-src="images/infinityfree.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
-                    </a>
-                    <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
-                    <div class="xe-comment">
-                        <a href="#" class="xe-user-name overflowClip_1">
-                            <strong>infinityfree</strong>
-                        </a>
-                        <p class="overflowClip_2">相对较好的免费虚拟主机</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="xe-widget xe-conversations box2 label-info" 
-                onclick="window.open('https://www.youcompress.com/videos/', '_blank')" data-toggle="tooltip" 
-                data-placement="bottom" title="" data-original-title="https://www.youcompress.com/videos/">
-                <div class="xe-comment-entry">
-                    <a class="xe-user-img">
-                        <img data-src="images/youcompress.png" class="lozad img-circle" width="40" onerror="imgerrorfun();">
+                        <img data-src="https://gitee.com/assets/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
                     </a>
                     <div class="xe-comment">
-                        <a href="#" class="xe-user-name overflowClip_1">
-                            <strong>youcompress</strong>
+                        <a href="javascript:void();"
+                            class="xe-user-name overflowClip_1">
+                            <strong>Gitee</strong>
                         </a>
-                        <p class="overflowClip_2">免费在线压缩视频</p>
+                        <p class="overflowClip_2">Gitee 是一个云端软件开发协作平台</p>
                     </div>
                 </div>
             </div>
@@ -612,28 +591,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="xe-widget xe-conversations box2 label-info"
-                onclick='window.open("https://4everland.org/","_blank")' data-toggle="tooltip"
-                data-placement="bottom" data-original-title="https://4everland.org/">
-                <div class="xe-comment-entry">
-                    <a class="xe-user-img">
-                        <img data-src="https://4everland.org/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
-                    </a>
-                    <div class="xe-comment">
-                        <a href="javascript:void();"
-                            class="xe-user-name overflowClip_1">
-                            <strong>4everland</strong>
-                        </a>
-                        <p class="overflowClip_2">类似Github Pages免费托管项目</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
+    <br />
     <!--END 常用推荐 --> 
     <!-- 文艺至死-->
     <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="文艺至死"></i>文艺至死</h4>
@@ -796,7 +754,6 @@
         </div>
     </div>
     <br />
-    <br />
     <!--END 直播聚合 -->
     <!--4K优选 -->
     <h4 class="text-gray">
@@ -805,8 +762,8 @@
     <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
-                onclick='window.open("https://yanetflix.com/","_blank")' data-toggle="tooltip"
-                data-placement="bottom" data-original-title="https://yanetflix.com/">
+                onclick='window.open("https://azx.me/","_blank")' data-toggle="tooltip"
+                data-placement="bottom" data-original-title="https://azx.me/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
                         <img data-src="https://yanetflix.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
@@ -914,8 +871,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 4K优选 -->
     <!--在线综合 -->
     <h4 class="text-gray">
@@ -969,7 +925,7 @@
                     <div class="xe-comment">
                         <a href="javascript:void();"
                             class="xe-user-name overflowClip_1">
-                            <strong>真不卡影院</strong>
+                            <strong>真不卡影院（已失效）</strong>
                         </a>
                         <p class="overflowClip_2">搜集最新电影、高清电影、超清蓝光电影等视频的电影网站。</p>
                     </div>
@@ -1069,8 +1025,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线综合 -->
     <!--在线美剧 -->
     <h4 class="text-gray">
@@ -1114,8 +1069,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线美剧 -->
     <!--在线日韩 -->
     <h4 class="text-gray">
@@ -1233,8 +1187,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END在线日韩 -->
     <!--在线动漫 -->
     <h4 class="text-gray">
@@ -1314,8 +1267,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线动漫 -->
     <!--在线港台 -->
     <h4 class="text-gray">
@@ -1377,8 +1329,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线港台 -->
     <!--在线解析 -->
     <h4 class="text-gray">
@@ -1422,8 +1373,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线解析 -->
     <!--字幕库 -->
     <h4 class="text-gray">
@@ -1503,8 +1453,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 字幕库 -->
     <!--资源库 -->
     <h4 class="text-gray">
@@ -1622,8 +1571,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 资源库 -->
     <!--在线工具箱 -->
     <h4 class="text-gray">
@@ -1797,8 +1745,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线工具箱 -->
     <!--在线改图 -->
     <h4 class="text-gray">
@@ -2046,8 +1993,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线改图 -->
     <!--在线转格 -->
     <h4 class="text-gray">
@@ -2257,8 +2203,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线转格 -->
     <!--在线生成 -->
     <h4 class="text-gray">
@@ -2468,8 +2413,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 在线生成 -->
     <!--其他在线 -->
     <h4 class="text-gray">
@@ -2806,8 +2750,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 其他在线 -->
     <!--上传下载 -->
     <h4 class="text-gray">
@@ -2981,8 +2924,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 上传下载 -->
     <!--软件精选 -->
     <h4 class="text-gray">
@@ -3282,8 +3224,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 软件精选 -->
     <!--浏览器插件 -->
     <h4 class="text-gray">
@@ -3419,8 +3360,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 浏览器插件 -->
     <!--虚拟信息 -->
     <h4 class="text-gray">
@@ -3594,8 +3534,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 虚拟信息 -->
     <!--壁纸下载 -->
     <h4 class="text-gray">
@@ -3787,8 +3726,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END 壁纸下载 -->
     <!--PNG免扣 -->
     <h4 class="text-gray">
@@ -3868,8 +3806,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END PNG免扣 -->
     <!-- PPT资源 -->
     <h4 class="text-gray">
@@ -4000,8 +3937,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!--END PPT资源 -->
     <!-- 字体资源 -->
     <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="字体资源"></i>字体资源</h4>
@@ -4339,8 +4275,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 其他资源 -->
     <!-- 设计灵感 -->
     <h4 class="text-gray">
@@ -4420,8 +4355,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 设计灵感 -->
     <!-- 域名申请 -->
     <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="域名申请"></i>域名申请</h4>
@@ -4746,9 +4680,26 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-3">
+            <div class="xe-widget xe-conversations box2 label-info" 
+                onclick="window.open('https://sm.ms/', '_blank')" data-toggle="tooltip" 
+                data-placement="bottom" title="" data-original-title="https://sm.ms/">
+                <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                        <img data-src="https://sm.ms/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
+                    </a>
+                    <span class="label label-info" data-toggle="tooltip" data-placement="left" title="" data-original-title="Hello I am a Tooltip"></span>
+                    <div class="xe-comment">
+                        <a href="#" class="xe-user-name overflowClip_1">
+                            <strong>SM.MS</strong>
+                        </a>
+                        <p class="overflowClip_2">SM.MS图床</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 云端服务 -->
     <!-- 开发文档 -->
     <h4 class="text-gray">
@@ -4958,8 +4909,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 开发文档 -->
     <!-- 模板资源 -->
     <h4 class="text-gray">
@@ -5020,91 +4970,47 @@
                 </div>
             </div>
         </div>
+        <div class="col-sm-3">
+            <div class="xe-widget xe-conversations box2 label-info"
+                onclick='window.open("https://www.cutercounter.com/","_blank")' data-toggle="tooltip"
+                data-placement="bottom" data-original-title="https://www.cutercounter.com/">
+                <div class="xe-comment-entry">
+                    <a class="xe-user-img">
+                        <img data-src="https://www.cutercounter.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
+                    </a>
+                    <div class="xe-comment">
+                        <a href="javascript:void();"
+                            class="xe-user-name overflowClip_1">
+                            <strong>CuterCounter</strong>
+                        </a>
+                        <p class="overflowClip_2">免费网页点击计数器/访客计数器</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br>
-    <br>
-    <!-- END 模板资源 -->
-    <!-- Github -->
-    <h4 class="text-gray">
-        <i class="linecons-tag" style="margin-right:7px" id="Github"></i>Github
-    </h4>
     <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
-                onclick='window.open("https://github.com/Genymobile/scrcpy/","_blank")' data-toggle="tooltip"
-                data-placement="bottom" data-original-title="https://github.com/Genymobile/scrcpy/">
+                onclick='window.open("https://count.getloli.com/","_blank")' data-toggle="tooltip"
+                data-placement="bottom" data-original-title="https://count.getloli.com/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
-                        <img data-src="https://github.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
+                        <img data-src="https://count.getloli.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
                     </a>
                     <div class="xe-comment">
                         <a href="javascript:void();"
                             class="xe-user-name overflowClip_1">
-                            <strong>Scrcpy</strong>
+                            <strong>Moe-counter</strong>
                         </a>
-                        <p class="overflowClip_2">手机投屏项目</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="xe-widget xe-conversations box2 label-info"
-                onclick='window.open("https://github.com/barry-ran/QtScrcpy","_blank")' data-toggle="tooltip"
-                data-placement="bottom" data-original-title="https://github.com/barry-ran/QtScrcpy">
-                <div class="xe-comment-entry">
-                    <a class="xe-user-img">
-                        <img data-src="https://github.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
-                    </a>
-                    <div class="xe-comment">
-                        <a href="javascript:void();"
-                            class="xe-user-name overflowClip_1">
-                            <strong>Qtscrcpy</strong>
-                        </a>
-                        <p class="overflowClip_2">可视化方便操作的手机投屏项目</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="xe-widget xe-conversations box2 label-info"
-                onclick='window.open("https://github.com/huiyadanli/PasteEx","_blank")' data-toggle="tooltip"
-                data-placement="bottom" data-original-title="https://github.com/huiyadanli/PasteEx">
-                <div class="xe-comment-entry">
-                    <a class="xe-user-img">
-                        <img data-src="https://github.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
-                    </a>
-                    <div class="xe-comment">
-                        <a href="javascript:void();"
-                            class="xe-user-name overflowClip_1">
-                            <strong>剪切板转为文件</strong>
-                        </a>
-                        <p class="overflowClip_2">自定义文本扩展名规则。自动识别图片的扩展名，且支持透明 PNG 与动态 GIF 的粘贴。更快捷方便的监听模式</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="xe-widget xe-conversations box2 label-info"
-                onclick='window.open("https://github.com/qier222/YesPlayMusic","_blank")' data-toggle="tooltip"
-                data-placement="bottom" data-original-title="https://github.com/qier222/YesPlayMusic">
-                <div class="xe-comment-entry">
-                    <a class="xe-user-img">
-                        <img data-src="https://github.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
-                    </a>
-                    <div class="xe-comment">
-                        <a href="javascript:void();"
-                            class="xe-user-name overflowClip_1">
-                            <strong>YesPlayMusic</strong>
-                        </a>
-                        <p class="overflowClip_2">高颜值的第三方网易云播放器</p>
+                        <p class="overflowClip_2">多种风格可选的萌萌计数器</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br>
-    <br>
-    <!-- END Github -->
+    <br />
+    <!-- END 模板资源 -->
     <!-- 自学编程 -->
     <h4 class="text-gray">
         <i class="linecons-tag" style="margin-right:7px" id="自学编程"></i>自学编程
@@ -5183,8 +5089,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 自学编程 -->
     <!-- 学习吧 -->
     <h4 class="text-gray">
@@ -5338,8 +5243,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 学习吧 -->
     <!-- 休闲娱乐 -->
     <h4 class="text-gray">
@@ -5605,8 +5509,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 休闲娱乐 -->
     <!-- 系统下载 -->
     <h4 class="text-gray">
@@ -5686,8 +5589,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 系统下载 -->
     <!-- 系统美化 -->
     <h4 class="text-gray">
@@ -5767,8 +5669,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 系统美化 -->
     <!-- 系统工具 -->
     <h4 class="text-gray">
@@ -5848,8 +5749,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 系统工具 -->
     <!-- 影视搜索 -->
     <h4 class="text-gray">
@@ -5893,8 +5793,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 影视搜索 -->
     <!-- 小说搜索 -->
     <h4 class="text-gray">
@@ -5925,7 +5824,7 @@
                 data-placement="bottom" data-original-title="http://www.banshujiang.cn/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
-                        <img data-src="http://www.banshujiang.cn/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
+                        <img data-src="https://api.btstu.cn/getfav/api.php?url=www.banshujiang.cn" class="lozad img-circle" width="40" onerror="imgerrorfun();">
                     </a>
                     <div class="xe-comment">
                         <a href="javascript:void();"
@@ -5943,7 +5842,7 @@
                 data-placement="bottom" data-original-title="https://www.jiumodiary.com/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
-                        <img data-src="https://www.jiumodiary.com/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
+                        <img data-src="https://api.btstu.cn/getfav/api.php?url=www.jiumodiary.com" class="lozad img-circle" width="40" onerror="imgerrorfun();">
                     </a>
                     <div class="xe-comment">
                         <a href="javascript:void();"
@@ -5956,8 +5855,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 小说搜索 -->
     <!-- 以图搜图 -->
     <h4 class="text-gray">
@@ -5988,7 +5886,7 @@
                 data-placement="bottom" data-original-title="https://trace.moe/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
-                        <img data-src="https://trace.moe/favicon.ico" class="lozad img-circle" width="40" onerror="imgerrorfun();">
+                        <img data-src="https://api.btstu.cn/getfav/api.php?url=trace.moe" class="lozad img-circle" width="40" onerror="imgerrorfun();">
                     </a>
                     <div class="xe-comment">
                         <a href="javascript:void();"
@@ -6019,8 +5917,7 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
+    <br />
     <!-- END 以图搜图 -->
     <!-- 社区资讯 -->
     <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="社区资讯"></i>社区资讯</h4>
@@ -6063,8 +5960,8 @@
         </div>
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
-                onclick="window.open('https://www.landian.vip/', '_blank')" data-toggle="tooltip" 
-                data-placement="bottom" title="" data-original-title="https://www.landian.vip/">
+                onclick="window.open('https://www.landiannews.com/', '_blank')" data-toggle="tooltip" 
+                data-placement="bottom" title="" data-original-title="https://www.landiannews.com/">
                 <div class="xe-comment-entry">
                     <a class="xe-user-img">
                         <img data-src="https://static.lancdn.com/landian/v4.0.1/images/favicon.png" class="lozad img-circle" width="40" onerror="imgerrorfun();">
@@ -6390,8 +6287,6 @@
                 target="_blank">
                     <strong>WebStack</strong>
                 </a>
-		    
-		    
             </div>
             <div class="go-up">
                 <a href="#" rel="go-top">

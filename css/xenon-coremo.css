@@ -2541,7 +2541,9 @@ body.chat-open .user-info-navbar a[data-toggle="chat"] {
   position: relative;
   display: block;
   padding: 30px 20px;
-  color: #d2136b;
+  background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
+  -webkit-background-clip: text;
+  color: transparent;
   border-bottom: 1px solid #fff0;
   top: 1px;
   z-index: 5;
@@ -2552,7 +2554,7 @@ body.chat-open .user-info-navbar a[data-toggle="chat"] {
   line-height: 1;
 }
 .user-info-navbar .user-info-menu > li > a:hover {
-  color: #606161;
+  color: #FF0500;
 }
 .user-info-navbar .user-info-menu > li > a .badge {
   font-size: 9px;
@@ -9087,7 +9089,9 @@ a.text-yellow:hover {
   color: #fbc404;
 }
 .text-gray {
-  color: #d2136b;
+  background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 a.text-gray:hover {
   color: #3b3b3b;

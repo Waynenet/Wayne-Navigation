@@ -11,18 +11,18 @@
         var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
         var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
         if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-            console.log(" %c Navigation By Wayne %c https://3301.cf/ ", "color: #d2136b; background: #c7c4ea; border-radius: 5px; padding:5px;", "padding:5px;"),
+            console.log(" %c Navigation By Wayne %c https://soga.ml/ ", "color: #d2136b; background: #c7c4ea; border-radius: 5px; padding:5px;", "padding:5px;"),
             document.write('<link rel="stylesheet" href="css/bootstrapmo.css">');
             document.write('<link rel="stylesheet" href="css/xenon-coremo.css">');
             document.write('<link rel="stylesheet" href="css/xenon-componentsmo.css">');
-            document.write('<div id="bg" style="background-image: url(images/bgmobile.jpg)"></div>');
+            document.write('<div id="bg" style="background-image: url(https://api.dujin.org/bing/m.php)"></div>');
             return 'phone';
         } else {
-            console.log(" %c Navigation By Wayne %c https://3301.cf/ ", "color: #ffffff; background: #6ea9e5;  border-radius: 5px; padding:5px;", "padding:5px;"),
+            console.log(" %c Navigation By Wayne %c https://soga.ml/ ", "color: #ffffff; background: #6ea9e5;  border-radius: 5px; padding:5px;", "padding:5px;"),
             document.write('<link rel="stylesheet" href="css/bootstrap.css">');
             document.write('<link rel="stylesheet" href="css/xenon-core.css">');
             document.write('<link rel="stylesheet" href="css/xenon-components.css">');
-            document.write('<div id="bg" style="background-image: url(images/bg.jpg)"></div>');
+            document.write('<div id="bg" style="background-image: url(https://api.ixiaowai.cn/gqapi/gqapi.php)"></div>');
             return 'pc';
             }
         }
