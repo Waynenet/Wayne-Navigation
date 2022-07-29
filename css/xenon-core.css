@@ -2448,6 +2448,9 @@ footer.main-footer:after {
 }
 footer.main-footer .footer-text {
   float: left;
+  background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 footer.main-footer .go-up {
   float: right;
