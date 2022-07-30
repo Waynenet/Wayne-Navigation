@@ -22,7 +22,7 @@
             document.write('<link rel="stylesheet" href="css/bootstrap.css">');
             document.write('<link rel="stylesheet" href="css/xenon-core.css">');
             document.write('<link rel="stylesheet" href="css/xenon-components.css">');
-            document.write('<div id="bg" style="background-image: url(https://api.ixiaowai.cn/gqapi/gqapi.php)"></div>');
+            document.write('<div id="bg" style="background-image: url(https://api.btstu.cn/sjbz/api.php?lx=suiji&format=images)"></div>');
             return 'pc';
             }
         }
