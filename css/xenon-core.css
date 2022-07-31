@@ -822,7 +822,7 @@ body {
   max-width: 1140px;
   margin: 20px auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .boxed-container .page-container {
     margin: 0;
   }
@@ -871,7 +871,7 @@ body {
   -moz-box-shadow: 0 1px 0 rgba(0, 1, 1, 0.08), inset 0 1px 0 #ededed;
   box-shadow: 0 1px 0 rgba(0, 1, 1, 0.08), inset 0 1px 0 #ededed;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page-container .main-content .page-title {
     padding: 15px 0;
   }
@@ -892,7 +892,7 @@ body {
   margin: 0;
   font-size: 27px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page-container .main-content .page-title .title-env .title {
     font-size: 23px;
   }
@@ -925,7 +925,7 @@ body {
   margin-bottom: 0;
   margin-top: 8px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page-container .main-content .page-title .breadcrumb-env .breadcrumb {
     margin-top: 4px;
   }
@@ -937,7 +937,7 @@ body {
   display: table-cell;
   position: relative;
   width: 280px;
-  background: #ffffffba;
+  background: #ffffffd9;
   z-index: 1;
 }
 .sidebar-menu .logo-env {
@@ -973,7 +973,10 @@ body {
   margin-bottom: 20px;
   list-style: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+  .sidebar-menu .main-menu a {
+    color: #540329;
+  }
   .sidebar-menu .main-menu {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -1894,7 +1897,7 @@ body {
   .dropdown-menu.user-profile-menu {
   right: 0 !important;
 }
-@media screen and (min-width: 767px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .navbar.horizontal-menu .navbar-inner .navbar-brand {
     padding: 0 15px;
   }
@@ -1941,7 +1944,7 @@ body {
 .navbar.horizontal-menu.navbar-minimal.navbar-fixed-top + .page-container {
   margin-top: 55px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navbar.horizontal-menu.navbar-minimal.navbar-fixed-top + .page-container {
     margin-top: 0;
   }
@@ -1972,12 +1975,12 @@ body {
 .navbar.horizontal-menu.navbar-minimal .navbar-inner > .nav > li {
   line-height: 55px;
 }
-@media screen and (min-width: 767px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .navbar.horizontal-menu.navbar-minimal .navbar-inner .navbar-nav > li {
     line-height: 54px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .navbar.horizontal-menu {
     background: #2c2e2f;
     color: #fff;
@@ -2396,7 +2399,7 @@ body {
     min-width: 14px;
   }
 }
-@media screen and (max-width: 768px) and screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and screen and (min-width: 768px) {
   .navbar.horizontal-menu .navbar-inner .navbar-nav {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -2463,6 +2466,18 @@ footer.main-footer .go-up a {
 }
 footer.main-footer .go-up a:hover {
   background-color: rgba(44, 46, 47, 0.1);
+}
+@media screen and (max-width: 767px) {
+  footer.main-footer .go-up a {
+    background-color: #d2136bb0;
+  }
+  footer.main-footer .go-up a:hover {
+    background-color: #d2136bb0;
+  }
+  .user-info-navbar {
+    background-color: #ffffff38;
+    backdrop-filter: blur(15px);
+  }
 }
 footer.main-footer.footer-type-2 {
   background-color: #252729;
@@ -4024,7 +4039,7 @@ body.chat-open #chat {
 .chat-open .footer-sticked-chat {
   right: 310px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .chat-open .footer-sticked-chat {
     right: 30px;
   }
@@ -4033,12 +4048,12 @@ body.chat-open #chat {
   left: 30px;
   right: auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat.mobile-is-visible .chat-conversations {
     display: block !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat {
     left: 0;
     right: 0;
@@ -4051,7 +4066,7 @@ body.chat-open #chat {
   z-index: 5;
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat .chat-conversations {
     padding: 15px 30px;
     background: #fff;
@@ -4065,7 +4080,7 @@ body.chat-open #chat {
   float: left;
   margin: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat .chat-conversations > li {
     float: none;
     width: 100%;
@@ -4088,7 +4103,7 @@ body.chat-open #chat {
   white-space: nowrap;
   max-width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat .chat-conversations > li .chat-user {
     width: 100%;
   }
@@ -4328,7 +4343,7 @@ body.chat-open #chat {
 .footer-sticked-chat .chat-conversations > li.open > a {
   width: 250px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat .chat-conversations > li.open > a {
     width: 100%;
   }
@@ -4361,7 +4376,7 @@ body.chat-open #chat {
   -o-transition: none;
   transition: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat .chat-conversations > li.browse-more > a {
     background-color: #f4f4f4;
   }
@@ -4390,7 +4405,7 @@ body.chat-open #chat {
   right: auto;
   left: auto;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat
     .chat-conversations
     > li.browse-more
@@ -4408,7 +4423,7 @@ body.chat-open #chat {
   display: block;
   text-align: right;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat
     .chat-conversations
     > li.browse-more
@@ -4445,7 +4460,7 @@ body.chat-open #chat {
   -moz-opacity: 0;
   opacity: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat
     .chat-conversations
     > li.browse-more
@@ -4501,7 +4516,7 @@ body.chat-open #chat {
 .footer-sticked-chat .chat-conversations > li + li {
   margin-left: 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat .chat-conversations > li + li {
     margin-left: 0;
     margin-top: 5px;
@@ -4524,7 +4539,7 @@ body.chat-open #chat {
 .footer-sticked-chat .mobile-chat-toggle i {
   font-size: 14px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-sticked-chat .mobile-chat-toggle {
     display: block;
   }
@@ -4540,7 +4555,7 @@ body.chat-open #chat {
   -ms-transform: translate(-25%, -25%);
   transform: translate(-25%, -25%);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page-container {
     display: block;
   }
@@ -4581,7 +4596,7 @@ body.chat-open #chat {
     a {
     position: relative;
     display: inline-block;
-    color: #979898;
+    color: #d2136b;
     line-height: 1;
     margin-left: 20px;
   }
@@ -4614,7 +4629,7 @@ body.chat-open #chat {
     .logo-env
     .mobile-menu-toggle
     a:focus {
-    color: #fff;
+    color: #bf0b5e;
   }
   .page-container
     .sidebar-menu
@@ -5185,7 +5200,7 @@ body.chat-open #chat {
   white-space: nowrap;
   max-width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.chat-open .settings-pane {
     left: -340px;
   }
@@ -5205,7 +5220,7 @@ body.chat-open #chat {
   -ms-transform-origin: center bottom;
   transform-origin: center bottom;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .settings-pane {
     padding: 30px;
   }
@@ -5214,7 +5229,7 @@ body.chat-open #chat {
   position: relative;
   padding: 50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .settings-pane .settings-pane-inner {
     padding: 0;
   }
@@ -5279,7 +5294,7 @@ body.chat-open #chat {
     margin-bottom: 20px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .settings-pane .user-info {
     width: auto;
     margin: 0 auto;
@@ -7853,7 +7868,7 @@ address {
   height: 10px;
   display: block !important;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .vspacer {
     display: none;
   }
@@ -8458,7 +8473,7 @@ img.img-corona {
   margin-top: 10px;
   color: #2c2e2f;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .highlights .entry-description h3 {
     font-size: 19px;
     margin-bottom: 15px;
@@ -8483,7 +8498,7 @@ img.img-corona {
     width: 65%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .highlights .entry-img,
   .highlights .entry-description {
     float: none;
@@ -8502,17 +8517,17 @@ img.img-corona {
     text-align: left;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .text-left-sm {
     text-align: left;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .text-center-sm {
     text-align: center;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .text-right-sm {
     text-align: right;
   }
@@ -9161,7 +9176,7 @@ pre {
   margin-top: 0;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page-body .jumbotron {
     padding-left: 0;
     padding-right: 0;

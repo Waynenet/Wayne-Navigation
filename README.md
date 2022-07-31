@@ -1,3 +1,7 @@
+<p>
+<strong><h2>WayneのNavigation</h2></strong>
+</p>
+
 Webstack网址导航 美化版
 ===
 

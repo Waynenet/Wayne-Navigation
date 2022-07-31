@@ -6,6 +6,12 @@ html {
 }
 body {
   margin: 0;
+  background-image: url(https://api.btstu.cn/sjbz/api.php?lx=suiji&format=images); /* 随机图片API */
+}
+@media screen and (max-width: 767px) {
+  body {
+    background-image: url(https://api.dujin.org/bing/m.php); /* 随机图片API */
+  }
 }
 article,
 aside,
@@ -46,12 +52,14 @@ summary {
     font-size: 21px;
 }
 #qrcode img {
-    position: absolute;
-    top: 36%;
-    left: 45%;
+    position: fixed;
     width: 200px;
     height: 200px;
-    display: block;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    margin: auto;
     border-radius: 5px;
 }
 #qrcode {
@@ -74,7 +82,7 @@ summary {
     border-radius: 30px;
 }
 a.logo-expanded {
-    color: #666;
+    color: #d2136b;
     font-size: 16px;
 }
 audio,
@@ -2596,6 +2604,18 @@ table th[class*="col-"] {
   min-height: 0.01%;
 }
 @media screen and (max-width: 767px) {
+  footer.main-footer .go-up {
+    width: 66px;
+  }
+  footer.main-footer .go-up a {
+    border-radius: 20%;
+  }
+  a {
+    color: #d2136b;
+  }
+  a:focus {
+    color: #8e0946;
+  }
   .table-responsive {
     width: 100%;
     margin-bottom: 13.5px;
@@ -6224,10 +6244,10 @@ button.close {
 .tooltip-inner {
     max-width: 200px;
     padding: 3px 8px;
-    color: #2c2c2c;
+    color: #fff;
     text-align: center;
     text-decoration: none;
-    background-color: #ffffff;
+    background-color: #000;
     border-radius: 3px;
 }
 .tooltip-arrow {
@@ -6277,7 +6297,7 @@ button.close {
   left: 50%;
   margin-left: -5px;
   border-width: 0 5px 5px;
-  border-bottom-color: #ffffff;
+  border-bottom-color: #000;
 }
 .tooltip.bottom-left .tooltip-arrow {
   top: 0;
