@@ -1263,7 +1263,16 @@ body {
     .user-info-navbar
     .user-info-menu
     a[data-toggle="sidebar"] {
-    color: #606161;
+    background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .sidebar-menu.collapsed
+    + .main-content
+    .user-info-navbar
+    .user-info-menu
+    a[data-toggle="sidebar"]:hover {
+    color: #FF0500;
   }
   .sidebar-menu.collapsed + .main-content .main-footer {
     left: 80px;
