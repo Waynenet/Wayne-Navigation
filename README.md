@@ -1,14 +1,13 @@
 <p>
-<strong><h2>WayneのNavigation</h2></strong>
+<strong><h1>WayneのNavigation</h1></strong>
 </p>
 
 Webstack网址导航 美化版
-===
+---
 
-### Demo: [3301.ml](https://3301.ml/)
+### Demo: [➡️ WayneのNavigation](https://3301.ml/)
 
 喜欢给个Star~
-
 
 ### Webstack网址导航
 
