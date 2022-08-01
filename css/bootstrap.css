@@ -1816,8 +1816,9 @@ table th[class*="col-"] {
   a {
     color: #d2136b;
   }
+  a:hover,
   a:focus {
-    color: #8e0946;
+    color: #3273dc;
   }
   .table-responsive {
     width: 100%;
