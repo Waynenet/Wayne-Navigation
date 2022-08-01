@@ -582,8 +582,6 @@
   display: block;
   position: absolute;
   color: #fff;
-  content: "\f06e";
-  font-family: fontawesome;
   left: 50%;
   top: 50%;
   font-size: 22px;
@@ -1354,8 +1352,6 @@ lesshat-selector {
   font-size: 24px;
 }
 .calendar-env .calendar-main .fc .fc-toolbar .fc-left h2:before {
-  content: "\f133";
-  font-family: fontawesome;
   display: inline-block;
   margin-right: 10px;
 }
@@ -1512,7 +1508,6 @@ lesshat-selector {
 }
 .calendar-env .calendar-main .fc .fc-toolbar .fc-button .fc-icon {
   font-size: 13px;
-  font-family: fontawesome;
 }
 .calendar-env .calendar-main .fc .fc-toolbar .fc-button.fc-next-button:hover,
 .calendar-env .calendar-main .fc .fc-toolbar .fc-button.fc-prev-button:hover {

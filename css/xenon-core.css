@@ -1015,8 +1015,6 @@ body {
 .sidebar-menu .main-menu li.has-sub > a:before {
   position: relative;
   display: inline-block;
-  font-family: FontAwesome;
-  content: "\f107";
   float: right;
   color: #6d747a;
   margin-left: 10px;
@@ -1702,8 +1700,6 @@ body {
     right: 0;
   }
   .navbar.horizontal-menu .navbar-inner .navbar-nav ul > li.has-sub > a:before {
-    content: "\f105";
-    font-family: FontAwesome;
     display: block;
     float: right;
     color: #979898;
@@ -2090,8 +2086,6 @@ body {
   .navbar.horizontal-menu .navbar-inner .navbar-nav li.has-sub > a:before {
     position: relative;
     display: inline-block;
-    font-family: FontAwesome;
-    content: "\f107";
     float: right;
     color: #6d747a;
     margin-left: 10px;
@@ -3938,8 +3932,6 @@ body.chat-open #chat {
   padding: 0;
 }
 #chat .chat-conversation .chat-textarea:after {
-  content: "\f075";
-  font-family: fontawesome;
   color: #979898;
   right: 15px;
   top: 10px;
@@ -7287,8 +7279,6 @@ blockquote small {
 .dataTables_wrapper .table thead > tr .sorting:before,
 .dataTables_wrapper .table thead > tr .sorting_asc:before,
 .dataTables_wrapper .table thead > tr .sorting_desc:before {
-  font-family: fontawesome;
-  content: "\f0dc";
   float: right;
   display: block;
   zoom: 1;

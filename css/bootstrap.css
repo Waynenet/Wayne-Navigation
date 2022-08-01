@@ -350,21 +350,11 @@ footer.main-footer .go-up a {
 .has-sub {
   cursor: pointer;
 }
-@font-face {
-  font-family: "Glyphicons Halflings";
-  src: url(fonts/glyphicons/glyphicons-halflings-regular.eot);
-  src: url(fonts/glyphicons/glyphicons-halflings-regular.eot?#iefix)
-      format("embedded-opentype"),
-    url(fonts/glyphicons/glyphicons-halflings-regular.woff) format("woff"),
-    url(fonts/glyphicons/glyphicons-halflings-regular.ttf) format("truetype"),
-    url(fonts/glyphicons/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)
-      format("svg");
-}
+
 .glyphicon {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: "Glyphicons Halflings";
   font-style: normal;
   font-weight: 400;
   line-height: 1;
