@@ -9,12 +9,14 @@ body {
   background-image: url(https://api.btstu.cn/sjbz/api.php?lx=suiji&format=images); /* 随机图片API */
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 }
 @media screen and (max-width: 767px) {
   body {
     background-image: url(https://api.dujin.org/bing/m.php); /* 随机图片API */
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
   }
 }
 article,

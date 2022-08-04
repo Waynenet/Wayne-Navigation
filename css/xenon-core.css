@@ -1232,7 +1232,7 @@ body {
 }
 .sidebar-menu .ps-scrollbar-x-rail .ps-scrollbar-x,
 .sidebar-menu .ps-scrollbar-y-rail .ps-scrollbar-y {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0);
 }
 .sidebar-menu.fixed {
   height: 100%;
@@ -1279,7 +1279,7 @@ body {
   }
   .sidebar-menu.collapsed .sidebar-menu-inner {
     overflow: visible;
-    position: fixed;
+    position: fixed; /* 屏幕高度不够时会有问题，日常使用应该不会遇到，也可设为relative，则左侧菜单栏不固定 */
   }
   .sidebar-menu.collapsed .logo-env {
     padding: 18px 0;
