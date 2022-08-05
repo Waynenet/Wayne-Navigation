@@ -199,3 +199,24 @@ $(function () {
         }
     }
 });
+
+//控制台输出
+console.clear();
+let styleTitle = `
+font-size: 20px;
+font-weight: 600;
+color: rgb(244,167,89);
+`
+let styleContent = `
+color: rgb(30,152,255);
+`
+let title = 'WayneのNavigation'
+let content = `
+版 本 号：1.0.0
+更新日期：2022-08-05
+
+WayneのNavigation: https://3301.ml/
+Github:  https://github.com/Waynenet/Wayne-Navigation
+`
+console.log(`%c${title}
+%c${content}`, styleTitle, styleContent)

@@ -2,23 +2,19 @@
 <strong><h1>WayneのNavigation</h1></strong>
 </p>
 
-Webstack网址导航 美化版
+Webstack网址导航美化版
 ---
 
 ### Demo: [➡️ WayneのNavigation](https://3301.ml/)
 
-喜欢给个Star~
-
-### Webstack网址导航
+✅ 随机背景   
+✅ 快捷搜索   
+✅ 实时天气
 
 ### 原作者项目
 
-[https://github.com/WebStackPage/WebStackPage.github.io](https://github.com/WebStackPage/WebStackPage.github.io)
-
-### Demo: [➡️ www.webstack.cc](https://webstack.cc)
+[WebStackPage.github.io](https://github.com/WebStackPage/WebStackPage.github.io)
 
 ### 参考魔改项目
 
-[https://github.com/arleycn/arleybookmarks](https://github.com/arleycn/arleybookmarks)
-
-### Demo: [➡️ bm.arley.cn](https://bm.arley.cn/)
+[arleybookmarks](https://github.com/arleycn/arleybookmarks)
