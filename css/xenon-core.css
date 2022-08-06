@@ -3661,6 +3661,14 @@ body.chat-open #chat {
   -ms-transform: translate(-25%, -25%);
   transform: translate(-25%, -25%);
 }
+@media screen and (max-width: 292px) {
+  .page-container .sidebar-menu .sidebar-menu-inner .logo-env .logo-expanded {
+    display: none;
+  }
+  .page-container .sidebar-menu .sidebar-menu-inner .logo-env .logo-collapsed {
+    display: block;
+  }
+}
 @media screen and (max-width: 767px) {
   .page-container {
     display: block;

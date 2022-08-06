@@ -212,8 +212,8 @@ color: rgb(30,152,255);
 `
 let title = 'WayneのNavigation'
 let content = `
-版 本 号：1.0.0
-更新日期：2022-08-05
+版 本 号：1.1.1
+更新日期：2022-08-06
 
 WayneのNavigation: https://3301.ml/
 Github:  https://github.com/Waynenet/Wayne-Navigation

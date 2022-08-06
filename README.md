@@ -2,8 +2,7 @@
 <strong><h1>WayneのNavigation</h1></strong>
 </p>
 
-Webstack网址导航美化版
----
+## Webstack网址导航美化版
 
 ### Demo: [➡️ WayneのNavigation](https://3301.ml/)
 
