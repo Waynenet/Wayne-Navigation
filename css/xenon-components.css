@@ -248,9 +248,6 @@
 .mailbox-env .mail-env .mail-table a {
   color: #979898;
 }
-.mailbox-env .mail-env .mail-table .btn {
-  margin-bottom: 0;
-}
 .mailbox-env .mail-env .mail-table .checkbox {
   margin: 0;
 }
@@ -464,53 +461,6 @@
 }
 .mailbox-env .mail-single .mail-single-info .mail-single-info-user.open > a {
   text-decoration: none;
-}
-.mailbox-env
-  .mail-single
-  .mail-single-info
-  .mail-single-info-user
-  .dropdown-menu {
-  width: 100%;
-  margin-top: 10px;
-}
-.mailbox-env
-  .mail-single
-  .mail-single-info
-  .mail-single-info-user
-  .dropdown-menu:before {
-  content: "";
-  position: absolute;
-  display: block;
-  background: inherit;
-  width: 10px;
-  height: 10px;
-  top: -5px;
-  left: 4%;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: 1;
-}
-.mailbox-env
-  .mail-single
-  .mail-single-info
-  .mail-single-info-user
-  .dropdown-menu
-  li {
-  position: relative;
-  z-index: 2;
-}
-.mailbox-env
-  .mail-single
-  .mail-single-info
-  .mail-single-info-user
-  .dropdown-menu
-  li
-  i {
-  display: inline-block;
-  margin-right: 2px;
 }
 .mailbox-env .mail-single .mail-single-info .mail-single-info-options {
   float: right;
@@ -3569,21 +3519,6 @@ button.toast-close-button {
   filter: alpha(opacity=0);
   visibility: hidden;
 }
-.login-page .login-form .form-group .btn {
-  padding-top: 11.11px;
-  padding-bottom: 11.11px;
-}
-.login-page .login-form .form-group .btn i {
-  margin-right: 5px;
-}
-.login-page .login-form .form-group .btn.btn-dark {
-  border-color: rgba(55, 57, 58, 0.9);
-  background-color: #2c2e2f;
-  color: #fff;
-}
-.login-page .login-form .form-group .btn.btn-dark:hover {
-  background-color: rgba(55, 57, 58, 0.3);
-}
 .login-page .login-form .login-footer {
   margin-top: 45px;
 }
@@ -3754,32 +3689,6 @@ button.toast-close-button {
   padding-top: 10px;
   color: rgba(255, 255, 255, 0.6);
   font-size: 12px;
-}
-.lockscreen-page .lockcreen-form .form-group .input-group .input-group-btn {
-  padding-left: 10px;
-}
-.lockscreen-page
-  .lockcreen-form
-  .form-group
-  .input-group
-  .input-group-btn
-  .btn {
-  border: 1px solid #3e4142;
-  padding: 10px 20px;
-}
-.lockscreen-page
-  .lockcreen-form
-  .form-group
-  .input-group
-  .input-group-btn
-  .btn:hover,
-.lockscreen-page
-  .lockcreen-form
-  .form-group
-  .input-group
-  .input-group-btn
-  .btn:focus {
-  background-color: rgba(62, 65, 66, 0.3);
 }
 .lockscreen-page .lockcreen-form.fade-in-effect .user-thumb {
   position: relative;
