@@ -202,21 +202,35 @@ $(function () {
 
 //控制台输出
 console.clear();
-let styleTitle = `
+let styleTitle1 = `
 font-size: 20px;
 font-weight: 600;
+color: rgb(244,167,89);
+`
+let styleTitle2 = `
+font-size:16px;
 color: rgb(244,167,89);
 `
 let styleContent = `
 color: rgb(30,152,255);
 `
-let title = 'WayneのNavigation'
+let title1 = 'WayneのNavigation'
+let title2 = `
+==============================
+#   #    #   #   # #   # #####
+#   #   # #   # #  ##  # #
+# # #  #####   #   # # # #####
+## ##  #   #   #   #  ## #
+#   #  #   #   #   #   # #####
+==============================
+`
 let content = `
-版 本 号：1.1.1
-更新日期：2022-08-06
+版 本 号：1.1.2
+更新日期：2022-08-07
 
 WayneのNavigation: https://3301.ml/
 Github:  https://github.com/Waynenet/Wayne-Navigation
 `
-console.log(`%c${title}
-%c${content}`, styleTitle, styleContent)
+console.log(`%c${title1} %c${title2}
+%c${content}`, styleTitle1, styleTitle2, styleContent)
+
