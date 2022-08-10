@@ -10,16 +10,21 @@
     <meta name="description" content="WayneのNavigation - 收集国内外优秀网站、灵感创意网站，定时更新分享优质书签。3301.ml">
     <link rel="shortcut icon" type="image/x-icon" href="images/wayne.png"/>
     <link rel="stylesheet" href="css/linecons.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/xenon-core.css">
-    <link rel="stylesheet" href="css/xenon-components.css">
+    <link rel="stylesheet" href="css/core.min.css">
+    <link rel="stylesheet" href="css/dark.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/xenon-core.min.css">
+    <link rel="stylesheet" href="css/xenon-components.min.css">
     <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/function.js"></script>
     <!-- FontAwesome -->
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/wayne-img@latest/css/fontawesomepro6.1.0.css"
     media="all">
+    <!-- Izitoast -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css">
+    <script type="text/javascript"
+    src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js">
+    </script>
 </head>
 <body class="page-body">
     <div class="page-container">
@@ -35,9 +40,11 @@
                             <img src="images/wayne.png" width="40" alt="" />
                         </a>
                     </div>
-                    <div class="mobile-menu-toggle visible-xs"><a href="#" data-toggle="user-info-menu" style="margin-right: 25px"><i
-                                class="linecons-cog"></i></a><a href="#" data-toggle="mobile-menu" style="margin-right: 25px"><i
-                                class="fa-bars"></i></a></div>
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a onclick="switchNightMode()" style="margin-right: 25px"><i class="fa-solid fa-circle-half-stroke"></i></a>
+                        <a href="#" data-toggle="user-info-menu" style="margin-right: 25px"><i class="linecons-cog"></i></a>
+                        <a href="#" data-toggle="mobile-menu" style="margin-right: 25px"><i class="fa-bars"></i></a>
+                    </div>
                 </header>
                 <ul id="main-menu" class="main-menu">
                     <li><a href="#search" class="smooth"><i class="linecons-search"></i> <span class="title">Search</span></a></li>
@@ -141,47 +148,184 @@
             </li>
         </ul>
         <ul class="user-info-menu right-links list-inline list-unstyled">
-            <li class="hidden-sm hidden-xs text-gray" style="padding:30px 0px">
+            <li class="hidden-sm hidden-xs" style="top:30px">
                 <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tz&skin=gif&color=f0610e" 
                 frameborder="0" width="100%" height="30" allowtransparency="true"></iframe>
             </li>
         </ul>
         </nav>
-        <!-- 可添加banner -->
-        <div class="hidden-xs box" id="banner">
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <img src="images/navigation.png" width="25%" height="auto">
-            </div>
-        </div>
-        <!-- 内容卡片 -->
-        <div class="box" id="search"style="overflow: visible;">
-            <div style="display: flex; justify-content: center;align-items: center; padding-top: 20px" >
-                <div style="display: flex;width: 100%; justify-content: center;">
-                    <div style="width: 50%;position: relative;">
-                        <input id="searchText" type="text"  title="请先输入搜索内容，然后点击下面的标签~" placeholder="先输入内容然后点下面标签~" oninput ="autoFillSearch()" onblur="searchTextOnblur()"
-                        style="border: 1px solid rgba(34,36,38,.15); outline: 0; border-radius: 30px; width: 100%; height: 40px; background-color: #ffffffba; padding-left: 15px; padding-right: 15px;"/>
-                        <div id="autoFillInput" style="width: 100%; position: absolute; z-index: 99999; background: #fff; overflow: auto;">
-                        </div>
-                    </div>
+        <!-- 搜索 -->
+        <div id="search" class="s-search">
+            <div id="search-list" class="hide-type-list">
+            <div class="s-type">
+                <span></span>
+                <div class="s-type-list animated fadeInUp">
+                <label for="type-baidu">常用</label>
+                <label for="type-search">搜索</label>
+                <label for="type-br">工具</label>
+                <label for="type-zhihu">社区</label>
+                <label for="type-taobao1">生活</label>
+                <label for="type-zhaopin">求职</label>
                 </div>
             </div>
-            <div style="display: flex; justify-content: center;align-items: center; padding-top: 10px" >
-                <div style="display: flex;width: 100%; justify-content: center;">
-                    <div style="justify-content: center;">
-                        <input type="button" class="search_btn" value="F搜" onclick="search_click('fsou')" />
-                        <input type="button" class="search_btn" value="必应" onclick="search_click('bing')" />
-                        <input type="button" class="search_btn" value="百度" onclick="search_click('baidu')" />
-                        <input type="button" class="search_btn" value="搜狗" onclick="search_click('sogou')" />
-                        <input type="button" class="search_btn" value="知乎" onclick="search_click('zhihu')" />
-                        <input type="button" class="search_btn" value="Bilibili" onclick="search_click('bilibili')" />
-                        <input type="button" class="search_btn" value="谷歌" onclick="search_click('google')" />
-                        <input type="button" class="search_btn" value="谷歌镜像" onclick="search_click('google-image')" />
-                        <input type="button" class="search_btn" value="github" onclick="search_click('github')" />
-                    </div>
-                </div>
+            <div class="search-group group-a">
+                <span class="type-text">常用</span>
+                <ul class="search-type">
+                <li><input checked hidden type="radio" name="type" id="type-baidu" value="https://www.baidu.com/s?wd="
+                    data-placeholder="百度一下，你就知道"><label for="type-baidu"><span style="color:#2100E0"
+                        class="dark-text">百度</span></label>
+                </li>
+                <li><input hidden type="radio" name="type" id="type-bing1" value="https://cn.bing.com/search?q="
+                    data-placeholder="微软 Bing 搜索"><label for="type-bing1"><span style="color:#007daa">Bing</span></label>
+                </li>
+                <li><input hidden type="radio" name="type" id="type-google" value="https://www.google.com/search?q="
+                    data-placeholder="谷歌搜索"><label for="type-google"><span style="color:#3B83FA">G</span><span
+                        style="color:#F3442C">o</span><span style="color:#FFC300">o</span><span
+                        style="color:#4696F8">g</span><span style="color:#2CAB4E">l</span><span
+                        style="color:#F54231">e</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-bili1"
+                    value="https://search.bilibili.com/all?keyword=" data-placeholder="哔哩哔哩搜索"><label
+                    for="type-bili1"><span style="color:#00a1d6">BiliBili</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-git1"
+                    value="https://github.com/search?utf8=%E2%9C%93&q=" data-placeholder="搜索 Github 仓库"><label
+                    for="type-git1"><span style="color:#000000" class="dark-text">Github</span></label></li>
+                </ul>
+            </div>
+            <div class="search-group group-b">
+                <span class="type-text">搜索</span>
+                <ul class="search-type">
+                <li><input hidden type="radio" name="type" id="type-search" value="https://www.baidu.com/s?wd="
+                    data-placeholder="百度一下，你就知道"><label for="type-search"><span style="color:#2319dc"
+                        class="dark-text">百度</span></label>
+                </li>
+                <li><input hidden type="radio" name="type" id="type-bing" value="https://cn.bing.com/search?q="
+                    data-placeholder="微软 Bing 搜索"><label for="type-bing"><span style="color:#007daa">Bing</span></label>
+                </li>
+                <li><input hidden type="radio" name="type" id="type-google1" value="https://www.google.com/search?q="
+                    data-placeholder="谷歌搜索"><label for="type-google1"><span style="color:#3B83FA">G</span><span
+                        style="color:#F3442C">o</span><span style="color:#FFC300">o</span><span
+                        style="color:#4696F8">g</span><span style="color:#2CAB4E">l</span><span
+                        style="color:#F54231">e</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-fsou" value="https://fsoufsou.com/search?q="
+                    data-placeholder="F搜"><label for="type-fsou"><span style="color:#AE049D ">F搜</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-360" value="https://www.so.com/s?q="
+                    data-placeholder="360好搜"><label for="type-360"><span style="color:#19b955">360</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-sogo" value="https://www.sogou.com/web?query="
+                    data-placeholder="搜狗搜索"><label for="type-sogo"><span style="color:#ff5943">搜狗</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-bili" value="https://search.bilibili.com/all?keyword="
+                    data-placeholder="哔哩哔哩搜索"><label for="type-bili"><span style="color:#00a1d6">BiliBili</span></label>
+                </li>
+                <li><input hidden type="radio" name="type" id="type-git"
+                    value="https://github.com/search?utf8=%E2%9C%93&q=" data-placeholder="搜索 Github 仓库"><label
+                    for="type-git"><span style="color:#000000" class="dark-text">Github</span></label></li>
+                </ul>
+            </div>
+            <div class="search-group group-c">
+                <span class="type-text">工具</span>
+                <ul class="search-type">
+                <li><input hidden type="radio" name="type" id="type-ping" value="https://ping.chinaz.com/"
+                    data-placeholder="请输入网址 ( 不带http:// )"><label for="type-ping"><span
+                        style="color:#00599e">PING检测</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-icp" value="https://icp.chinaz.com/"
+                    data-placeholder="请输入网址 ( 不带http:// )"><label for="type-icp"><span
+                        style="color:#ffac00">备案查询</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-br" value="https://rank.chinaz.com/all/"
+                    data-placeholder="请输入网址 ( 不带http:// )"><label for="type-br"><span
+                        style="color:#55a300">权重查询</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-links" value="https://link.chinaz.com/"
+                    data-placeholder="请输入网址 ( 不带http:// )"><label for="type-links"><span style="color:#313439"
+                        class="dark-text">友链检测</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-404" value="https://stool.chinaz.com/https?url="
+                    data-placeholder="请输入网址 ( 不带http:// )"><label for="type-404"><span
+                        style="color:#f00">HTTPS检测</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-ciku" value="https://seo.chinaz.com/"
+                    data-placeholder="请输入网址 ( 不带http:// )"><label for="type-ciku"><span
+                        style="color:#016DBD">SEO查询</span></label></li>
+                </ul>
+            </div>
+            <div class="search-group group-d">
+                <span class="type-text">社区</span>
+                <ul class="search-type">
+                <li><input hidden type="radio" name="type" id="type-zhihu"
+                    value="https://www.zhihu.com/search?type=content&q=" data-placeholder="知乎，与你分享刚编的故事"><label
+                    for="type-zhihu"><span style="color:#0084ff">知乎</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-wechat"
+                    value="http://weixin.sogou.com/weixin?type=2&query=" data-placeholder="微信"><label
+                    for="type-wechat"><span style="color:#00a06a">微信</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-weibo" value="http://s.weibo.com/weibo/"
+                    data-placeholder="微博"><label for="type-weibo"><span style="color:#e6162d">微博</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-douban" value="https://www.douban.com/search?q="
+                    data-placeholder="豆瓣"><label for="type-douban"><span style="color:#55a300">豆瓣</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-why" value="https://ask.seowhy.com/search/?q="
+                    data-placeholder="SEO问答社区"><label for="type-why"><span style="color:#428bca">搜外问答</span></label></li>
+                </ul>
+            </div>
+            <div class="search-group group-e">
+                <span class="type-text">生活</span>
+                <ul class="search-type">
+                <li><input hidden type="radio" name="type" id="type-taobao1" value="https://s.taobao.com/search?q="
+                    data-placeholder="淘宝"><label for="type-taobao1"><span style="color:#f40">淘宝</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-jd" value="https://search.jd.com/Search?keyword="
+                    data-placeholder="京东"><label for="type-jd"><span style="color:#c91623">京东</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-xiachufang"
+                    value="http://www.xiachufang.com/search/?keyword=" data-placeholder="下厨房"><label
+                    for="type-xiachufang"><span style="color:#dd3915">下厨房</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-xiangha"
+                    value="https://www.xiangha.com/so/?q=caipu&s=" data-placeholder="香哈菜谱"><label for="type-xiangha"><span
+                        style="color:#930">香哈菜谱</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-12306" value="http://www.12306.cn/?"
+                    data-placeholder="12306"><label for="type-12306"><span style="color:#07f">12306</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-qunar" value="https://www.qunar.com/?"
+                    data-placeholder="去哪儿"><label for="type-qunar"><span style="color:#00afc7">去哪儿</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-快递100" value="http://www.kuaidi100.com/?"
+                    data-placeholder="快递100"><label for="type-快递100"><span style="color:#3278e6">快递100</span></label></li>
+                </ul>
+            </div>
+            <div class="search-group group-f">
+                <span class="type-text">求职</span>
+                <ul class="search-type">
+                <li><input hidden type="radio" name="type" id="type-zhaopin"
+                    value="https://sou.zhaopin.com/jobs/searchresult.ashx?kw=" data-placeholder="智联招聘"><label
+                    for="type-zhaopin"><span style="color:#689fee">智联招聘</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-51job" value="https://search.51job.com/?"
+                    data-placeholder="前程无忧"><label for="type-51job"><span style="color:#ff6000">前程无忧</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-lagou" value="https://www.lagou.com/jobs/list_"
+                    data-placeholder="拉钩网"><label for="type-lagou"><span style="color:#00b38a">拉钩网</span></label></li>
+                <li><input hidden type="radio" name="type" id="type-liepin" value="https://www.liepin.com/zhaopin/?key="
+                    data-placeholder="猎聘网"><label for="type-liepin"><span style="color:#303a40"
+                        class="dark-text">猎聘网</span></label></li>
+                </ul>
+            </div>
+            </div>
+            <form action="?s=" method="get" target="_blank" id="super-search-fm"><input type="text" id="search-text"
+                placeholder="输入关键字搜索" style="outline:0" autocomplete="off"><button type="submit"><i
+                class="fa fa-search "></i></button></form>
+            <div class="set-check hidden-xs">
+            <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
             </div>
         </div>
-    <br />
+        <script type="text/javascript">
+            eval(function (e, t, a, c, i, n) {
+            if (i = function (e) {
+                return (e < t ? "" : i(parseInt(e / t))) + (35 < (e %= t) ? String.fromCharCode(e + 29) : e.toString(
+                    36))
+                }, !"".replace(/^/, String)) {
+                for (; a--;) n[i(a)] = c[a] || i(a);
+                c = [function (e) {
+                return n[e]
+                }], i = function () {
+                return "\\w+"
+                }, a = 1
+            }
+            for (; a--;) c[a] && (e = e.replace(new RegExp("\\b" + i(a) + "\\b", "g"), c[a]));
+            return e
+            }('!2(){2 g(){h(),i(),j(),k()}2 h(){d.9=s()}2 i(){z a=4.8(\'A[B="7"][5="\'+p()+\'"]\');a&&(a.9=!0,l(a))}2 j(){v(u())}2 k(){w(t())}2 l(a){P(z b=0;b<e.O;b++)e[b].I.1c("s-M");a.F.F.F.I.V("s-M")}2 m(a,b){E.H.S("L"+a,b)}2 n(a){6 E.H.Y("L"+a)}2 o(a){f=a.3,v(u()),w(a.3.5),m("7",a.3.5),c.K(),l(a.3)}2 p(){z b=n("7");6 b||a[0].5}2 q(a){m("J",a.3.9?1:-1),x(a.3.9)}2 r(a){6 a.11(),""==c.5?(c.K(),!1):(w(t()+c.5),x(s()),s()?E.U(b.G,+T X):13.Z=b.G,10 0)}2 s(){z a=n("J");6 a?1==a:!0}2 t(){6 4.8(\'A[B="7"]:9\').5}2 u(){6 4.8(\'A[B="7"]:9\').W("14-N")}2 v(a){c.1e("N",a)}2 w(a){b.G=a}2 x(a){a?b.3="1a":b.16("3")}z y,a=4.R(\'A[B="7"]\'),b=4.8("#18-C-19"),c=4.8("#C-12"),d=4.8("#17-C-15"),e=4.R(".C-1b"),f=a[0];P(g(),y=0;y<a.O;y++)a[y].D("Q",o);d.D("Q",q),b.D("1d",r)}();',
+            62, 77,
+            "||function|target|document|value|return|type|querySelector|checked||||||||||||||||||||||||||var|input|name|search|addEventListener|window|parentNode|action|localStorage|classList|newWindow|focus|superSearch|current|placeholder|length|for|change|querySelectorAll|setItem|new|open|add|getAttribute|Date|getItem|href|void|preventDefault|text|location|data|blank|removeAttribute|set|super|fm|_blank|group|remove|submit|setAttribute"
+            .split("|"), 0, {}));
+        </script>
+        <!-- 搜索 end -->
+
     <!-- 热搜新闻 --> 
     <h4 class="text-gray">
         <i class="linecons-tag" style="margin-right:7px" id="热搜新闻"></i>热搜新闻
@@ -259,8 +403,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("http://www.guozhivip.com/rank/","_blank")' data-toggle="tooltip"
@@ -377,8 +519,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://bilibili.com/', '_blank')" data-toggle="tooltip" 
@@ -451,8 +591,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://www.52pojie.cn/', '_blank')" data-toggle="tooltip" 
@@ -525,8 +663,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://gitee.com/","_blank")' data-toggle="tooltip"
@@ -823,8 +959,6 @@
                 </div>
             </div>
         </div>
-    </div>
-        <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.tkys.tv/","_blank")' data-toggle="tooltip"
@@ -941,8 +1075,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.zxzjtv.com/","_blank")' data-toggle="tooltip"
@@ -1015,8 +1147,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.mkvdo.com/","_blank")' data-toggle="tooltip"
@@ -1195,8 +1325,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.kan.cc/","_blank")' data-toggle="tooltip"
@@ -1579,8 +1707,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.dygangs.com/', '_blank')" data-toggle="tooltip" 
@@ -1733,8 +1859,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://tool.chinaz.com/","_blank")' data-toggle="tooltip"
@@ -1807,8 +1931,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://docsmall.com/","_blank")' data-toggle="tooltip"
@@ -1907,8 +2029,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://bigjpg.com/","_blank")' data-toggle="tooltip"
@@ -1981,8 +2101,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.fococlipping.com/","_blank")' data-toggle="tooltip"
@@ -2055,8 +2173,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.iloveimg.com/","_blank")' data-toggle="tooltip"
@@ -2155,8 +2271,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.hipdf.cn/pdf-to-word","_blank")' data-toggle="tooltip"
@@ -2229,8 +2343,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.aconvert.com/cn/","_blank")' data-toggle="tooltip"
@@ -2383,8 +2495,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://getavataaars.com/","_blank")' data-toggle="tooltip"
@@ -2457,8 +2567,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://ctfile.qinlili.bid/","_blank")' data-toggle="tooltip"
@@ -2593,8 +2701,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://habo.qq.com/","_blank")' data-toggle="tooltip"
@@ -2667,8 +2773,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://unlock-music-ix.netlify.app/","_blank")' data-toggle="tooltip"
@@ -2740,8 +2844,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://ip8.com/","_blank")' data-toggle="tooltip"
@@ -2812,8 +2914,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("http://speed.neu6.edu.cn/","_blank")' data-toggle="tooltip"
@@ -2966,8 +3066,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://apkpure.com/","_blank")' data-toggle="tooltip"
@@ -3040,8 +3138,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://youtube.iiilab.com/","_blank")' data-toggle="tooltip"
@@ -3140,8 +3236,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://u.tools/","_blank")' data-toggle="tooltip"
@@ -3214,8 +3308,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://faxian.appinn.com/', '_blank')" data-toggle="tooltip" 
@@ -3286,8 +3378,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://www.atlassian.com/software/confluence?bundle=confluence&edition=free', '_blank')" data-toggle="tooltip" 
@@ -3440,8 +3530,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://greasyfork.org/","_blank")' data-toggle="tooltip"
@@ -3576,8 +3664,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://smailpro.com/","_blank")' data-toggle="tooltip"
@@ -3650,8 +3736,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("http://www.fakemailgenerator.com/","_blank")' data-toggle="tooltip"
@@ -3750,8 +3834,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.pixiv.net/","_blank")' data-toggle="tooltip"
@@ -3824,8 +3906,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.vmgirls.com/","_blank")' data-toggle="tooltip"
@@ -4018,8 +4098,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.tretars.com/ppt-templates', '_blank')" data-toggle="tooltip" 
@@ -4147,8 +4225,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://ziticq.com/', '_blank')" data-toggle="tooltip" 
@@ -4281,8 +4357,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.yin2s.com/","_blank")' data-toggle="tooltip"
@@ -4355,8 +4429,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.52doutu.cn/","_blank")' data-toggle="tooltip"
@@ -4569,8 +4641,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://api.btstu.cn/', '_blank')" data-toggle="tooltip" 
@@ -4643,8 +4713,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://api.ddkjt.com/index.php', '_blank')" data-toggle="tooltip" 
@@ -4717,8 +4785,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://api.wuenci.com/meting/api/","_blank")' data-toggle="tooltip"
@@ -4877,8 +4943,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.aliyundrive.com/","_blank")' data-toggle="tooltip"
@@ -4951,8 +5015,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://cloud.huawei.com/","_blank")' data-toggle="tooltip"
@@ -5025,8 +5087,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://vercel.com/","_blank")' data-toggle="tooltip"
@@ -5099,8 +5159,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://www.mongodb.com/', '_blank')" data-toggle="tooltip" 
@@ -5235,8 +5293,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://gitee.com/","_blank")' data-toggle="tooltip"
@@ -5309,8 +5365,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://e5.qyi.io/', '_blank')" data-toggle="tooltip" 
@@ -5463,8 +5517,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://pagespeed.web.dev/","_blank")' data-toggle="tooltip"
@@ -5679,8 +5731,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://web.dudianji.com/","_blank")' data-toggle="tooltip"
@@ -5833,8 +5883,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://game.chronodivide.com/","_blank")' data-toggle="tooltip"
@@ -5907,8 +5955,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://flash.zczc.cz/","_blank")' data-toggle="tooltip"
@@ -5981,8 +6027,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://lines.frvr.com/","_blank")' data-toggle="tooltip"
@@ -6505,8 +6549,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://www.leiphone.com/', '_blank')" data-toggle="tooltip" 
@@ -6575,8 +6617,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.woshipm.com/', '_blank')" data-toggle="tooltip" 
@@ -6645,8 +6685,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.iyunying.org/', '_blank')" data-toggle="tooltip" 
@@ -6716,8 +6754,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.yxdown.com/', '_blank')" data-toggle="tooltip" 
@@ -6809,7 +6845,7 @@
       </div>
      </div>
     </div>
-    <footer class="main-footer sticky footer-type-1">
+    <footer class="main-footer sticky">
         <div class="footer-inner">
             <div class="footer-text">COPYRIGHT © 2022-<script>document.write( new Date().getFullYear() );</script> <a
                     href="https://soga.ml/"
@@ -6818,11 +6854,6 @@
                 </a> 丨 POWERED BY <a href="https://github.com/WebStackPage/WebStackPage.github.io"
                 target="_blank">
                     <strong>WebStack</strong>
-                </a>
-            </div>
-            <div class="go-up">
-                <a href="#" rel="go-top">
-                    <i class="fa-angle-up"></i>
                 </a>
             </div>
         </div>
@@ -6841,55 +6872,33 @@
 
         });
     </script>
-    <script>
-    $(document).ready(function() {
-            //img lazy loaded
-            const observer = lozad();
-            observer.observe();
-
-            return $(document).on("click", ".has-sub", function () {
-                var e = $(this);
-                $(this).hasClass("expanded") ? $(".has-sub ul").each(function (s, i) {
-                    var t = $(this);
-                    e.find("ul")[0] != i && setTimeout(function () {
-                        t.attr("style", "")
-                    }, 300)
-                }) : setTimeout(function () {
-                    e.find("ul").attr("style", "")
-                }, 300)
-            }), $(".user-info-menu .hidden-sm").click(function () {
-                $(".sidebar-menu").hasClass("collapsed") ? $(".has-sub.expanded > ul").attr("style",
-                    "") : $(".has-sub.expanded > ul").show()
-            }), $("#main-menu li ul li").click(function () {
-                $(this).siblings("li").removeClass("active"), $(this).addClass("active")
-            }), $("a.smooth").click(function (s) {
-                s.preventDefault(), public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass(
-                    "mobile-is-visible"), ps_destroy(), $("html, body").animate({
-                    scrollTop: $($(this).attr("href")).offset().top - 30
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                })
-            }), !1
-        });
-        var href = "",
-            pos = 0;
-        $("a.smooth").click(function (s) {
-            $("#main-menu li").each(function () {
-                    $(this).removeClass("active")
-                }), $(this).parent("li").addClass("active"), s.preventDefault(), href = $(this).attr("href"),
-                pos = $(href).position().top - 30
-        })
-    </script>
-    <script src="js/jquery-3.2.1.js"></script>
+    <!-- 悬浮窗 -->
+    <div class="wapnone suspension">
+        <ul>
+          <li class="suspension_box suspension_ax" onclick="switchNightMode()">
+            <div class="suspension_ax_cont" id="fk-span"> <span class="suspension_triangle"
+                id="fk-span-right"></span><span id="suspension_text">切换夜间模式</span></div>
+          </li>
+          <a rel="go-top">
+            <li class="suspension_box suspension_upward" id="topup" style="display: none;">
+              <div class="suspension_upward_cont" id="fk-span"> <span class="suspension_triangle"
+                  id="fk-span-right"></span> <span>返回顶部</span>
+              </div>
+            </li>
+          </a>
+        </ul>
+    </div>
+    <!-- 悬浮窗 end -->
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
-    <script src="js/resizeable.js"></script>
-    <script src="js/joinable.js"></script>
-    <script src="js/xenon-api.js"></script>
-    <script src="js/xenon-toggles.js"></script>
-    <script src="js/xenon-custom.js"></script>
-    <script src="js/lozad.js"></script>
+    <script src="js/resizeable.min.js"></script>
+    <script src="js/joinable.min.js"></script>
+    <script src="js/xenon-api.min.js"></script>
+    <script src="js/xenon-toggles.min.js"></script>
+    <script src="js/xenon-custom.min.js"></script>
+    <script src="js/lozad.min.js"></script>
+    <script src="js/function.min.js"></script>
     <script type="text/javascript"> 
         function imgerrorfun(){ 
             var img=event.srcElement; 
