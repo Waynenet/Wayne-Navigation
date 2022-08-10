@@ -2431,8 +2431,6 @@ body.chat-open .user-info-navbar a[data-toggle="chat"] {
   background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
   -webkit-background-clip: text;
   color: transparent;
-  border-bottom: 1px solid #fff0;
-  top: 1px;
   z-index: 5;
   text-decoration: none;
 }

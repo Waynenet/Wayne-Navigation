@@ -11,6 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/wayne.png"/>
     <link rel="stylesheet" href="css/linecons.css">
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/dark.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/xenon-core.css">
     <link rel="stylesheet" href="css/xenon-components.css">
@@ -20,6 +21,11 @@
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/wayne-img@latest/css/fontawesomepro6.1.0.css"
     media="all">
+    <!-- Izitoast -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/css/iziToast.min.css">
+    <script type="text/javascript"
+    src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/izitoast/1.4.0/js/iziToast.min.js">
+    </script>
 </head>
 <body class="page-body">
     <div class="page-container">
@@ -35,9 +41,11 @@
                             <img src="images/wayne.png" width="40" alt="" />
                         </a>
                     </div>
-                    <div class="mobile-menu-toggle visible-xs"><a href="#" data-toggle="user-info-menu" style="margin-right: 25px"><i
-                                class="linecons-cog"></i></a><a href="#" data-toggle="mobile-menu" style="margin-right: 25px"><i
-                                class="fa-bars"></i></a></div>
+                    <div class="mobile-menu-toggle visible-xs">
+                        <a onclick="switchNightMode()" style="margin-right: 25px"><i class="fa-solid fa-circle-half-stroke"></i></a>
+                        <a href="#" data-toggle="user-info-menu" style="margin-right: 25px"><i class="linecons-cog"></i></a>
+                        <a href="#" data-toggle="mobile-menu" style="margin-right: 25px"><i class="fa-bars"></i></a>
+                    </div>
                 </header>
                 <ul id="main-menu" class="main-menu">
                     <li><a href="#search" class="smooth"><i class="linecons-search"></i> <span class="title">Search</span></a></li>
@@ -141,7 +149,7 @@
             </li>
         </ul>
         <ul class="user-info-menu right-links list-inline list-unstyled">
-            <li class="hidden-sm hidden-xs text-gray" style="padding:30px 0px">
+            <li class="hidden-sm hidden-xs" style="top:30px">
                 <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tz&skin=gif&color=f0610e" 
                 frameborder="0" width="100%" height="30" allowtransparency="true"></iframe>
             </li>
@@ -259,8 +267,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("http://www.guozhivip.com/rank/","_blank")' data-toggle="tooltip"
@@ -377,8 +383,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://bilibili.com/', '_blank')" data-toggle="tooltip" 
@@ -451,8 +455,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://www.52pojie.cn/', '_blank')" data-toggle="tooltip" 
@@ -525,8 +527,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://gitee.com/","_blank")' data-toggle="tooltip"
@@ -823,8 +823,6 @@
                 </div>
             </div>
         </div>
-    </div>
-        <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.tkys.tv/","_blank")' data-toggle="tooltip"
@@ -941,8 +939,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.zxzjtv.com/","_blank")' data-toggle="tooltip"
@@ -1015,8 +1011,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.mkvdo.com/","_blank")' data-toggle="tooltip"
@@ -1195,8 +1189,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.kan.cc/","_blank")' data-toggle="tooltip"
@@ -1579,8 +1571,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.dygangs.com/', '_blank')" data-toggle="tooltip" 
@@ -1733,8 +1723,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://tool.chinaz.com/","_blank")' data-toggle="tooltip"
@@ -1807,8 +1795,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://docsmall.com/","_blank")' data-toggle="tooltip"
@@ -1907,8 +1893,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://bigjpg.com/","_blank")' data-toggle="tooltip"
@@ -1981,8 +1965,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.fococlipping.com/","_blank")' data-toggle="tooltip"
@@ -2055,8 +2037,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.iloveimg.com/","_blank")' data-toggle="tooltip"
@@ -2155,8 +2135,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.hipdf.cn/pdf-to-word","_blank")' data-toggle="tooltip"
@@ -2229,8 +2207,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.aconvert.com/cn/","_blank")' data-toggle="tooltip"
@@ -2383,8 +2359,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://getavataaars.com/","_blank")' data-toggle="tooltip"
@@ -2457,8 +2431,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://ctfile.qinlili.bid/","_blank")' data-toggle="tooltip"
@@ -2593,8 +2565,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://habo.qq.com/","_blank")' data-toggle="tooltip"
@@ -2667,8 +2637,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://unlock-music-ix.netlify.app/","_blank")' data-toggle="tooltip"
@@ -2740,8 +2708,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://ip8.com/","_blank")' data-toggle="tooltip"
@@ -2812,8 +2778,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("http://speed.neu6.edu.cn/","_blank")' data-toggle="tooltip"
@@ -2966,8 +2930,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://apkpure.com/","_blank")' data-toggle="tooltip"
@@ -3040,8 +3002,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://youtube.iiilab.com/","_blank")' data-toggle="tooltip"
@@ -3140,8 +3100,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://u.tools/","_blank")' data-toggle="tooltip"
@@ -3214,8 +3172,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://faxian.appinn.com/', '_blank')" data-toggle="tooltip" 
@@ -3286,8 +3242,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://www.atlassian.com/software/confluence?bundle=confluence&edition=free', '_blank')" data-toggle="tooltip" 
@@ -3440,8 +3394,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://greasyfork.org/","_blank")' data-toggle="tooltip"
@@ -3576,8 +3528,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://smailpro.com/","_blank")' data-toggle="tooltip"
@@ -3650,8 +3600,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("http://www.fakemailgenerator.com/","_blank")' data-toggle="tooltip"
@@ -3750,8 +3698,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.pixiv.net/","_blank")' data-toggle="tooltip"
@@ -3824,8 +3770,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.vmgirls.com/","_blank")' data-toggle="tooltip"
@@ -4018,8 +3962,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.tretars.com/ppt-templates', '_blank')" data-toggle="tooltip" 
@@ -4147,8 +4089,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://ziticq.com/', '_blank')" data-toggle="tooltip" 
@@ -4281,8 +4221,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.yin2s.com/","_blank")' data-toggle="tooltip"
@@ -4355,8 +4293,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.52doutu.cn/","_blank")' data-toggle="tooltip"
@@ -4569,8 +4505,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://api.btstu.cn/', '_blank')" data-toggle="tooltip" 
@@ -4643,8 +4577,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://api.ddkjt.com/index.php', '_blank')" data-toggle="tooltip" 
@@ -4717,8 +4649,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://api.wuenci.com/meting/api/","_blank")' data-toggle="tooltip"
@@ -4877,8 +4807,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://www.aliyundrive.com/","_blank")' data-toggle="tooltip"
@@ -4951,8 +4879,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://cloud.huawei.com/","_blank")' data-toggle="tooltip"
@@ -5025,8 +4951,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://vercel.com/","_blank")' data-toggle="tooltip"
@@ -5099,8 +5023,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://www.mongodb.com/', '_blank')" data-toggle="tooltip" 
@@ -5235,8 +5157,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://gitee.com/","_blank")' data-toggle="tooltip"
@@ -5309,8 +5229,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://e5.qyi.io/', '_blank')" data-toggle="tooltip" 
@@ -5463,8 +5381,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://pagespeed.web.dev/","_blank")' data-toggle="tooltip"
@@ -5679,8 +5595,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://web.dudianji.com/","_blank")' data-toggle="tooltip"
@@ -5833,8 +5747,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://game.chronodivide.com/","_blank")' data-toggle="tooltip"
@@ -5907,8 +5819,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://flash.zczc.cz/","_blank")' data-toggle="tooltip"
@@ -5981,8 +5891,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info"
                 onclick='window.open("https://lines.frvr.com/","_blank")' data-toggle="tooltip"
@@ -6505,8 +6413,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('https://www.leiphone.com/', '_blank')" data-toggle="tooltip" 
@@ -6575,8 +6481,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.woshipm.com/', '_blank')" data-toggle="tooltip" 
@@ -6645,8 +6549,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.iyunying.org/', '_blank')" data-toggle="tooltip" 
@@ -6716,8 +6618,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-3">
             <div class="xe-widget xe-conversations box2 label-info" 
                 onclick="window.open('http://www.yxdown.com/', '_blank')" data-toggle="tooltip" 
@@ -6820,11 +6720,6 @@
                     <strong>WebStack</strong>
                 </a>
             </div>
-            <div class="go-up">
-                <a href="#" rel="go-top">
-                    <i class="fa-angle-up"></i>
-                </a>
-            </div>
         </div>
     </footer>
     </div>
@@ -6841,46 +6736,23 @@
 
         });
     </script>
-    <script>
-    $(document).ready(function() {
-            //img lazy loaded
-            const observer = lozad();
-            observer.observe();
-
-            return $(document).on("click", ".has-sub", function () {
-                var e = $(this);
-                $(this).hasClass("expanded") ? $(".has-sub ul").each(function (s, i) {
-                    var t = $(this);
-                    e.find("ul")[0] != i && setTimeout(function () {
-                        t.attr("style", "")
-                    }, 300)
-                }) : setTimeout(function () {
-                    e.find("ul").attr("style", "")
-                }, 300)
-            }), $(".user-info-menu .hidden-sm").click(function () {
-                $(".sidebar-menu").hasClass("collapsed") ? $(".has-sub.expanded > ul").attr("style",
-                    "") : $(".has-sub.expanded > ul").show()
-            }), $("#main-menu li ul li").click(function () {
-                $(this).siblings("li").removeClass("active"), $(this).addClass("active")
-            }), $("a.smooth").click(function (s) {
-                s.preventDefault(), public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass(
-                    "mobile-is-visible"), ps_destroy(), $("html, body").animate({
-                    scrollTop: $($(this).attr("href")).offset().top - 30
-                }, {
-                    duration: 500,
-                    easing: "swing"
-                })
-            }), !1
-        });
-        var href = "",
-            pos = 0;
-        $("a.smooth").click(function (s) {
-            $("#main-menu li").each(function () {
-                    $(this).removeClass("active")
-                }), $(this).parent("li").addClass("active"), s.preventDefault(), href = $(this).attr("href"),
-                pos = $(href).position().top - 30
-        })
-    </script>
+    <!-- 悬浮窗 -->
+    <div class="wapnone suspension">
+        <ul>
+          <li class="suspension_box suspension_ax" onclick="switchNightMode()">
+            <div class="suspension_ax_cont" id="fk-span"> <span class="suspension_triangle"
+                id="fk-span-right"></span><span id="suspension_text">切换夜间模式</span></div>
+          </li>
+          <a rel="go-top">
+            <li class="suspension_box suspension_upward" id="topup" style="display: none;">
+              <div class="suspension_upward_cont" id="fk-span"> <span class="suspension_triangle"
+                  id="fk-span-right"></span> <span>返回顶部</span>
+              </div>
+            </li>
+          </a>
+        </ul>
+    </div>
+    <!-- 悬浮窗 end -->
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/TweenMax.min.js"></script>

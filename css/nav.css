@@ -45,6 +45,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  margin-right: 4px;
 }
 .overflowClip_2 {
   overflow: hidden;
@@ -53,10 +54,234 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
-.submit-tag {
-  margin-top: 50px;
-}
-
 .img-circle {
   padding: 7px 0;
+}
+/* 打赏 */
+#reward {
+  margin-top: 25px;
+  border: 0px solid white;
+  cursor: pointer;
+  background-color: #e92843;
+  color: white;
+  border-radius: 5px;
+  width: 88px;
+  height: 36px;
+  font-size: 21px;
+}
+#qrcode img {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  margin: auto;
+  border-radius: 5px;
+}
+#qrcode {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 62%);
+  z-index: 9999;
+  display: none;
+}
+.search_btn {
+  outline: 0;
+  border: none;
+  background: #ffffffba none;
+  color: rgba(0,0,0,.6);
+  padding: 5px 10px 5px 10px;
+  height: 30px;
+  border-radius: 30px;
+}
+/* 背景 */
+body {
+  background-image: url(https://api.btstu.cn/sjbz/api.php?lx=suiji&format=images); /* 随机图片API */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  body {
+    background-image: url(https://api.dujin.org/bing/m.php); /* 随机图片API */
+  }
+}
+/*悬浮窗*/
+.suspension {
+  max-height: 232px;
+  position: fixed;
+  right: 8px;
+  top: 66%;
+  /* 垂直位置 */
+  font-size: 14px;
+  color: #243558;
+  z-index: 10000
+}
+.suspension ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0
+}
+.suspension li {
+  list-style-type: none
+}
+.suspension li>div {
+  box-sizing: border-box;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+}
+.suspension_box {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.suspension_triangle {
+  top: 12px;
+  right: -11px;
+  position: absolute;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 11px solid #e1e6ec;
+  z-index: 1010;
+  transition: 0.3s;
+}
+.suspension_triangle:after {
+  content: "\20";
+  top: -6px;
+  right: 1px;
+  position: absolute;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid #fff;
+  z-index: 1000;
+  transition: 0.3s;
+}
+.suspension_triangle:before {
+  content: "\20";
+  width: 80px;
+  height: 45px;
+  top: -20px;
+  right: -52px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+@keyframes fade-in {
+  0% {
+      opacity: .4;
+      right: 82px
+  }
+  100% {
+      opacity: 1;
+      right: 62px
+  }
+}
+/* 回顶按钮 */
+.suspension_upward {
+  background: url(../images/up.png) no-repeat center center #fff;
+  background-size: 60% 60%;
+}
+.suspension_upward:hover {
+  border: 0;
+  background: url(../images/up-dark.png) no-repeat center center #4f7cfc;
+  background-size: 60% 60%;
+  cursor: pointer
+}
+.suspension_upward:hover .suspension_upward_cont {
+  display: block;
+  opacity: 1;
+  transition: linear .2s;
+  animation-name: fade-in;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-delay: 0s
+}
+.suspension_upward_cont {
+  width: 90px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  color: black;
+  background: #fff;
+  right: 62px;
+  position: absolute;
+  text-align: center;
+  border: 1px solid #e1e6ec;
+  display: none;
+  opacity: 0;
+  box-shadow: 0 0 9px 0 rgb(0 0 0 / 10%);
+}
+/* 回顶结束 */
+/* 暗色模式按钮 */
+.suspension_ax {
+  background: url(../images/sun.png) no-repeat center center #fff;
+  background-size: 50% 50%;
+}
+.suspension_ax:hover {
+  border: 0;
+  background: url(../images/sun.png) no-repeat center center #4f7cfc;
+  background-size: 50% 50%;
+  cursor: pointer
+}
+.suspension_ax:hover .suspension_ax_cont {
+  display: block;
+  opacity: 1;
+  transition: linear .2s;
+  animation-name: fade-in;
+  animation-duration: .3s;
+  animation-iteration-count: 1;
+  animation-delay: 0s
+}
+.suspension_ax_cont {
+  width: 112px;
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  border-radius: 5px;
+  right: 62px;
+  text-align: center;
+  position: absolute;
+  display: none;
+  border: 1px solid #e1e6ec;
+}
+/* 暗色模式按钮结束 */
+/*弹窗*/
+.iziToast-texts {
+  max-width: 300px !important;
+  min-width: 200px !important;
+}
+
+.iziToast-body .iziToast-message {
+  line-height: 18px !important;
+}
+
+.iziToast:after {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+}
+
+.iziToast-message.slideIn {
+  margin-top: 5px !important;
+}
+
+.iziToast-message {
+  word-break: break-all !important;
+}
+
+@media screen and (max-width: 500px) {
+  .iziToast-texts {
+      max-width: unset !important;
+      min-width: unset !important;
+  }
 }
