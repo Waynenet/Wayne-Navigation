@@ -177,12 +177,11 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：1.1.2
-更新日期：2022-08-07
+版 本 号：2.0.0
+更新日期：2022-08-10
 
 WayneのNavigation: https://3301.ml/
 Github:  https://github.com/Waynenet/Wayne-Navigation
 `
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
-

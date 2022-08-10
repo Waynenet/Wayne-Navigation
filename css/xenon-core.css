@@ -2335,44 +2335,6 @@ footer.main-footer .footer-text {
   -webkit-background-clip: text;
   color: transparent;
 }
-footer.main-footer .go-up {
-  float: right;
-  font-size: 20px;
-}
-footer.main-footer .go-up a {
-    display: inline-block;
-    background-color: #03b8cfad;
-    padding: 0px 5px;
-}
-footer.main-footer .go-up a:hover {
-  background-color: rgba(44, 46, 47, 0.1);
-}
-@media screen and (max-width: 767px) {
-  footer.main-footer .go-up a {
-    background-color: #d2136bb0;
-  }
-  footer.main-footer .go-up a:hover {
-    background-color: #d2136bb0;
-  }
-  .user-info-navbar {
-    background-color: #ffffff38;
-    backdrop-filter: blur(15px);
-  }
-}
-footer.main-footer.footer-type-2 {
-  background-color: #252729;
-  border-top: 0;
-  color: #fff;
-}
-footer.main-footer.footer-type-2 a {
-  color: #fff;
-}
-footer.main-footer.footer-type-2 .go-up a {
-  background-color: rgba(255, 255, 255, 0.05);
-}
-footer.main-footer.footer-type-2 .go-up a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
 footer.main-footer.fixed {
   position: fixed;
   left: 0px;
@@ -2392,6 +2354,12 @@ body.chat-open .user-info-navbar a[data-toggle="chat"] {
   padding: 0;
   margin: -30px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  .user-info-navbar {
+    background-color: #ffffff38;
+    backdrop-filter: blur(15px);
+  }
 }
 .user-info-navbar .user-info-menu {
   margin: 0;
