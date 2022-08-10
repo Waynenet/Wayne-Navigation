@@ -4,8 +4,7 @@ body.night a {
 }
 
 body.night {
-    background-color: #232323 !important;
-    background-image: url() !important;
+    background-image: none !important;
     transition: 0.3s;
 }
 

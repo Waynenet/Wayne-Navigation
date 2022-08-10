@@ -1,205 +1,3 @@
-function autoFillSearch() {
-    var strdomin = $("#searchText").val();
-
-    if (strdomin == null || strdomin == "") {
-        hideDiv($("#autoFillInput"));
-        return;
-    }
-  
-    window.status = "请求中";
-
-    var qsData = {'wd': strdomin, 'p': '3', 'cb': 'ShowDiv', 't': new Date().getMilliseconds().toString()};
-    $.ajax({
-        async: false,
-        url: "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su",
-        type: "GET",
-        dataType: 'jsonp',
-        jsonp: 'jsoncallback',
-        data: qsData,
-        timeout: 5000,
-        success: function (json) {
-        },
-        error: function (xhr) {
-        }
-    });
-}
-
-function hideDiv(element) {
-    element.empty();
-    element.hide(); 
-}
-function searchTextOnblur(){
-    // hideDiv($("#autoFillInput"));
-    // $("#autoFillInput").hide();
-}
-function ShowDiv(strurls) {
-    autoDisplay(strurls);
-    window.status = "请求结束";
-}
-
-var highlightindex = -1;   //高亮
-function autoDisplay(autoStr) {
-    var Info = autoStr['s'];   //拿到关键字提示
-
-    var wordText = $("#searchText").val();
-    var autoNode = $("#autoFillInput");   
-
-    if (Info.length == 0) {
-        autoNode.hide();
-        return false;
-    }
-
-    autoNode.empty();  //清空上次
-    for (var i = 0; i < Info.length; i++) {
-        var wordNode = Info[i];   //弹出框里的每一条内容
-
-        var newDivNode = $("<div>").attr("id", i);    //设置每个节点的id值
-        newDivNode.attr("style", "font:14px/25px arial;height:25px;padding:0 8px;cursor: pointer; text-align:left");
-
-        newDivNode.html(wordNode).appendTo(autoNode);  //追加到弹出框
-
-        //鼠标移入高亮，移开不高亮
-        newDivNode.mouseover(function () {
-            if (highlightindex != -1) {        //原来高亮的节点要取消高亮（是-1就不需要了）
-                autoNode.children("div").eq(highlightindex).css("background-color", "white");
-            }
-            //记录新的高亮节点索引
-            highlightindex = $(this).attr("id");
-            $(this).css("background-color", "#ebebeb");
-        });
-        newDivNode.mouseout(function () {
-            $(this).css("background-color", "white");
-        });
-
-        //鼠标点击文字上屏
-        newDivNode.click(function () {
-            //取出高亮节点的文本内容
-            var comText = autoNode.hide().children("div").eq(highlightindex).text();
-            highlightindex = -1;
-            //文本框中的内容变成高亮节点的内容
-            $("#searchText").val(comText);
-        });
-        if (Info.length > 0) {    //如果返回值有内容就显示出来
-            autoNode.show();
-        } else {               //服务器端无内容返回 那么隐藏弹出框
-            autoNode.hide();
-            //弹出框隐藏的同时，高亮节点索引值也变成-1
-            highlightindex = -1;
-        }
-
-    }
-
-}
-
-function search_click(engine){
-    hideDiv($("#autoFillInput"));
-	 var v = document.getElementById("searchText").value;
-    if (v != '') {
-
-        if (engine == '') {
-            search('https://fsoufsou.com/search?q=' + v)
-        } else {
-            if (engine === 'fsou') {
-                search('https://fsoufsou.com/search?q=' + v)
-            } else if (engine === 'bing') {
-                search("https://cn.bing.com/search?q=" + v)
-            } else if (engine === 'google') {
-                search("https://www.google.com.hk/search?q=" + v)
-            } else if (engine === 'github') {
-            	search('https://github.com/search?q=' + v)
-            } else if (engine === 'baidu') {
-                search("https://www.baidu.com/s?wd=" + v)
-            } else if (engine === 'sogou') {
-                search("https://www.sogou.com/web?query=" + v)
-            } else if (engine === 'zhihu') {
-                search("https://www.zhihu.com/search?type=content&q=" + v)
-            } else if (engine === 'bilibili') {
-                search("https://search.bilibili.com/all?keyword=" + v)
-            } else if (engine === 'google-image') {
-            	search('https://www.googlebridge.com/search?q=' + v )
-            }
-        }
-    }
-}
-
-
-
-function search(url) {
-    window.open(url)
-}
-
-$(function () {
-     $("#searchText").keyup(function (event) {
-        var myEvent = event || window.event;
-        var keyCode = myEvent.keyCode;
-
-        if (keyCode == 38 || keyCode == 40) {
-            if (keyCode == 38) {       //向上
-                var autoNodes = $("#autoFillInput").children("div");
-                if (highlightindex != -1) {
-                    //如果原来存在高亮节点，则将背景色改称白色
-                    autoNodes.eq(highlightindex).css("background-color", "white");
-                    highlightindex--;
-                } else {
-                    highlightindex = autoNodes.length - 1;
-                }
-                if (highlightindex == -1) {
-                    //如果修改索引值以后index变成-1，则将索引值指向最后一个元素
-                    highlightindex = autoNodes.length - 1;
-                }
-                //让现在高亮的内容变成红色
-                autoNodes.eq(highlightindex).css("background-color", "#ebebeb");
-
-                //取出当前选中的项 赋值到输入框内
-                var comText = autoNodes.eq(highlightindex).text();
-                $("#searchText").val(comText);
-            }
-            if (keyCode == 40) {    //向下
-                var autoNodes = $("#autoFillInput").children("div");
-                if (highlightindex != -1) {
-                    //如果原来存在高亮节点，则将背景色改称白色
-                    autoNodes.eq(highlightindex).css("background-color", "white");
-                }
-                highlightindex++;
-                if (highlightindex == autoNodes.length) {
-                    //如果修改索引值以后index变成-1，则将索引值指向最后一个元素
-                    highlightindex = 0;
-                }
-                //让现在高亮的内容变成红色
-                autoNodes.eq(highlightindex).css("background-color", "#ebebeb");
-
-                var comText = autoNodes.eq(highlightindex).text();
-                $("#searchText").val(comText);
-            }
-        } else if (keyCode == 13) {     //回车
-            //下拉框有高亮内容
-            if (highlightindex != -1) {
-                //取出高亮节点的文本内容
-                var comText = $("#autoFillInput").hide().children("div").eq(highlightindex).text();
-                highlightindex = -1;
-                //文本框中的内容变成高亮节点的内容
-                $("#searchText").val(comText);
-            } 
-            search_click("baidu");
-        } else if (keyCode == 27) {    //按下Esc 隐藏弹出层
-            if ($("#autoFillInput").is(":visible")) {
-                $("#autoFillInput").hide();
-            }
-        }
-
-     });
-    //点击页面隐藏自动补全提示框
-    document.onclick = function (e) {
-        var e = e ? e : window.event;
-        var tar = e.srcElement || e.target;
-        if (tar.id != "searchText") {
-            if ($("#autoFillInput").is(":visible")) {
-                $("#autoFillInput").css("display", "none")
-            }
-        }
-    }
-});
-
 //回到顶部
 window.onscroll = function () {
     if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
@@ -261,6 +59,7 @@ function switchNightMode() {
     var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
     if (night == '0') {
         dark();
+        starry();
     } else {
         light();
     }
@@ -270,6 +69,7 @@ window.matchMedia('(prefers-color-scheme: dark)')
     .addEventListener('change', event => {
         if (event.matches) {
             dark();
+            starry();
         } else {
             light();
         }
@@ -353,6 +153,60 @@ $(document).ready(function () {
         }
     }
 })();
+
+/* 星空背景 */
+function starry() {
+    window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;
+    var n,e,i,h,t=.05,s=document.getElementById("starfield"),
+    o=!0,a="180,184,240",r="226,225,142",d="226,225,224",c=[];
+    function f(){
+        n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)
+    }
+    function u(){
+        h.clearRect(0,0,n,e);
+        for(var t=c.length,i=0;i<t;i++){
+            var s=c[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()
+        }
+    }
+    function y(){
+        this.reset=function(){
+            this.giant=m(3),this.comet=!this.giant&&!o&&m(10),this.x=l(0,n-10),this.y=l(0,e),this.r=l(1.1,2.6),
+            this.dx=l(t,6*t)+(this.comet+1-1)*t*l(50,120)+2*t,this.dy=-l(t,6*t)-(this.comet+1-1)*t*l(50,120),
+            this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=l(.2,1-.4*(this.comet+1-1)),
+            this.do=l(5e-4,.002)+.001*(this.comet+1-1)
+        },
+        this.fadeIn=function(){
+            this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)
+        },
+        this.fadeOut=function(){
+            this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,
+        (this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))
+        },
+        this.draw=function(){
+            if(h.beginPath(),this.giant)h.fillStyle="rgba("+a+","+this.opacity+")",
+            h.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){h.fillStyle="rgba("+d+","+this.opacity+")",
+            h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var t=0;t<30;t++)h.fillStyle="rgba("+d+","+(this.opacity-this.opacity/20*t)+")",
+            h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()}else h.fillStyle="rgba("+r+","+this.opacity+")",
+            h.rect(this.x,this.y,this.r,this.r);h.closePath(),h.fill()
+        },
+        this.move=function(){
+            this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)
+        },setTimeout(function(){o=!1},50)
+    }
+    function m(t){
+        return Math.floor(1e3*Math.random())+1<10*t
+    }
+    function l(t,i){
+        return Math.random()*(i-t)+t
+    }
+    f(),window.addEventListener("resize",f,!1),
+    function(){
+        h=s.getContext("2d");for(var t=0;t<i;t++)c[t]=new y,c[t].reset();u()
+    }(),
+    function t(){
+        document.getElementsByTagName('html')[0].getAttribute('night')=='1'&&u(),window.requestAnimationFrame(t)
+    }()
+};
 
 //控制台输出
 console.clear();
