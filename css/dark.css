@@ -130,6 +130,16 @@ body.night .go-up a:hover {
     color: #979898;
 }
 
+/* 关于 */
+.night .label.label-blue {
+    background-color: #232323;
+    color: #d8d8d8;
+}
+.night .label.label-info {
+    background-color: #232323;
+    color: #d8d8d8;
+}
+
 /*搜索栏*/
 .night span.dark-text {
     color: #ddd9ce !important;
