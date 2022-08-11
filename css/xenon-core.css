@@ -3538,7 +3538,8 @@ body.chat-open #chat {
     display: inline-block;
     color: #d2136b;
     line-height: 1;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
   }
   .page-container
     .sidebar-menu
