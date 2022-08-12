@@ -120,37 +120,61 @@ $(document).ready(function () {
         });
     });
     return false;
-    });
+});
     
-    var href = "";
-    var pos = 0;
-    $("a.smooth").click(function (e) {
-    $("#main-menu li").each(function () {
-        $(this).removeClass("active");
-    });
-    $(this).parent("li").addClass("active");
-    e.preventDefault();
-    href = $(this).attr("href");
-    pos = $(href).position().top - 30;
-    });
-    (function () {
-    if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-        if (new Date().getHours() > 22 || new Date().getHours() < 6) {
-        document.body.classList.add('night');
-        document.cookie = "night=1;path=/";
-        } else {
-        document.body.classList.remove('night');
-        document.cookie = "night=0;path=/";
-        }
+var href = "";
+var pos = 0;
+$("a.smooth").click(function (e) {
+$("#main-menu li").each(function () {
+    $(this).removeClass("active");
+});
+$(this).parent("li").addClass("active");
+e.preventDefault();
+href = $(this).attr("href");
+pos = $(href).position().top - 30;
+});
+(function () {
+if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
+    if (new Date().getHours() > 22 || new Date().getHours() < 6) {
+    document.body.classList.add('night');
+    document.cookie = "night=1;path=/";
     } else {
-        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-        if (night == '0') {
-        document.body.classList.remove('night');
-        } else if (night == '1') {
-        document.body.classList.add('night');
-        }
+    document.body.classList.remove('night');
+    document.cookie = "night=0;path=/";
     }
+} else {
+    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+    if (night == '0') {
+    document.body.classList.remove('night');
+    } else if (night == '1') {
+    document.body.classList.add('night');
+    }
+}
 })();
+
+//鼠标在左边菜单的时候，禁用body的滚动条，防止滚动左边的时候右边也一起滚动
+//function IsPC() {
+//    var userAgentInfo = navigator.userAgent;
+//    var Agents = ["Android", "iPhone","SymbianOS", "Windows Phone", "iPad", "iPod"];
+//    var flag = true;
+//    for (var v = 0; v < Agents.length; v++) {
+//        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+//            flag = false;
+//            break;
+//        }
+//    }
+//    return flag;
+//};
+//$(document).ready(function(){
+//    var isPC=IsPC();
+//    if(isPC){
+//        $('.sidebar-menu-inner').mousemove(function () {
+//            document.body.style.overflow = 'hidden';
+//        }).mouseleave(function () {
+//            document.body.style.overflow = 'auto';
+//        });
+//    }
+//});
 
 //控制台输出
 console.clear();

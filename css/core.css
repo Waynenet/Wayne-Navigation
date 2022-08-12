@@ -92,7 +92,7 @@
 /*搜索框*/
 #search {
   max-width: 700px;
-  margin: 60px auto 20px;
+  margin: 60px auto 0px;
 }
 
 #search form {
@@ -317,7 +317,7 @@
 
 @media screen and (max-width:767px) {
   #search {
-      margin: 25px auto 15px
+      margin: 20px auto 0px
   }
 
   .s-type-list label {
@@ -333,12 +333,6 @@
       overflow-y: hidden;
       overflow-x: scroll;
       white-space: nowrap
-  }
-}
-
-@media screen and (min-width:768px) {
-  #search {
-      margin: 80px auto 14px !important;
   }
 }
 
