@@ -518,19 +518,9 @@ body {
 /* 暗色模式按钮结束 */
 /*滚动条*/
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff00;
+  width: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: #767676;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #484848;
-}
 /*弹窗*/
 .iziToast-texts {
   max-width: 300px !important;

@@ -152,6 +152,13 @@ $(document).ready(function () {
     }
 })();
 
+//鼠标在左边菜单的时候，禁用body的滚动条，防止滚动左边的时候右边也一起滚动
+$('.sidebar-menu-inner').mousemove(function () {
+    document.body.style.overflow = 'hidden';
+}).mouseleave(function () {
+    document.body.style.overflow = 'auto';
+});
+
 //控制台输出
 console.clear();
 let styleTitle1 = `
@@ -177,8 +184,8 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.0.2
-更新日期：2022-08-11
+版 本 号：2.1.0
+更新日期：2022-08-12
 
 WayneのNavigation: https://3301.ml/
 Github:  https://github.com/Waynenet/Wayne-Navigation
