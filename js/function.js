@@ -153,11 +153,15 @@ $(document).ready(function () {
 })();
 
 //鼠标在左边菜单的时候，禁用body的滚动条，防止滚动左边的时候右边也一起滚动
-$('.sidebar-menu-inner').mousemove(function () {
-    document.body.style.overflow = 'hidden';
-}).mouseleave(function () {
+if(window.matchMedia("(max-width: 767px)").matches){
+    $('.sidebar-menu-inner').mousemove(function () {
+        document.body.style.overflow = 'hidden';
+    }).mouseleave(function () {
+        document.body.style.overflow = 'auto';
+    });
+}else {
     document.body.style.overflow = 'auto';
-});
+}
 
 //控制台输出
 console.clear();
