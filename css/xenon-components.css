@@ -2058,9 +2058,6 @@ lesshat-selector {
   position: fixed;
   top: 15px;
 }
-.navbar.horizontal-menu + .page-container .tocify.fixed {
-  top: 110px;
-}
 @media (max-width: 991px) {
   .tocify {
     top: 0;
