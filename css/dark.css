@@ -8,22 +8,6 @@ body.night {
     transition: 0.3s;
 }
 
-/* 背景宇宙星光 */
-body.night #starfield{
-    display: block;
-    position: fixed;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
-
 body.night .board {
     background: #2c2e2f;
     box-shadow: 0px 0px 6px #00000061;
@@ -50,6 +34,10 @@ body.night .text-gray {
 
 body.night .xe-widget.xe-conversations {
     background: #464646a6;
+}
+
+body.night .xe-comment-entry img {
+    filter: brightness(95%);
 }
 
 body.night .box2 {
@@ -123,6 +111,22 @@ body.night .go-up a:hover {
     background-color: rgb(123 123 123 0.6) !important;
 }
 
+/* 背景宇宙星光 */
+body.night #starfield{
+    display: block;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
 /*左侧导航栏*/
 .night .sidebar-menu {
     background: #464646a6;
@@ -154,82 +158,47 @@ body.night .go-up a:hover {
     background-color: #232323a6;
     color: #d8d8d8;
 }
+/* 打赏 */
+.night #reward {
+    border: 0px solid #d8d8d8;
+    background-color: #e9284252;
+    color: #d8d8d8;
+}
 
 /*搜索栏*/
 .night span.dark-text {
     color: #ddd9ce !important;
 }
 
-.night #search-text,
 .night .search-type input:checked+label,
 .night .search-type input:hover+label {
     background-color: #464646a6 !important;
 }
 
 .night .s-type-list {
-    background-color: #464646a6;
-    box-shadow: 0 9px 20px rgba(0, 0, 0, .3)
+    background-color: #464646ea;
+    box-shadow: 0 9px 20px rgba(0, 0, 0, .7)
 }
 
 .night .s-type-list:before {
-    border-bottom-color: #464646a6;
-}
-
-.night .s-type-list label:hover {
-    background: rgba(31, 31, 31, 0.7)
+    border-bottom-color: #464646ea;
 }
 
 .night .type-text{
     color: #d8d8d8;
 }
 
-body.night .submit {
-    color: #a5a5a5;
-    background-color: #0000008f;
-    border: 0px;
-    border-radius: 5px;
-    padding: 5px 10px;
-    font-size: 15px;
-    float: right;
-    margin-top: 10px;
-}
+.night #search button:hover {
+    background: #464646a6;
+  }
 
-body.night #search button i {
+.night #search button i {
     color: #b1b1b1;
 }
 
-body.night #search-text {
+.night #search-text {
     background-color: #464646a6;
     color: #bdbdbd;
-}
-
-body.night .search-type input:checked+label,
-.search-type input:hover+label {
-    background-color: #464646a6;
-}
-
-body.night .s-type-list {
-    background: #464646a6;
-    box-shadow: 0 0 6px rgba(0, 0, 0, .16);
-}
-
-body.night .xe-comment-entry img {
-    filter: brightness(95%);
-}
-
-body.night .search-input {
-    border: 1px solid #424242;
-    border-radius: 10px;
-    background-color: #424242;
-}
-
-body.night .search-engine {
-    background: #424242;
-    box-shadow: 0px 5px 20px 0px #2c2e2f;
-}
-
-body.night .search-engine-list li {
-    background: #424242;
 }
 
 /*悬浮窗*/

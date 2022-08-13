@@ -1,3 +1,52 @@
+$(document).ready(function () {
+    //img lazy loaded
+    const observer = lozad();
+    observer.observe();
+    
+    $(document).on('click', '.has-sub', function () {
+        var _this = $(this)
+        if (!$(this).hasClass('expanded')) {
+        setTimeout(function () {
+            _this.find('ul').attr("style", "")
+        }, 300);
+    
+        } else {
+        $('.has-sub ul').each(function (id, ele) {
+            var _that = $(this)
+            if (_this.find('ul')[0] != ele && !expandAll) {
+            setTimeout(function () {
+                _that.attr("style", "")
+            }, 300);
+            }
+        })
+        }
+    })
+    $('.user-info-menu .hidden-sm').click(function () {
+        if ($('.sidebar-menu').hasClass('collapsed')) {
+        $('.has-sub.expanded > ul').attr("style", "")
+        } else {
+        $('.has-sub.expanded > ul').show()
+        }
+    })
+    $("#main-menu li ul li").click(function () {
+        $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
+        $(this).addClass('active'); // 添加当前元素的样式
+    });
+    $("a.smooth").click(function (ev) {
+        ev.preventDefault();
+    
+        public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
+        ps_destroy();
+        $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top - 30
+        }, {
+        duration: 500,
+        easing: "swing"
+        });
+    });
+    return false;
+});
+
 //回到顶部
 window.onscroll = function () {
     if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
@@ -73,55 +122,6 @@ window.matchMedia('(prefers-color-scheme: dark)')
         }
     })
     
-$(document).ready(function () {
-    //img lazy loaded
-    const observer = lozad();
-    observer.observe();
-    
-    $(document).on('click', '.has-sub', function () {
-        var _this = $(this)
-        if (!$(this).hasClass('expanded')) {
-        setTimeout(function () {
-            _this.find('ul').attr("style", "")
-        }, 300);
-    
-        } else {
-        $('.has-sub ul').each(function (id, ele) {
-            var _that = $(this)
-            if (_this.find('ul')[0] != ele && !expandAll) {
-            setTimeout(function () {
-                _that.attr("style", "")
-            }, 300);
-            }
-        })
-        }
-    })
-    $('.user-info-menu .hidden-sm').click(function () {
-        if ($('.sidebar-menu').hasClass('collapsed')) {
-        $('.has-sub.expanded > ul').attr("style", "")
-        } else {
-        $('.has-sub.expanded > ul').show()
-        }
-    })
-    $("#main-menu li ul li").click(function () {
-        $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
-        $(this).addClass('active'); // 添加当前元素的样式
-    });
-    $("a.smooth").click(function (ev) {
-        ev.preventDefault();
-    
-        public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
-        ps_destroy();
-        $("html, body").animate({
-        scrollTop: $($(this).attr("href")).offset().top - 30
-        }, {
-        duration: 500,
-        easing: "swing"
-        });
-    });
-    return false;
-});
-    
 var href = "";
 var pos = 0;
 $("a.smooth").click(function (e) {
@@ -151,30 +151,6 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1"
     }
 }
 })();
-
-//鼠标在左边菜单的时候，禁用body的滚动条，防止滚动左边的时候右边也一起滚动
-//function IsPC() {
-//    var userAgentInfo = navigator.userAgent;
-//    var Agents = ["Android", "iPhone","SymbianOS", "Windows Phone", "iPad", "iPod"];
-//    var flag = true;
-//    for (var v = 0; v < Agents.length; v++) {
-//        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-//            flag = false;
-//            break;
-//        }
-//    }
-//    return flag;
-//};
-//$(document).ready(function(){
-//    var isPC=IsPC();
-//    if(isPC){
-//        $('.sidebar-menu-inner').mousemove(function () {
-//            document.body.style.overflow = 'hidden';
-//        }).mouseleave(function () {
-//            document.body.style.overflow = 'auto';
-//        });
-//    }
-//});
 
 // 星空背景 
 function stars() {
@@ -228,7 +204,7 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.3.2
+版 本 号：2.3.3
 更新日期：2022-08-13
 
 WayneのNavigation: https://3301.ml/
