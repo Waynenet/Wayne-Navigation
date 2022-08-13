@@ -3194,9 +3194,9 @@ label.cbr-inline + .cbr-inline {
   color: #fff;
 }
 .label.label-info {
-    background-color: #5a5a5a;
-    color: #fff;
-    border-radius: 3px;
+  background-color: #5a5a5a;
+  color: #fff;
+  border-radius: 3px;
 }
 .label.label-warning {
   background-color: #ffba00;
@@ -3213,7 +3213,7 @@ label.cbr-inline + .cbr-inline {
 .label.label-pink {
   background-color: #ff6264;
   color: #fff;
-  border-radius: 30%;
+  border-radius: 10%;
 }
 .label.label-yellow {
   background-color: #fcd036;
@@ -3230,6 +3230,7 @@ label.cbr-inline + .cbr-inline {
 .label.label-blue {
   background-color: #0e62c7;
   color: #fff;
+  border-radius: 3px;
 }
 .label.label-black {
   background-color: #222;

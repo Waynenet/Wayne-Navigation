@@ -55,6 +55,7 @@
 }
 .img-circle {
   padding: 7px 0;
+  width: 40px;
 }
 /* 打赏 */
 #reward {
