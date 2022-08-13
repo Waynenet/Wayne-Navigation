@@ -349,12 +349,8 @@ body {
     background-image: url(https://api.dujin.org/bing/m.php); /* 随机图片API */
   }
 }
-canvas{
-  position: fixed;
-  top: 1000000px;
-  left: 1000000px;
-  z-index: -1;
-  background: #0e1729;
+#starfield{
+  display: none;
 }
 /*悬浮窗*/
 .suspension {

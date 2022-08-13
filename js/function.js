@@ -176,58 +176,32 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1"
 //    }
 //});
 
-//星空背景
-var canvas;
-var stars_count;
-var stars;
-ini();
-makeStars();
-var interval=setInterval(function(){drawStars();},50);//定时刷新星星数据
-
-function ini(){//初始化
-    canvas = document.getElementById("starfield");
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    context = canvas.getContext("2d");
-    stars = Array();//数组存放随机生成的星星数据（x,y,大小，颜色，速度）
-    stars_count = 300;//星星数量
-    clearInterval(interval);
-}
-
-function makeStars(){//随机生成星星数据
-    for(var i=0;i<stars_count;i++)
-    {
-        let x=Math.random() * canvas.offsetWidth;
-        let y = Math.random() * canvas.offsetHeight;
-        let radius = Math.random()*0.8;
-        let color="rgba("+Math.random()*255+","+Math.random()*255+","+Math.random()*255+",0.8)";
-        let speed=Math.random()*0.5;
-        let arr={'x':x,'y':y,'radius':radius,'color':color,'speed':speed};//（x,y,大小，颜色，速度）
-        stars.push(arr);//随机生成的星星数据存在这里
+// 星空背景 
+function stars() {
+    window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;
+    var n,e,i,h,t=.05,s=document.getElementById("starfield"),o=!0,a="180,184,240",r="226,225,142",d="226,225,224",c=[];
+    function f(){n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)}
+    function u(){h.clearRect(0,0,n,e);for(var t=c.length,i=0;i<t;i++){var s=c[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()}}
+    function y(){
+        this.reset=function(){this.giant=m(3),this.comet=!this.giant&&!o&&m(10),this.x=l(0,n-10),this.y=l(0,e),
+        this.r=l(1.1,2.6),this.dx=l(t,6*t)+(this.comet+1-1)*t*l(50,120)+2*t,this.dy=-l(t,6*t)-(this.comet+1-1)*t*l(50,120),
+        this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=l(.2,1-.4*(this.comet+1-1)),
+        this.do=l(5e-4,.002)+.001*(this.comet+1-1)},
+        this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},
+        this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))},
+        this.draw=function(){
+            if(h.beginPath(),this.giant)h.fillStyle="rgba("+a+","+this.opacity+")",h.arc(this.x,this.y,2,0,2*Math.PI,!1);
+            else if(this.comet){h.fillStyle="rgba("+d+","+this.opacity+")",h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);
+            for(var t=0;t<30;t++)h.fillStyle="rgba("+d+","+(this.opacity-this.opacity/20*t)+")",h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()
+        }else h.fillStyle="rgba("+r+","+this.opacity+")",h.rect(this.x,this.y,this.r,this.r);
+        h.closePath(),h.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)},
+        setTimeout(function(){o=!1},50)
     }
-}
-
-function drawStars(){//把星星画到画布上
-    context.fillStyle = "#0e1729";
-    context.fillRect(0,0,canvas.width,canvas.height);
-    for (var i = 0; i < stars.length; i++) {
-        var x = stars[i]['x'] - stars[i]['speed'];
-        if(x<-2*stars[i]['radius']) x=canvas.width;
-        stars[i]['x']=x;
-        var y = stars[i]['y'];
-        var radius = stars[i]['radius'];
-        context.beginPath();
-        context.arc(x, y, radius*2, 0, 2*Math.PI);
-        context.fillStyle = "rgba("+Math.random()*255+","+Math.random()*255+","+Math.random()*255+",0.8)";
-        context.fill();
-    }
-}
-
-window.onresize = function(){//窗口大小发生变化时重新随机生成星星数据
-    ini();
-    makeStars();
-    interval=setInterval(function(){drawStars();},50);
-}
+    function m(t){return Math.floor(1e3*Math.random())+1<10*t}
+    function l(t,i){return Math.random()*(i-t)+t}f(),window.addEventListener("resize",f,!1),
+    function(){h=s.getContext("2d");for(var t=0;t<i;t++)c[t]=new y,c[t].reset();u()}(),
+    function t(){document.getElementsByTagName('html')[0]&&u(),window.requestAnimationFrame(t)}()};
+stars()
 
 //控制台输出
 console.clear();
@@ -254,7 +228,7 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.3.1
+版 本 号：2.3.2
 更新日期：2022-08-13
 
 WayneのNavigation: https://3301.ml/
