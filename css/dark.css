@@ -9,6 +9,11 @@ body.night {
     transition: 0.3s;
 }
 
+body.night canvas{
+    top: 0;
+    left: 0;
+}
+
 body.night .board {
     background: #2c2e2f;
     box-shadow: 0px 0px 6px #00000061;
@@ -34,7 +39,7 @@ body.night .text-gray {
 }
 
 body.night .xe-widget.xe-conversations {
-    background: #464646;
+    background: #464646a6;
 }
 
 body.night .box2 {
@@ -57,7 +62,7 @@ body.night .box2:hover {
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease-out;
-    background-color: #232323 !important;
+    background-color: #232323a6 !important;
 }
 
 body.night footer.main-footer {
@@ -69,7 +74,7 @@ body.night .footer-text a {
 }
 
 body.night .footer-text a:hover,
-body.night footer-text a:focus {
+body.night .footer-text a:focus {
     color: #ffffff;
     text-decoration: none
 }
@@ -139,6 +144,9 @@ body.night .go-up a:hover {
     background-color: #232323;
     color: #d8d8d8;
 }
+.night .panel-default {
+    background: #464646a6 !important;
+}
 
 /*搜索栏*/
 .night span.dark-text {
@@ -148,16 +156,16 @@ body.night .go-up a:hover {
 .night #search-text,
 .night .search-type input:checked+label,
 .night .search-type input:hover+label {
-    background-color: #464646 !important;
+    background-color: #464646a6 !important;
 }
 
 .night .s-type-list {
-    background-color: #464646;
+    background-color: #464646a6;
     box-shadow: 0 9px 20px rgba(0, 0, 0, .3)
 }
 
 .night .s-type-list:before {
-    border-bottom-color: #464646;
+    border-bottom-color: #464646a6;
 }
 
 body.night .submit {
@@ -176,17 +184,17 @@ body.night #search button i {
 }
 
 body.night #search-text {
-    background-color: #464646;
+    background-color: #464646a6;
     color: #bdbdbd;
 }
 
 body.night .search-type input:checked+label,
 .search-type input:hover+label {
-    background-color: #464646;
+    background-color: #464646a6;
 }
 
 body.night .s-type-list {
-    background: #464646;
+    background: #464646a6;
     box-shadow: 0 0 6px rgba(0, 0, 0, .16);
 }
 
