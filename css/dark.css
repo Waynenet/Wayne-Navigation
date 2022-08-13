@@ -175,6 +175,14 @@ body.night .go-up a:hover {
     border-bottom-color: #464646a6;
 }
 
+.night .s-type-list label:hover {
+    background: rgba(31, 31, 31, 0.7)
+}
+
+.night .type-text{
+    color: #d8d8d8;
+}
+
 body.night .submit {
     color: #a5a5a5;
     background-color: #0000008f;
