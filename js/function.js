@@ -1,3 +1,42 @@
+$(document).ready(function() {
+    //img lazy loaded
+    const observer = lozad();
+    observer.observe();
+
+    return $(document).on("click", ".has-sub", function () {
+        var e = $(this);
+        $(this).hasClass("expanded") ? $(".has-sub ul").each(function (s, i) {
+            var t = $(this);
+            e.find("ul")[0] != i && setTimeout(function () {
+                t.attr("style", "")
+            }, 300)
+        }) : setTimeout(function () {
+            e.find("ul").attr("style", "")
+        }, 300)
+    }), $(".user-info-menu .hidden-sm").click(function () {
+        $(".sidebar-menu").hasClass("collapsed") ? $(".has-sub.expanded > ul").attr("style",
+            "") : $(".has-sub.expanded > ul").show()
+    }), $("#main-menu li ul li").click(function () {
+        $(this).siblings("li").removeClass("active"), $(this).addClass("active")
+    }), $("a.smooth").click(function (s) {
+        s.preventDefault(), public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass(
+            "mobile-is-visible"), ps_destroy(), $("html, body").animate({
+            scrollTop: $($(this).attr("href")).offset().top - 30
+        }, {
+            duration: 500,
+            easing: "swing"
+        })
+    }), !1
+});
+var href = "",
+    pos = 0;
+$("a.smooth").click(function (s) {
+    $("#main-menu li").each(function () {
+            $(this).removeClass("active")
+        }), $(this).parent("li").addClass("active"), s.preventDefault(), href = $(this).attr("href"),
+        pos = $(href).position().top - 30
+})
+
 function imgerrorfun(){ 
     var img=event.srcElement; 
     img.src="images/browser.svg"; //默认图片
@@ -77,67 +116,8 @@ window.matchMedia('(prefers-color-scheme: dark)')
         } else {
             light();
         }
-    })
-    
-$(document).ready(function () {
-    //img lazy loaded
-    const observer = lozad();
-    observer.observe();
-    $(document).on('click', '.has-sub', function () {
-        var _this = $(this)
-        if (!$(this).hasClass('expanded')) {
-        setTimeout(function () {
-            _this.find('ul').attr("style", "")
-        }, 300);
-    
-        } else {
-        $('.has-sub ul').each(function (id, ele) {
-            var _that = $(this)
-            if (_this.find('ul')[0] != ele && !expandAll) {
-            setTimeout(function () {
-                _that.attr("style", "")
-            }, 300);
-            }
-        })
-        }
-    })
-    $('.user-info-menu .hidden-sm').click(function () {
-        if ($('.sidebar-menu').hasClass('collapsed')) {
-        $('.has-sub.expanded > ul').attr("style", "")
-        } else {
-        $('.has-sub.expanded > ul').show()
-        }
-    })
-    $("#main-menu li ul li").click(function () {
-        $(this).siblings('li').removeClass('active'); // 删除其他兄弟元素的样式
-        $(this).addClass('active'); // 添加当前元素的样式
     });
-    $("a.smooth").click(function (ev) {
-        ev.preventDefault();
     
-        public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
-        ps_destroy();
-        $("html, body").animate({
-        scrollTop: $($(this).attr("href")).offset().top - 30
-        }, {
-        duration: 500,
-        easing: "swing"
-        });
-    });
-    return false;
-});
-var href = "";
-var pos = 0;
-$("a.smooth").click(function (e) {
-$("#main-menu li").each(function () {
-    $(this).removeClass("active");
-});
-$(this).parent("li").addClass("active");
-e.preventDefault();
-href = $(this).attr("href");
-pos = $(href).position().top - 30;
-});
-
 (function () {
     if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
         if (new Date().getHours() > 22 || new Date().getHours() < 6) {
@@ -155,7 +135,7 @@ pos = $(href).position().top - 30;
         document.body.classList.add('night');
         }
     }
-    })();
+})();
 
 // 星空背景 
 function stars() {
@@ -209,7 +189,7 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.3.5
+版 本 号：2.3.6
 更新日期：2022-08-14
 
 WayneのNavigation: https://3301.ml/
