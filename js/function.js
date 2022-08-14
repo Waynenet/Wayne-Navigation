@@ -2,7 +2,6 @@ $(document).ready(function () {
     //img lazy loaded
     const observer = lozad();
     observer.observe();
-    
     $(document).on('click', '.has-sub', function () {
         var _this = $(this)
         if (!$(this).hasClass('expanded')) {
@@ -45,6 +44,17 @@ $(document).ready(function () {
         });
     });
     return false;
+});
+var href = "";
+var pos = 0;
+$("a.smooth").click(function (e) {
+$("#main-menu li").each(function () {
+    $(this).removeClass("active");
+});
+$(this).parent("li").addClass("active");
+e.preventDefault();
+href = $(this).attr("href");
+pos = $(href).position().top - 30;
 });
 
 //回到顶部
@@ -104,6 +114,25 @@ function light() {
     });
 }
 
+(function () {
+    if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
+        if (new Date().getHours() > 22 || new Date().getHours() < 6) {
+        document.body.classList.add('night');
+        document.cookie = "night=1;path=/";
+        } else {
+        document.body.classList.remove('night');
+        document.cookie = "night=0;path=/";
+        }
+    } else {
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+        if (night == '0') {
+        document.body.classList.remove('night');
+        } else if (night == '1') {
+        document.body.classList.add('night');
+        }
+    }
+    })();
+
 function switchNightMode() {
     var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
     if (night == '0') {
@@ -122,36 +151,6 @@ window.matchMedia('(prefers-color-scheme: dark)')
         }
     })
     
-var href = "";
-var pos = 0;
-$("a.smooth").click(function (e) {
-$("#main-menu li").each(function () {
-    $(this).removeClass("active");
-});
-$(this).parent("li").addClass("active");
-e.preventDefault();
-href = $(this).attr("href");
-pos = $(href).position().top - 30;
-});
-(function () {
-if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-    if (new Date().getHours() > 22 || new Date().getHours() < 6) {
-    document.body.classList.add('night');
-    document.cookie = "night=1;path=/";
-    } else {
-    document.body.classList.remove('night');
-    document.cookie = "night=0;path=/";
-    }
-} else {
-    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-    if (night == '0') {
-    document.body.classList.remove('night');
-    } else if (night == '1') {
-    document.body.classList.add('night');
-    }
-}
-})();
-
 // 星空背景 
 function stars() {
     window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;
