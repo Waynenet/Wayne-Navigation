@@ -1,3 +1,84 @@
+function imgerrorfun(){ 
+    var img=event.srcElement; 
+    img.src="images/browser.svg"; //默认图片
+    img.onerror=null; 
+} 
+
+//回到顶部
+window.onscroll = function () {
+    if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
+        $("#topup").css({
+            display: 'block',
+            transform: 'translateX(0px)',
+            transition: '0.3s',
+        });
+    } else {
+        $("#topup").css({
+            transform: 'translateX(60px)',
+            transition: '0.3s',
+        });
+    }
+}
+
+//夜间模式切换
+function dark() {
+    document.body.classList.add('night');
+    document.cookie = "night=1;path=/";
+    document.getElementById("suspension_text").innerHTML = "切换日间模式";
+    iziToast.info({
+        timeout: 2000,
+        icon: 'Fontawesome',
+        closeOnEscape: 'true',
+        transitionOut: 'fadeOutRight',
+        displayMode: 'replace',
+        layout: '2',
+        transitionIn: 'bounceInLeft',
+        position: 'topRight',
+        icon: 'fa-solid fa-moon',
+        backgroundColor: '#fff',
+        title: '夜间模式切换',
+        message: '已切换为夜间模式'
+    });
+}
+
+function light() {
+    document.body.classList.remove('night');
+    document.cookie = "night=0;path=/";
+    document.getElementById("suspension_text").innerHTML = "切换夜间模式";
+    iziToast.info({
+        timeout: 2000,
+        icon: 'Fontawesome',
+        closeOnEscape: 'true',
+        transitionOut: 'fadeOutRight',
+        displayMode: 'replace',
+        layout: '2',
+        transitionIn: 'bounceInLeft',
+        position: 'topRight',
+        icon: 'fa-solid fa-sun',
+        backgroundColor: '#fff',
+        title: '日间模式切换',
+        message: '已切换为日间模式'
+    });
+}
+
+function switchNightMode() {
+    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+    if (night == '0') {
+        dark();
+    } else {
+        light();
+    }
+}
+
+window.matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', event => {
+        if (event.matches) {
+            dark();
+        } else {
+            light();
+        }
+    })
+    
 $(document).ready(function () {
     //img lazy loaded
     const observer = lozad();
@@ -57,63 +138,6 @@ href = $(this).attr("href");
 pos = $(href).position().top - 30;
 });
 
-//回到顶部
-window.onscroll = function () {
-    if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
-        $("#topup").css({
-            display: 'block',
-            transform: 'translateX(0px)',
-            transition: '0.3s',
-        });
-    } else {
-        $("#topup").css({
-            transform: 'translateX(60px)',
-            transition: '0.3s',
-        });
-    }
-}
-
-//夜间模式切换
-function dark() {
-    document.body.classList.add('night');
-    document.cookie = "night=1;path=/";
-    document.getElementById("suspension_text").innerHTML = "切换日间模式";
-    iziToast.info({
-        timeout: 2000,
-        icon: 'Fontawesome',
-        closeOnEscape: 'true',
-        transitionOut: 'fadeOutRight',
-        displayMode: 'replace',
-        layout: '2',
-        transitionIn: 'bounceInLeft',
-        position: 'topRight',
-        icon: 'fa-solid fa-moon',
-        backgroundColor: '#fff',
-        title: '夜间模式切换',
-        message: '已切换为夜间模式'
-    });
-}
-
-function light() {
-    document.body.classList.remove('night');
-    document.cookie = "night=0;path=/";
-    document.getElementById("suspension_text").innerHTML = "切换夜间模式";
-    iziToast.info({
-        timeout: 2000,
-        icon: 'Fontawesome',
-        closeOnEscape: 'true',
-        transitionOut: 'fadeOutRight',
-        displayMode: 'replace',
-        layout: '2',
-        transitionIn: 'bounceInLeft',
-        position: 'topRight',
-        icon: 'fa-solid fa-sun',
-        backgroundColor: '#fff',
-        title: '日间模式切换',
-        message: '已切换为日间模式'
-    });
-}
-
 (function () {
     if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
         if (new Date().getHours() > 22 || new Date().getHours() < 6) {
@@ -133,24 +157,6 @@ function light() {
     }
     })();
 
-function switchNightMode() {
-    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-    if (night == '0') {
-        dark();
-    } else {
-        light();
-    }
-}
-
-window.matchMedia('(prefers-color-scheme: dark)')
-    .addEventListener('change', event => {
-        if (event.matches) {
-            dark();
-        } else {
-            light();
-        }
-    })
-    
 // 星空背景 
 function stars() {
     window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;
@@ -203,8 +209,8 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.3.4
-更新日期：2022-08-13
+版 本 号：2.3.5
+更新日期：2022-08-14
 
 WayneのNavigation: https://3301.ml/
 Github:  https://github.com/Waynenet/Wayne-Navigation
