@@ -545,11 +545,11 @@ body {
 .post-reward .reward-main {
   position:absolute;
   bottom:40px;
-  left:0;
+  left:-45px;
   z-index:100;
   display:none;
   padding:0 0 15px;
-  width:100%
+  width:calc(100% + 90px)
 }
 .post-reward .reward-main .reward-all {
   display:inline-block;
@@ -586,10 +586,10 @@ body {
   vertical-align:top
 }
 .post-reward .reward-main .reward-all .reward-item img {
-  width:105px;
-  height:105px
+  width:130px;
+  height:130px
 }
 .post-reward .reward-main .reward-all .reward-item .post-qr-code-desc {
-  width:105px;
+  width:130px;
   color:#e92843;
 }

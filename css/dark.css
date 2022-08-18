@@ -150,10 +150,6 @@ body.night #starfield{
 }
 
 /* 关于 */
-.night .label.label-blue {
-    background-color: #232323a6;
-    color: #d8d8d8;
-}
 .night .label.label-info {
     background-color: #232323a6;
     color: #d8d8d8;
