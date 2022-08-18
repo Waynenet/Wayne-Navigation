@@ -158,12 +158,6 @@ body.night #starfield{
     background-color: #232323a6;
     color: #d8d8d8;
 }
-/* 打赏 */
-.night #reward {
-    border: 0px solid #d8d8d8;
-    background-color: #e9284252;
-    color: #d8d8d8;
-}
 
 /*搜索栏*/
 .night span.dark-text {
@@ -271,4 +265,25 @@ body.night #starfield{
 .night .iziToast>.iziToast-close {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAAAXNSR0IB2cksfwAAAAlwSFlzAAAJOgAACToB8GSSSgAAAAZQTFRFqKioAAAAmKDP8QAAAAJ0Uk5T/wDltzBKAAAAY0lEQVR4nDWOsQ0AIQwDHVGkZARGYTQYjVEyAiUFwg+WvjkpSnI2MjnhZCCRA0Z2dNIw2kmIuh2zrIyVZ8H2qDhpNNA6wW4XI12EX8z8Q6MWOnnHepNAKkmlV5AiFa4aKvSqfSWBUGXNeqSXAAAAAElFTkSuQmCC) no-repeat 50% 50% !important;
     background-size: 8px !important;
+}
+
+/* 打赏 */
+.night .post-reward .reward-button {
+    background-color: #e9284252;
+    color: #d8d8d8;
+}
+.night .post-reward:hover .reward-button {
+    background-color: #464646a6;
+    color: #e92842
+}
+.night .post-reward .reward-main .reward-all {
+    background-color: #464646a6;
+}
+.night .post-reward .reward-main .reward-all:after {
+    border-top:13px solid #464646a6;
+    border-right:13px solid transparent;
+    border-left:13px solid transparent;
+}
+.night .post-reward .reward-main .reward-all .reward-item .post-qr-code-desc {
+    color:#d8d8d8;
 }

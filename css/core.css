@@ -57,39 +57,7 @@
   padding: 7px 0;
   width: 40px;
 }
-/* 打赏 */
-#reward {
-  margin-top: 25px;
-  border: 0px solid white;
-  cursor: pointer;
-  background-color: #e92843;
-  color: white;
-  border-radius: 5px;
-  width: 88px;
-  height: 36px;
-  font-size: 21px;
-}
-#qrcode img {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  top: 0px;
-  margin: auto;
-  border-radius: 5px;
-}
-#qrcode {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(0 0 0 / 62%);
-  z-index: 9999;
-  display: none;
-}
+
 /*搜索框*/
 #search {
   max-width: 700px;
@@ -547,4 +515,81 @@ body {
       max-width: unset !important;
       min-width: unset !important;
   }
+}
+/* 打赏 */
+.post-reward {
+  position:relative;
+  margin-top:25px;
+  width:100%;
+  text-align:center;
+  pointer-events:none
+}
+.post-reward > * {
+  pointer-events:auto
+}
+.post-reward .reward-button {
+  display:inline-block;
+  padding:4px 14px;
+  background-color: #e92843c7;
+  color: #ffffff;
+  cursor:pointer;
+  border-radius: 5px;
+}
+.post-reward:hover .reward-button {
+  background-color: #ffffffc7;
+  color: #e92843;
+}
+.post-reward:hover > .reward-main {
+  display:block
+}
+.post-reward .reward-main {
+  position:absolute;
+  bottom:40px;
+  left:0;
+  z-index:100;
+  display:none;
+  padding:0 0 15px;
+  width:100%
+}
+.post-reward .reward-main .reward-all {
+  display:inline-block;
+  margin:0;
+  padding:20px 10px;
+  border-radius:4px;
+  background-color: #ffffffc7;
+}
+.post-reward .reward-main .reward-all:before {
+  position:absolute;
+  bottom:-10px;
+  left:0;
+  width:100%;
+  height:20px;
+  content:''
+}
+.post-reward .reward-main .reward-all:after {
+  position:absolute;
+  right:0;
+  bottom:2px;
+  left:0;
+  margin:0 auto;
+  width:0;
+  height:0;
+  border-top:13px solid #ffffffc7;
+  border-right:13px solid transparent;
+  border-left:13px solid transparent;
+  content:''
+}
+.post-reward .reward-main .reward-all .reward-item {
+  display:inline-block;
+  padding:0 8px;
+  list-style-type:none;
+  vertical-align:top
+}
+.post-reward .reward-main .reward-all .reward-item img {
+  width:105px;
+  height:105px
+}
+.post-reward .reward-main .reward-all .reward-item .post-qr-code-desc {
+  width:105px;
+  color:#e92843;
 }
