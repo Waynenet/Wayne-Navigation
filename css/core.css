@@ -307,7 +307,7 @@
 
 /* 背景 */
 body {
-  background-image: url(https://tuapi.eees.cc/api.php?category={meinv,fengjing,biying}&type=302); /* 随机图片API */
+  background-image: url(https://tuapi.eees.cc/api.php?category={fengjing,biying}&type=302); /* 随机图片API */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
