@@ -25,6 +25,6 @@
 2️⃣ [今日诗词 API](https://www.jinrishici.com/)     
 3️⃣ [新逸Cary API](https://api.xinac.net/)    
 4️⃣ [缙哥哥博客 API](https://www.dujin.org/3618.html)    
-5️⃣ [魅影随机图片 API](https://tuapi.eees.cc/)
+5️⃣ [小歪 API](https://api.ixiaowai.cn/)
 
 <a title="Copyright" target="_blank" href="https://soga.ml/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202022--2022-Wayne-red"></a>
