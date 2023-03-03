@@ -189,8 +189,8 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.4.2
-更新日期：2023-03-02
+版 本 号：2.4.3
+更新日期：2023-03-03
 
 WayneのNavigation: https://3301.ml/
 Github:  https://github.com/Waynenet/Wayne-Navigation
