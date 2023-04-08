@@ -6,6 +6,10 @@
 
 ### Demo: [➡️ WayneのNavigation](https://3301.ml/)
 
+### 原作者项目
+
+[WebStackPage](https://github.com/WebStackPage/WebStackPage.github.io)
+
 ### 功能
 
 ✅ 丰富资源     
@@ -14,10 +18,6 @@
 ✅ 实时天气     
 ✅ 夜间模式     
 ✅ 星空背景     
-
-### 原作者项目
-
-[WebStackPage.github.io](https://github.com/WebStackPage/WebStackPage.github.io)
 
 ### API
 
