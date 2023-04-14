@@ -4,7 +4,9 @@
 
 ## Webstack网址导航美化版
 
-### Demo: [➡️ WayneのNavigation](https://3301.ml/)
+### Demo
+
+[➡️ WayneのNavigation](https://3301.ml/)
 
 ### 原作者项目
 
@@ -25,6 +27,6 @@
 2️⃣ [今日诗词 API](https://www.jinrishici.com/)     
 3️⃣ [新逸Cary API](https://api.xinac.net/)    
 4️⃣ [缙哥哥博客 API](https://www.dujin.org/3618.html)    
-5️⃣ [魅影随机图片 API](https://tuapi.eees.cc/)
+5️⃣ [IoTcat API](https://www.eee.dog/tech/rand-pic-api.html)
 
 <a title="Copyright" target="_blank" href="https://soga.ml/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202022--2023-Wayne-red"></a>
