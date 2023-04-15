@@ -66,14 +66,14 @@ function dark() {
     document.getElementById("suspension_text").innerHTML = "切换日间模式";
     iziToast.info({
         timeout: 2000,
-        icon: 'Fontawesome',
+        icon: 'tabler-icons',
         closeOnEscape: 'true',
         transitionOut: 'fadeOutRight',
         displayMode: 'replace',
         layout: '2',
         transitionIn: 'bounceInLeft',
         position: 'topRight',
-        icon: 'fa-solid fa-moon',
+        icon: 'ti ti-moon-filled',
         backgroundColor: '#fff',
         title: '夜间模式切换',
         message: '已切换为夜间模式'
@@ -86,14 +86,14 @@ function light() {
     document.getElementById("suspension_text").innerHTML = "切换夜间模式";
     iziToast.info({
         timeout: 2000,
-        icon: 'Fontawesome',
+        icon: 'tabler-icons',
         closeOnEscape: 'true',
         transitionOut: 'fadeOutRight',
         displayMode: 'replace',
         layout: '2',
         transitionIn: 'bounceInLeft',
         position: 'topRight',
-        icon: 'fa-solid fa-sun',
+        icon: 'ti ti-sun-filled',
         backgroundColor: '#fff',
         title: '日间模式切换',
         message: '已切换为日间模式'
@@ -189,7 +189,7 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.4.10
+版 本 号：2.5.0
 更新日期：2023-04-15
 
 WayneのNavigation: https://3301.ml/

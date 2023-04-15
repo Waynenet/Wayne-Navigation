@@ -209,8 +209,8 @@
 }
 
 .type-text:after {
-  content: "\f105";
-  font-family: FontAwesome;
+  content: '\ea61';
+  font-family: tabler-icons;
   margin: 0 0 0 8px;
 }
 
