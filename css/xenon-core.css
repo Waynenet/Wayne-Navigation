@@ -1,9 +1,7 @@
 .transall,
 .sidebar-menu .main-menu a,
 .user-info-navbar .user-info-menu > li > a,
-.breadcrumb.auto-hidden li a,
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str > i,
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str > span {
+.breadcrumb.auto-hidden li a {
   -webkit-transition: all 220ms ease-in-out;
   -moz-transition: all 220ms ease-in-out;
   -o-transition: all 220ms ease-in-out;
@@ -23,10 +21,6 @@ footer.main-footer .footer-inner:after,
 .breadcrumb.auto-hidden:after,
 .skin-color-palette:before,
 .skin-color-palette:after,
-.icon-collection .fontawesome-icon-list:before,
-.icon-collection .fontawesome-icon-list:after,
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str:before,
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str:after,
 .highlights li:before,
 .highlights li:after {
   content: " ";
@@ -39,8 +33,6 @@ footer.main-footer .footer-inner:after,
 .panel .panel-heading:after,
 .breadcrumb.auto-hidden:after,
 .skin-color-palette:after,
-.icon-collection .fontawesome-icon-list:after,
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str:after,
 .highlights li:after {
   clear: both;
 }
@@ -3055,87 +3047,10 @@ img.img-cirlce {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-[class*="fa-"] {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: initial;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 div.scrollable {
   max-height: 200px;
   overflow: hidden;
   position: relative;
-}
-.icon-collection .page-header {
-  margin: 0;
-  margin-bottom: 10px;
-}
-.icon-collection section .page-header {
-  margin-top: 40px;
-}
-.icon-collection .fontawesome-icon-list {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.icon-collection .fontawesome-icon-list .fa-hover {
-  float: left;
-  width: 25%;
-  margin-bottom: 10px;
-}
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str {
-  display: block;
-  background: #fff;
-  border: 1px solid #ddd;
-  margin: 0 5px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str > i {
-  display: block;
-  float: left;
-  position: relative;
-  background: #fafafa;
-  border-right: 1px solid #e9e9e9;
-  padding: 10px;
-  text-align: center;
-  width: 25%;
-}
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str > i:hover {
-  width: 60%;
-  background: #68b828;
-  color: #fff;
-}
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str > i:hover + span {
-  width: 40%;
-}
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str > span {
-  display: block;
-  float: right;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 100%;
-  padding: 10px;
-  padding-bottom: 8px;
-  width: 75%;
-  color: #7d7f7f;
-  font-family: Arimo, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.icon-collection .fontawesome-icon-list .fa-hover .icon-str > span:hover {
-  color: #2c2e2f;
-}
-@media (max-width: 991px) {
-  .icon-collection .fontawesome-icon-list .fa-hover {
-    width: 33%;
-  }
-}
-@media (max-width: 767px) {
-  .icon-collection .fontawesome-icon-list .fa-hover {
-    width: 50%;
-  }
 }
 .layout-variants {
   background: #fff;
