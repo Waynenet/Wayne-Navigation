@@ -189,10 +189,10 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.5.2
-更新日期：2023-04-17
+版 本 号：2.6.0
+更新日期：2023-05-02
 
-WayneのNavigation: https://3301.ml/
+WayneのNavigation: https://nav.kong.pub/
 Github:  https://github.com/Waynenet/Wayne-Navigation
 `
 console.log(`%c${title1} %c${title2}

@@ -6,7 +6,7 @@
 
 ### Demo
 
-[➡️ WayneのNavigation](https://3301.ml/)
+[➡️ WayneのNavigation](https://nav.kong.pub/)
 
 ### 原作者项目
 
@@ -29,4 +29,4 @@
 4️⃣ [缙哥哥博客 API](https://www.dujin.org/3618.html)    
 5️⃣ [IoTcat API](https://www.eee.dog/tech/rand-pic-api.html)
 
-<a title="Copyright" target="_blank" href="https://soga.ml/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202022--2023-Wayne-red"></a>
+<a title="Copyright" target="_blank" href="https://kong.pub/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202022--2023-Wayne-red"></a>
