@@ -120,7 +120,7 @@ window.matchMedia('(prefers-color-scheme: dark)')
     
 (function () {
     if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-        if (new Date().getHours() > 19 || new Date().getHours() < 6) {
+        if (new Date().getHours() > 18 || new Date().getHours() < 7) {
         document.body.classList.add('night');
         document.cookie = "night=1;path=/";
         } else {
@@ -189,8 +189,8 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：2.6.1
-更新日期：2023-05-19
+版 本 号：2.6.2
+更新日期：2023-05-21
 
 WayneのNavigation: https://nav.kong.pub/
 Github:  https://github.com/Waynenet/Wayne-Navigation

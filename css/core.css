@@ -63,11 +63,9 @@
   max-width: 700px;
   margin: 60px auto 0px;
 }
-
 #search form {
   position: relative;
 }
-
 #search-text {
   padding: 9pt;
   width: 100%;
@@ -76,8 +74,12 @@
   border: 0;
   border-radius: 3px;
   background-color: #ffffffc7;
+  transition: 0.3s;
 }
-
+#search-text:hover {
+  box-shadow: 0px 6px 12px -4px rgb(0 0 0 / 20%);
+  transition: 0.3s;
+}
 #search button {
   position: absolute;
   top: 0;
@@ -90,41 +92,37 @@
   line-height: 36px;
   border-radius: 3px;
   transition: 0.3s;
+  height: 100%;
+  margin: auto !important;
 }
-
 #search button:hover {
   background: #40bbea;
   cursor: pointer;
   transition: 0.3s;
 }
-
 #search button i {
+  position: relative;
   color: #ffffffc7;
-  font-size: 18px
+  font-size: 26px;
+  top: 4px;
 }
-
 .search-group {
   display: none;
   padding-left: 75px
 }
-
 .s-current .search-type {
   padding-left: 0;
   display: block;
 }
-
 .s-current .search-type::-webkit-scrollbar {
   height: 0px;
 }
-
 .s-current {
   display: block
 }
-
 #search-list {
   position: relative
 }
-
 .s-type {
   position: absolute;
   top: 0;
@@ -132,17 +130,14 @@
   z-index: 13;
   width: 75px
 }
-
 .s-type:hover {
   height: auto
 }
-
 .s-type>span {
   display: block;
   height: 31px;
   width: 75px
 }
-
 .s-type-list {
   display: none;
   position: absolute;
@@ -153,7 +148,6 @@
   border-radius: 5px;
   box-shadow: 0 9px 20px rgba(0, 0, 0, .16)
 }
-
 .s-type-list:before {
   position: absolute;
   top: -16px;
@@ -165,7 +159,6 @@
   border: 10px solid transparent;
   border-bottom-color: #ffffffc7
 }
-
 .s-type-list label {
   display: block;
   font-size: 15px;
@@ -176,11 +169,9 @@
   cursor: pointer;
   transition: .3s
 }
-
 .s-type-list label:hover {
   background: rgba(136, 136, 136, .1)
 }
-
 .s-type-list .tile-lg {
   color: #ffffffc7;
   width: 3pc;
@@ -191,11 +182,9 @@
   display: block;
   margin: auto
 }
-
 .s-type:hover .s-type-list {
   display: block
 }
-
 .type-text {
   position: absolute;
   left: 0;
@@ -207,26 +196,23 @@
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .type-text:after {
   content: '\ea61';
   font-family: tabler-icons;
   margin: 0 0 0 8px;
 }
-
 .search-type {
   white-space: nowrap;
-  margin: 0
+  margin: 0;
+  overflow: auto !important;
 }
-
 .search-type label {
   margin: 0
 }
-
 .search-type li {
+  list-style: none;
   display: inline-block
 }
-
 .search-type li label {
   display: inline-block;
   padding: 0 11px;
@@ -236,67 +222,32 @@
   cursor: pointer;
   transition: 0.3s;
 }
-
 .search-type input:checked+label,
 .search-type input:hover+label {
   background-color: #ffffffc7 !important;
 }
-
 .set-check {
   margin-top: 3px;
   font-size: 9pt
 }
-
 .set-check label {
   margin-left: 3px
 }
-
 .set-check input,
 .set-check label {
   opacity: 0;
   transition: all .3s ease
 }
-
-.search-type li {
-  list-style: none;
-  display: inline-block
-}
-
-.search-type {
-  overflow: auto !important;
-}
-
-#search-text {
-  transition: 0.3s;
-}
-
-#search-text:hover {
-  box-shadow: 0px 6px 12px -4px rgb(0 0 0 / 20%);
-  transition: 0.3s;
-}
-
-#search button {
-  height: 100%;
-  margin: auto !important;
-}
-
-#search button i {
-  margin: 16px;
-}
-
 @media screen and (max-width:767px) {
   #search {
       margin: 20px auto 0px
   }
-
   .s-type-list label {
       padding: 5px 0
   }
-
   .search-type {
       overflow: scroll
   }
-
   .search-list {
       height: 30px;
       overflow-y: hidden;
@@ -304,7 +255,6 @@
       white-space: nowrap
   }
 }
-
 /* 背景 */
 body {
   background-image: url(https://api.yimian.xyz/img?type=wallpaper); /* 随机图片API */
