@@ -257,17 +257,17 @@
 }
 /* 背景 */
 body {
-  background-image: url(https://api.yimian.xyz/img?type=wallpaper); /* 随机图片API */
+  background-image: url(https://api.aixiaowai.cn/gqapi/gqapi.php); /* 随机图片API */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   body {
-    background-image: url(https://api.dujin.org/bing/m.php); /* 随机图片API */
+    background-image: url(https://api.dujin.org/bing/m.php); 
   }
-}
+} */
 #starfield{
   display: none;
 }

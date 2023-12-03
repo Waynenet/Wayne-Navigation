@@ -26,7 +26,6 @@
 1️⃣ [天气 API](https://www.tianqiapi.com/)     
 2️⃣ [今日诗词 API](https://www.jinrishici.com/)     
 3️⃣ [新逸Cary API](https://api.xinac.net/)    
-4️⃣ [缙哥哥博客 API](https://www.dujin.org/3618.html)    
-5️⃣ [IoTcat API](https://www.eee.dog/tech/rand-pic-api.html)
+4️⃣ [小歪 API](https://api.aixiaowai.cn)  
 
 <a title="Copyright" target="_blank" href="https://kong.pub/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202022--2023-Wayne-red"></a>
