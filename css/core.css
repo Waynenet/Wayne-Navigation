@@ -257,7 +257,7 @@
 }
 /* 背景 */
 body {
-  background-image: url(https://api.aixiaowai.cn/gqapi/gqapi.php); /* 随机图片API */
+  background-image: url(https://api.vvhan.com/api/wallpaper/views); /* 随机图片API */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

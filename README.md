@@ -6,7 +6,7 @@
 
 ### Demo
 
-[➡️ WayneのNavigation](https://nav.kong.pub/)
+[➡️ WayneのNavigation 域名过期，访问不了](https://nav.kong.pub/)
 
 ### 原作者项目
 
@@ -23,9 +23,8 @@
 
 ### API
 
-1️⃣ [天气 API](https://www.tianqiapi.com/)     
+1️⃣ [韩小韩 WebAPI 接口站](https://api.vvhan.com/)     
 2️⃣ [今日诗词 API](https://www.jinrishici.com/)     
 3️⃣ [新逸Cary API](https://api.xinac.net/)    
-4️⃣ [小歪 API](https://api.aixiaowai.cn)  
 
-<a title="Copyright" target="_blank" href="https://kong.pub/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202022--2023-Wayne-red"></a>
+<a title="Copyright" target="_blank" href="https://kong.pub/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202022--2024-Wayne-red"></a>
