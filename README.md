@@ -1,12 +1,12 @@
 <p>
-<strong><h1>WayneのNavigation</h1></strong>
+<strong><h1>WayneのNav</h1></strong>
 </p>
 
 ## Webstack网址导航美化版
 
 ### Demo
 
-[➡️ WayneのNavigation 域名过期，访问不了](https://nav.kong.pub/)
+[➡️ WayneのNav 域名过期，访问不了](https://nav.kong.pub/)
 
 ### 原作者项目
 
@@ -16,8 +16,7 @@
 
 ✅ 丰富资源     
 ✅ 随机背景   
-✅ 快捷搜索   
-✅ 实时天气     
+✅ 快捷搜索      
 ✅ 夜间模式     
 ✅ 星空背景     
 
