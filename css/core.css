@@ -1,3 +1,25 @@
+body {
+  background-image: url(https://api.vvhan.com/api/wallpaper/views); /* 随机图片API */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+/* @media screen and (max-width: 767px) {
+  body {
+    background-image: url(https://api.dujin.org/bing/m.php); 
+  }
+} */
+#starfield{
+  display: none;
+}
+ul {
+  font-size: 0.8rem;
+}
+a:hover,
+a:focus {
+  color: #FF0500 !important;
+}
 .box2 {
   height: 86px;
   cursor: pointer;
@@ -45,6 +67,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  font-size: 0.8rem;
 }
 .overflowClip_2 {
   overflow: hidden;
@@ -52,6 +75,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  font-size: 0.5rem;
 }
 .img-circle {
   padding: 7px 0;
@@ -176,7 +200,7 @@
   color: #ffffffc7;
   width: 3pc;
   height: 3pc;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 3rem;
   border-radius: .3rem;
   display: block;
@@ -190,7 +214,7 @@
   left: 0;
   width: 75px;
   padding-left: 18px;
-  font-size: 1.45rem;
+  font-size: 1rem;
   line-height: 31px;
   background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
   -webkit-background-clip: text;
@@ -254,22 +278,6 @@
       overflow-x: scroll;
       white-space: nowrap
   }
-}
-/* 背景 */
-body {
-  background-image: url(https://api.vvhan.com/api/wallpaper/views); /* 随机图片API */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-}
-/* @media screen and (max-width: 767px) {
-  body {
-    background-image: url(https://api.dujin.org/bing/m.php); 
-  }
-} */
-#starfield{
-  display: none;
 }
 /*悬浮窗*/
 .suspension {

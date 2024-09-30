@@ -11,9 +11,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/wayne.png"/>
     <link rel="stylesheet" href="css/core.min.css">
     <link rel="stylesheet" href="css/dark.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/xenon-core.min.css">
     <link rel="stylesheet" href="css/xenon-components.min.css">
+    <!-- lozad -->
+    <script src="https://gcore.jsdelivr.net/npm/wayne-img@latest/js/lozad.min.js"></script>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/wayne-img@latest/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="https://gcore.jsdelivr.net/npm/wayne-img@latest/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <!-- jQuery -->
     <script src="https://gcore.jsdelivr.net/npm/wayne-img@latest/js/jquery-3.6.4.min.js"></script>
     <!-- tabler-icons -->
@@ -36,7 +40,7 @@
                             <img src="images/wayne.png" width="40" alt="" />
                         </a>
                     </div>
-                    <div class="mobile-menu-toggle visible-xs">
+                    <div class="mobile-menu-toggle d-sm-none">
                         <a onclick="switchNightMode()"><i class="ti ti-yin-yang-filled"></i></a>
                         <a href="#" data-toggle="user-info-menu"><i class="ti ti-settings"></i></a>
                         <a href="#" data-toggle="mobile-menu"><i class="ti ti-menu-2"></i></a>
@@ -113,7 +117,7 @@
         <div class="main-content">
             <nav class="navbar user-info-navbar" role="navigation" style="font-size: 14px">
                 <ul class="user-info-menu left-links list-inline list-unstyled">
-                    <li class="hidden-sm hidden-xs">
+                    <li class="d-sm-none d-md-block">
                         <a href="#" data-toggle="sidebar">
                             <i class="ti ti-menu-2"></i>
                         </a>
@@ -135,7 +139,7 @@
                 <div id="search-list" class="hide-type-list">
                     <div class="s-type">
                         <span></span>
-                        <div class="s-type-list animated fadeInUp">
+                        <div class="s-type-list animated fadeInUp" >
                         <label for="type-baidu">常用</label>
                         <label for="type-search">搜索</label>
                         <label for="type-br">工具</label>
@@ -276,7 +280,7 @@
                 <form action="?s=" method="get" target="_blank" id="super-search-fm"><input type="text" id="search-text"
                     placeholder="输入关键字搜索" style="outline:0" autocomplete="off"><button type="submit"><i
                     class="ti ti-search"></i></button></form>
-                <div class="set-check hidden-xs">
+                <div class="set-check d-sm-block">
                     <input type="checkbox" id="set-search-blank" class="bubble-3" autocomplete="off">
                 </div>
             </div>
@@ -303,9 +307,9 @@
             <!-- 实用搜索 end -->
             <br />
             <!-- 热搜新闻 --> 
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="热搜新闻"></i>热搜新闻
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -347,9 +351,9 @@
             <br />
             <!-- END 热搜新闻 --> 
             <!-- 常用推荐 --> 
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="常用推荐"></i>常用推荐
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -510,7 +514,7 @@
             <br />
             <!--END 常用推荐 --> 
             <!-- 文艺至死-->
-            <h4 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="文艺至死"></i>文艺至死</h4>
+            <h6 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="文艺至死"></i>文艺至死</h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -640,7 +644,7 @@
             <br />
             <!--END 文艺至死-->
             <!-- 音乐天堂 -->
-            <h4 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="音乐天堂"></i>音乐天堂</h4>
+            <h6 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="音乐天堂"></i>音乐天堂</h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -752,7 +756,7 @@
             <br />
             <!--END 音乐天堂 -->
             <!-- 直播聚合 -->
-            <h4 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="直播聚合"></i>直播聚合</h4>
+            <h6 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="直播聚合"></i>直播聚合</h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -945,9 +949,9 @@
             <br />
             <!--END 直播聚合 -->
             <!--在线综合 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="在线综合"></i>在线综合
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -1133,9 +1137,9 @@
             <br />
             <!--END 在线综合 -->
             <!-- 影视搜索 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="影视搜索"></i>影视搜索
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -1249,9 +1253,9 @@
             <br />
             <!-- END 影视搜索 -->
             <!--在线解析 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="在线解析"></i>在线解析
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -1293,9 +1297,9 @@
             <br />
             <!--END 在线解析 -->
             <!--字幕仓库 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="字幕仓库"></i>字幕仓库
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -1373,9 +1377,9 @@
             <br />
             <!--END 字幕仓库 -->
             <!--资源仓库 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="资源仓库"></i>资源仓库
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -1503,9 +1507,9 @@
             <br />
             <!--END 资源仓库 -->
             <!-- 休闲娱乐 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="休闲娱乐"></i>休闲娱乐
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -1889,9 +1893,9 @@
             <br />
             <!-- END 休闲娱乐 -->
             <!--在线工具 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
             <i class="ti ti-tag" style="margin-right:7px" id="在线工具"></i>在线工具
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -2039,18 +2043,18 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
-                        onclick='window.open("https://docsmall.com/","_blank")' data-toggle="tooltip"
-                        data-placement="bottom" data-original-title="https://docsmall.com/">
+                        onclick='window.open("https://docstrong.com/","_blank")' data-toggle="tooltip"
+                        data-placement="bottom" data-original-title="https://docstrong.com/">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
-                                <img data-src="https://docsmall.com/favicon.png" class="lozad img-circle" onerror="imgerrorfun();">
+                                <img data-src="https://docstrong.com/favicon.png" class="lozad img-circle" onerror="imgerrorfun();">
                             </a>
                             <div class="xe-comment">
                                 <a href="javascript:void(0);"
                                     class="xe-user-name overflowClip_1">
-                                    <strong>DOCSMALL</strong>
+                                    <strong>DOCstrong</strong>
                                 </a>
-                                <p class="overflowClip_2">docsmall - 免费在线图片压缩、GIF压缩工具、PDF压缩工具、PDF合并工具、PDF分割工具</p>
+                                <p class="overflowClip_2">docstrong - 免费在线图片压缩、GIF压缩工具、PDF压缩工具、PDF合并工具、PDF分割工具</p>
                             </div>
                         </div>
                     </div>
@@ -2059,9 +2063,9 @@
             <br />
             <!--END 在线工具 -->
             <!--在线改图 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="在线改图"></i>在线改图
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -2319,9 +2323,9 @@
             <br />
             <!--END 在线改图 -->
             <!-- 以图搜图 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="以图搜图"></i>以图搜图
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -2381,9 +2385,9 @@
             <br />
             <!-- END 以图搜图 -->
             <!--在线转格 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="在线转格"></i>在线转格
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -2623,9 +2627,9 @@
             <br />
             <!--END 在线转格 -->
             <!--在线生成 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="在线生成"></i>在线生成
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -2811,9 +2815,9 @@
             <br />
             <!--END 在线生成 -->
             <!--其他在线 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="其他在线"></i>其他在线
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -3176,9 +3180,9 @@
             <br />
             <!--END 其他在线 -->
             <!--上传下载 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="上传下载"></i>上传下载
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -3328,9 +3332,9 @@
             <br />
             <!--END 上传下载 -->
             <!--软件精选 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="软件精选"></i>软件精选
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -3566,9 +3570,9 @@
             <br />
             <!--END 软件精选 -->
             <!--浏览器插件 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="浏览器插件"></i>浏览器插件
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -3682,9 +3686,9 @@
             <br />
             <!--END 浏览器插件 -->
             <!--虚拟信息 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="虚拟信息"></i>虚拟信息
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -3924,9 +3928,9 @@
             <br />
             <!--END 虚拟信息 -->
             <!--壁纸下载 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="壁纸下载"></i>壁纸下载
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -4094,9 +4098,9 @@
             <br />
             <!--END 壁纸下载 -->
             <!--PNG免扣 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="PNG免扣"></i>PNG免扣
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -4174,9 +4178,9 @@
             <br />
             <!-- END PNG免扣 -->
             <!-- PPT资源 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="PPT资源"></i>PPT资源
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -4303,7 +4307,7 @@
             <br />
             <!--END PPT资源 -->
             <!-- 字体资源 -->
-            <h4 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="字体资源"></i>字体资源</h4>
+            <h6 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="字体资源"></i>字体资源</h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -4395,9 +4399,9 @@
             <br />
             <!--END 字体资源 -->
             <!--其他资源 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="其他资源"></i>其他资源
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -4583,9 +4587,9 @@
             <br />
             <!-- END 其他资源 -->
             <!-- 设计灵感 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="设计灵感"></i>设计灵感
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -4663,7 +4667,7 @@
             <br />
             <!-- END 设计灵感 -->
             <!-- API资源 -->
-            <h4 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="API资源"></i>API资源</h4>
+            <h6 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="API资源"></i>API资源</h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -4790,7 +4794,7 @@
                         data-placement="bottom" data-original-title="https://www.jinrishici.com/">
                         <div class="xe-comment-entry">
                             <a class="xe-user-img">
-                                <img data-src="https://www.jinrishici.com/img/icon-small.png" class="lozad img-circle" onerror="imgerrorfun();">
+                                <img data-src="https://www.jinrishici.com/img/icon-strong.png" class="lozad img-circle" onerror="imgerrorfun();">
                             </a>
                             <div class="xe-comment">
                                 <a href="javascript:void(0);"
@@ -4948,7 +4952,7 @@
             <br />
             <!-- END API资源 -->
             <!-- 域名申请 -->
-            <h4 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="域名申请"></i>域名申请</h4>
+            <h6 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="域名申请"></i>域名申请</h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -5005,9 +5009,9 @@
             <br />
             <!--END 域名申请 -->
             <!--云端服务 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="云端服务"></i>云端服务
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -5403,9 +5407,9 @@
             <br />
             <!-- END 云端服务 -->
             <!-- 开发文档 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="开发文档"></i>开发文档
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -5627,9 +5631,9 @@
             <br />
             <!-- END 开发文档 -->
             <!-- 网站管理 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="网站管理"></i>网站管理
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -5760,9 +5764,9 @@
             <br />
             <!-- END 网站管理 -->
             <!-- 自学编程 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="自学编程"></i>自学编程
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -5804,9 +5808,9 @@
             <br />
             <!-- END 自学编程 -->
             <!-- 学习天地 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="学习天地"></i>学习天地
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -5938,9 +5942,9 @@
             <br />
             <!-- END 学习天地 -->
             <!-- 系统下载 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="系统下载"></i>系统下载
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -6018,9 +6022,9 @@
             <br />
             <!-- END 系统下载 -->
             <!-- 系统美化 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="系统美化"></i>系统美化
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -6098,9 +6102,9 @@
             <br />
             <!-- END 系统美化 -->
             <!-- 系统工具 -->
-            <h4 class="text-gray">
+            <h6 class="text-gray">
                 <i class="ti ti-tag" style="margin-right:7px" id="系统工具"></i>系统工具
-            </h4>
+            </h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info"
@@ -6178,7 +6182,7 @@
             <br />
             <!-- END 系统工具 -->
             <!-- 社区资讯 -->
-            <h4 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="社区资讯"></i>社区资讯</h4>
+            <h6 class="text-gray"><i class="ti ti-tag" style="margin-right: 7px;" id="社区资讯"></i>社区资讯</h6>
             <div class="row">
                 <div class="col-sm-3">
                     <div class="xe-widget xe-conversations box2 label-info" 
@@ -6490,12 +6494,12 @@
             </div>
             <br />
             <!--END 社区资讯 -->
-            <h4 class="text-gray"><i id="about"></i></h4>
+            <h6 class="text-gray"><i id="about"></i></h6>
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <!-- 关于网站 -->
-                        <h4 class="text-gray">关于本站</h4>
+                        <h6 class="text-gray">关于本站</h6>
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-sm-12" style="text-align: center;font-size: 16px;">
@@ -6526,7 +6530,7 @@
                                 </div>
                             </div>
                             <!-- 关于站长 -->
-                            <h4 class="text-gray">关于站长</h4>
+                            <h6 class="text-gray">关于站长</h6>
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="xe-widget xe-conversations box2 label-info" onclick="window.open('https://blog.kong.pub/about/', '_blank')" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="关于站长">
@@ -6595,7 +6599,6 @@
         </div>
     </div>
     <canvas id="starfield"></canvas>
-    <script src="js/bootstrap.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
     <script src="js/resizeable.min.js"></script>
     <script src="js/xenon-api.min.js"></script>
