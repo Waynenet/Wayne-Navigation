@@ -57,6 +57,9 @@ a:focus {
   margin-left: 50px;
   top: 50%;
 }
+.xe-comment a {
+  text-decoration: none;
+}
 .xe-comment p {
   margin-bottom: 0px;
   margin-right: 15px;
@@ -67,7 +70,7 @@ a:focus {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .overflowClip_2 {
   overflow: hidden;
@@ -75,7 +78,7 @@ a:focus {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 0.5rem;
+  font-size: 0.75rem;
 }
 .img-circle {
   padding: 7px 0;
