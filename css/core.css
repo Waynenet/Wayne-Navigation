@@ -85,6 +85,9 @@ a:focus {
   margin-bottom: 0px;
   margin-right: 15px;
 }
+.footer-text a {
+  text-decoration: none;
+}
 .overflowClip_1 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -104,6 +107,17 @@ a:focus {
 .img-circle {
   padding: 7px 0;
   width: 40px;
+}
+@media screen and (max-width: 767px) {
+  .user-info-navbar {
+    background-color: #ffffff38;
+    backdrop-filter: blur(15px);
+  }
+  .user-info-navbar .user-info-menu > li > a {
+    margin: -12px;
+    margin-bottom: 12px;
+    margin-right: 8px;
+  }
 }
 
 /*搜索框*/
