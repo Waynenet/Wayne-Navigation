@@ -188,8 +188,8 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：3.0.3
-更新日期：2024-10-09
+版 本 号：3.0.4
+更新日期：2024-10-10
 
 WayneのNavigation: https://nav.kong.pub/
 Github:  https://github.com/Waynenet/Wayne-Navigation

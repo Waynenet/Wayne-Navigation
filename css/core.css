@@ -46,6 +46,20 @@ a:focus {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.pull-right {
+  float: right !important;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.pull-left {
+  float: left !important;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.label.label-pink {
+  border-radius: 20%;
+  font-size: 0.65rem;
+}
 .xe-comment-entry img {
   float: left;
   display: block;

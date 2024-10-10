@@ -1962,7 +1962,6 @@ label.cbr-inline + .cbr-inline {
 .label.label-pink {
   background-color: #ff6264;
   color: #fff;
-  border-radius: 10%;
 }
 .label.label-yellow {
   background-color: #fcd036;
