@@ -46,15 +46,22 @@ a:focus {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.navbar {
+  position: relative !important;
+  min-height: 50px !important;
+  border: 1px solid transparent !important;
+}
+.page-container
+  .mobile-menu-toggle {
+    margin-top: -6px;
+}
 .pull-right {
   float: right !important;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 0px 6px;
 }
 .pull-left {
   float: left !important;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 0px 6px;
 }
 .label.label-pink {
   border-radius: 20%;

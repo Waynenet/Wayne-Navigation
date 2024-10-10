@@ -12,7 +12,7 @@ $(document).ready(function() {
         }) : setTimeout(function () {
             e.find("ul").attr("style", "")
         }, 300)
-    }), $(".user-info-menu .d-sm-none .d-md-block").click(function () {
+    }), $(".user-info-menu .d-none .d-sm-block").click(function () {
         $(".sidebar-menu").hasClass("collapsed") ? $(".has-sub.expanded > ul").attr("style",
             "") : $(".has-sub.expanded > ul").show()
     }), $("#main-menu li ul li").click(function () {
@@ -188,7 +188,7 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：3.0.4
+版 本 号：3.0.5
 更新日期：2024-10-10
 
 WayneのNavigation: https://nav.kong.pub/
