@@ -119,6 +119,11 @@ a:focus {
     margin-right: 8px;
   }
 }
+.tooltip {
+  --bs-tooltip-font-size: 0.75rem !important;
+  --bs-tooltip-color: #2c2c2c !important;
+  --bs-tooltip-bg: #ffffffc7 !important;
+}
 
 /*搜索框*/
 #search {

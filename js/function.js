@@ -12,7 +12,7 @@ $(document).ready(function() {
         }) : setTimeout(function () {
             e.find("ul").attr("style", "")
         }, 300)
-    }), $(".user-info-menu .d-none .d-sm-block").click(function () {
+    }), $(".user-info-menu .d-none .d-lg-block").click(function () {
         $(".sidebar-menu").hasClass("collapsed") ? $(".has-sub.expanded > ul").attr("style",
             "") : $(".has-sub.expanded > ul").show()
     }), $("#main-menu li ul li").click(function () {
@@ -41,6 +41,11 @@ function imgerrorfun(){
     img.src="images/browser.svg"; //默认图片
     img.onerror=null; 
 } 
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 //回到顶部
 window.onscroll = function () {
@@ -188,8 +193,8 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：3.0.6
-更新日期：2024-10-10
+版 本 号：3.0.7
+更新日期：2024-10-11
 
 WayneのNavigation: https://nav.kong.pub/
 Github:  https://github.com/Waynenet/Wayne-Navigation
