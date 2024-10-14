@@ -63,8 +63,8 @@ body.night .box2:hover {
     background-color: #232323a6 !important;
 }
 
-body.night footer.main-footer {
-    background-color: #464646a6;
+.night footer.main-footer .footer-text {
+    color: #a9a9a9;
 }
 
 body.night .footer-text a {
@@ -128,6 +128,10 @@ body.night #starfield{
     background: #464646a6;
 }
 
+.night .sidebar-menu .main-menu a {
+    color: #d8d8d8 !important;
+  }
+
 .night .sidebar-menu .main-menu a:hover {
     background: #313233a6;
 }
@@ -138,16 +142,23 @@ body.night #starfield{
 
 .night .sidebar-menu.collapsed .main-menu > li > ul {
     background: #464646a6;
-  }
+}
 
-/*底栏*/
-.night footer.main-footer .footer-text {
-    color: #979898;
+.night .sidebar-menu .main-menu li.has-sub > a:before {
+    color: #d8d8d8 !important;
 }
 
 /* 关于 */
 .night .label.label-info {
     background-color: #232323a6;
+    color: #d8d8d8;
+}
+
+.night .panel-body p {
+    color: #d8d8d8;
+}
+
+.night .poem {
     color: #d8d8d8;
 }
 
