@@ -12,7 +12,7 @@ $(document).ready(function() {
         }) : setTimeout(function () {
             e.find("ul").attr("style", "")
         }, 300)
-    }), $(".user-info-menu .d-none .d-lg-block").click(function () {
+    }), $(".user-info-menu .d-none").click(function () {
         $(".sidebar-menu").hasClass("collapsed") ? $(".has-sub.expanded > ul").attr("style",
             "") : $(".has-sub.expanded > ul").show()
     }), $("#main-menu li ul li").click(function () {
@@ -168,6 +168,58 @@ function stars() {
     function t(){document.getElementsByTagName('html')[0]&&u(),window.requestAnimationFrame(t)}()};
 stars()
 
+//侧边栏菜单键
+;(function($, window, undefined)
+{
+	"use strict";
+
+	$(document).ready(function()
+	{
+		// Sidebar Toggle
+		$('a[data-toggle="sidebar"]').each(function(i, el)
+		{
+			$(el).on('click', function(ev)
+			{
+				ev.preventDefault();
+
+
+				if(public_vars.$sidebarMenu.hasClass('collapsed'))
+				{
+					public_vars.$sidebarMenu.removeClass('collapsed');
+					ps_init();
+				}
+				else
+				{
+					public_vars.$sidebarMenu.addClass('collapsed');
+					ps_destroy();
+				}
+
+				$(window).trigger('xenon.resize');
+			});
+		});
+
+		// Mobile Menu Trigger
+		$('a[data-toggle="mobile-menu"]').on('click', function(ev)
+		{
+			ev.preventDefault();
+
+			public_vars.$mainMenu.add(public_vars.$sidebarProfile).toggleClass('mobile-is-visible');
+			ps_destroy();
+		});
+
+        // Mobile User Info Menu Trigger
+		$('a[data-toggle="user-info-menu"]').on('click', function(ev)
+		{
+			ev.preventDefault();
+
+			public_vars.$userInfoMenu.toggleClass('mobile-is-visible');
+
+		});
+
+	});
+
+})(jQuery, window);
+
 //控制台输出
 console.clear();
 let styleTitle1 = `
@@ -193,10 +245,10 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：3.1.0
-更新日期：2024-10-14
+版 本 号：4.0.0
+更新日期：2024-10-15
 
-WayneのNavigation: https://nav.kong.pub/
+WayneのNavigation: https://
 Github:  https://github.com/Waynenet/Wayne-Navigation
 `
 console.log(`%c${title1} %c${title2}

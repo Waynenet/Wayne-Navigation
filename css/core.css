@@ -152,6 +152,12 @@ a:focus {
 .sidebar-menu .main-menu li.has-sub > a:before {
   color: #000000 !important;
 }
+@media screen and (min-width: 768px) {
+  .sidebar-menu.collapsed .main-menu > li > ul {
+    background: #ffffff38 !important;
+    backdrop-filter: blur(15px) !important;
+  }
+}
 /* 关于 */
 .panel-body p {
   color: #130505;
@@ -318,7 +324,7 @@ a:focus {
 }
 .search-type li {
   list-style: none;
-  display: inline-block
+  display: inline-block;
 }
 .search-type li label {
   display: inline-block;
@@ -333,6 +339,22 @@ a:focus {
 .search-type input:hover+label {
   background-color: #ffffff38 !important;
   backdrop-filter: blur(15px);
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.699);
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: rgba(0, 0, 0, 0.699);
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.699);
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.699);
 }
 .set-check {
   margin-top: 3px;

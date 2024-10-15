@@ -20,13 +20,9 @@ var public_vars = public_vars || {};
 		public_vars.$sidebarProfile       = public_vars.$sidebarMenu.find('.sidebar-user-info');
 		public_vars.$mainMenu             = public_vars.$sidebarMenu.find('.main-menu');
 
-		public_vars.$horizontalNavbar     = public_vars.$body.find('.navbar.horizontal-menu');
-		public_vars.$horizontalMenu       = public_vars.$horizontalNavbar.find('.navbar-nav');
-
 		public_vars.$mainContent          = public_vars.$pageContainer.find('.main-content');
 		public_vars.$mainFooter           = public_vars.$body.find('footer.main-footer');
 
-		public_vars.$userInfoMenuHor      = public_vars.$body.find('.navbar.horizontal-menu');
 		public_vars.$userInfoMenu         = public_vars.$body.find('nav.navbar.user-info-navbar');
 
 		public_vars.$settingsPane         = public_vars.$body.find('.settings-pane');
@@ -58,11 +54,6 @@ var public_vars = public_vars || {};
 
 		// Setup Sidebar Menu
 		setup_sidebar_menu();
-
-
-		// Setup Horizontal Menu
-		setup_horizontal_menu();
-
 
 		// Sticky Footer
 		if(public_vars.$mainFooter.hasClass('sticky'))
@@ -812,8 +803,6 @@ var public_vars = public_vars || {};
 					$label_1 = $('<span class="ui-label"></span>'),
 					$label_2 = $label_1.clone(),
 
-					orientation = attrDefault($this, 'vertical', 0) != 0 ? 'vertical' : 'horizontal',
-
 					prefix = attrDefault($this, 'prefix', ''),
 					postfix = attrDefault($this, 'postfix', ''),
 
@@ -837,7 +826,6 @@ var public_vars = public_vars || {};
 				{
 					$this.slider({
 						range: true,
-						orientation: orientation,
 						min: min,
 						max: max,
 						values: [min_val, max_val],
@@ -887,7 +875,6 @@ var public_vars = public_vars || {};
 
 					$this.slider({
 						range: attrDefault($this, 'basic', 0) ? false : "min",
-						orientation: orientation,
 						min: min,
 						max: max,
 						value: value,
@@ -1275,160 +1262,6 @@ function sidebar_menu_close_items_siblings($li)
 	});
 }
 
-
-// Horizontal Menu
-function setup_horizontal_menu()
-{
-	if(public_vars.$horizontalMenu.length)
-	{
-		var $items_with_subs = public_vars.$horizontalMenu.find('li:has(> ul)'),
-			click_to_expand = public_vars.$horizontalMenu.hasClass('click-to-expand');
-
-		if(click_to_expand)
-		{
-			public_vars.$mainContent.add( public_vars.$sidebarMenu ).on('click', function(ev)
-			{
-				$items_with_subs.removeClass('hover');
-			});
-		}
-
-		$items_with_subs.each(function(i, el)
-		{
-			var $li = jQuery(el),
-				$a = $li.children('a'),
-				$sub = $li.children('ul'),
-				is_root_element = $li.parent().is('.navbar-nav');
-
-			$li.addClass('has-sub');
-
-			// Mobile Only
-			$a.on('click', function(ev)
-			{
-				if(isxs())
-				{
-					ev.preventDefault();
-
-					// Automatically will toggle other menu items in mobile view
-					if(true)
-					{
-						sidebar_menu_close_items_siblings($li);
-					}
-
-					if($li.hasClass('expanded') || $li.hasClass('opened'))
-						sidebar_menu_item_collapse($li, $sub);
-					else
-						sidebar_menu_item_expand($li, $sub);
-				}
-			});
-
-			// Click To Expand
-			if(click_to_expand)
-			{
-				$a.on('click', function(ev)
-				{
-					ev.preventDefault();
-
-					if(isxs())
-						return;
-
-					// For parents only
-					if(is_root_element)
-					{
-						$items_with_subs.filter(function(i, el){ return jQuery(el).parent().is('.navbar-nav'); }).not($li).removeClass('hover');
-						$li.toggleClass('hover');
-					}
-					// Sub menus
-					else
-					{
-						var sub_height;
-
-						// To Expand
-						if($li.hasClass('expanded') == false)
-						{
-							$li.addClass('expanded');
-							$sub.addClass('is-visible');
-
-							sub_height = $sub.outerHeight();
-
-							$sub.height(0);
-
-							TweenLite.to($sub, .15, {css: {height: sub_height}, ease: Sine.easeInOut, onComplete: function(){ $sub.attr('style', ''); }});
-
-							// Hide Existing in the list
-							$li.siblings().find('> ul.is-visible').not($sub).each(function(i, el)
-							{
-								var $el = jQuery(el);
-
-								sub_height = $el.outerHeight();
-
-								$el.removeClass('is-visible').height(sub_height);
-								$el.parent().removeClass('expanded');
-
-								TweenLite.to($el, .15, {css: {height: 0}, onComplete: function(){ $el.attr('style', ''); }});
-							});
-						}
-						// To Collapse
-						else
-						{
-							sub_height = $sub.outerHeight();
-
-							$li.removeClass('expanded');
-							$sub.removeClass('is-visible').height(sub_height);
-							TweenLite.to($sub, .15, {css: {height: 0}, onComplete: function(){ $sub.attr('style', ''); }});
-						}
-					}
-				});
-			}
-			// Hover To Expand
-			else
-			{
-				$li.hoverIntent({
-					over: function()
-					{
-						if(isxs())
-							return;
-
-						if(is_root_element)
-						{
-							$li.addClass('hover');
-						}
-						else
-						{
-							$sub.addClass('is-visible');
-							sub_height = $sub.outerHeight();
-
-							$sub.height(0);
-
-							TweenLite.to($sub, .25, {css: {height: sub_height}, ease: Sine.easeInOut, onComplete: function(){ $sub.attr('style', ''); }});
-						}
-					},
-					out: function()
-					{
-						if(isxs())
-							return;
-
-						if(is_root_element)
-						{
-							$li.removeClass('hover');
-						}
-						else
-						{
-							sub_height = $sub.outerHeight();
-
-							$li.removeClass('expanded');
-							$sub.removeClass('is-visible').height(sub_height);
-							TweenLite.to($sub, .25, {css: {height: 0}, onComplete: function(){ $sub.attr('style', ''); }});
-						}
-					},
-					timeout: 200,
-					interval: is_root_element ? 10 : 100
-				});
-			}
-		});
-	}
-}
-
-
 function stickFooterToBottom()
 {
 	public_vars.$mainFooter.add( public_vars.$mainContent ).add( public_vars.$sidebarMenu ).attr('style', '');
@@ -1441,14 +1274,13 @@ function stickFooterToBottom()
 		var win_height				 = jQuery(window).height(),
 			footer_height			= public_vars.$mainFooter.outerHeight(true),
 			main_content_height	  = public_vars.$mainFooter.position().top + footer_height,
-			main_content_height_only = main_content_height - footer_height,
-			extra_height			 = public_vars.$horizontalNavbar.outerHeight();
+			main_content_height_only = main_content_height - footer_height;
 
 
 		if(win_height > main_content_height - parseInt(public_vars.$mainFooter.css('marginTop'), 10))
 		{
 			public_vars.$mainFooter.css({
-				marginTop: win_height - main_content_height - extra_height
+				marginTop: win_height - main_content_height
 			});
 		}
 	}
