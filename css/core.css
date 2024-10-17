@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://api.nxvav.cn/api/bing/); /* 随机图片API */
+  background-image: url(https://api.vvhan.com/api/wallpaper/views); /* 随机图片API */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -16,10 +16,10 @@ body {
 ul {
   font-size: 0.8rem;
 }
-a:hover,
+/* a:hover,
 a:focus {
   color: #FF0500 !important;
-}
+} */
 .box2 {
   height: 86px;
   cursor: pointer;
@@ -63,7 +63,20 @@ a:focus {
   float: left !important;
   padding: 0px 6px;
 }
+.tag {
+  background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-right: 7px;
+}
+.label.label-info {
+  background-color: #5a5a5a;
+  color: #fff;
+  border-radius: 20%;
+}
 .label.label-pink {
+  background-color: #ff6264;
+  color: #fff;
   border-radius: 20%;
   font-size: 0.65rem;
 }
@@ -80,11 +93,12 @@ a:focus {
 }
 .xe-comment a {
   text-decoration: none;
+  color: #000000;
 }
 .xe-comment p {
   margin-bottom: 0px;
   margin-right: 15px;
-  color: #130505;
+  color: #2c2626;
 }
 .xe-widget.xe-conversations {
   background: #ffffff38 !important;
@@ -96,6 +110,11 @@ a:focus {
 }
 .footer-text a {
   text-decoration: none;
+  /* color: #000000; */
+}
+.footer-text a:hover,
+.footer-text a:focus {
+  color: #FF0500;
 }
 .overflowClip_1 {
   overflow: hidden;
@@ -513,7 +532,6 @@ textarea:-ms-input-placeholder {
   opacity: 0;
   box-shadow: 0 0 9px 0 rgb(0 0 0 / 10%);
 }
-/* 回顶结束 */
 /* 暗色模式按钮 */
 .suspension_ax {
   background: url(../images/sun.png) no-repeat center center #ffffff38;
@@ -546,13 +564,16 @@ textarea:-ms-input-placeholder {
   display: none;
   border: 1px solid #e1e6ec;
 }
-/* 暗色模式按钮结束 */
 /*滚动条*/
 ::-webkit-scrollbar {
   width: 0;
 }
-
 /*弹窗*/
+.iziToast {
+  background: #ffffff38 !important;
+  backdrop-filter: blur(15px) !important;
+}
+
 .iziToast-texts {
   max-width: 300px !important;
   min-width: 200px !important;
