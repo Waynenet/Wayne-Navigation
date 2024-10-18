@@ -33,7 +33,8 @@ body.night .text-gray {
 }
 
 body.night .xe-widget.xe-conversations {
-    background: #464646a6;
+    background: #464646a6 !important;
+    backdrop-filter: blur(0px) !important;
 }
 
 body.night .xe-comment-entry img {
@@ -132,7 +133,11 @@ body.night #starfield{
 
 /*左侧导航栏*/
 .night .sidebar-menu {
-    background: #464646a6;
+    background: #464646a6 !important;
+}
+
+.night .sidebar-menu::before {
+    backdrop-filter: blur(0px) !important;
 }
 
 .night .sidebar-menu .main-menu a {

@@ -22,8 +22,10 @@
 
 ### API
 
-1️⃣ [韩小韩 WebAPI 接口站](https://api.vvhan.com/)     
+1️⃣ [nuoxian's API](https://api.nxvav.cn/)     
 2️⃣ [今日诗词 API](https://www.jinrishici.com/)     
 3️⃣ [新逸Cary API](https://api.xinac.net/)    
+
+![Alt](https://repobeats.axiom.co/api/embed/c2e76567810bef1e9530a1d532a6e83385658d6e.svg "Repobeats analytics image")
 
 <a title="Copyright" target="_blank" href="https://kong.pub/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202022--2024-Wayne-red"></a>

@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://api.vvhan.com/api/wallpaper/views); /* 随机图片API */
+  background-image: url(https://api.nxvav.cn/api/bing/); /* 随机图片API */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -128,7 +128,14 @@ a:focus {
   margin-right: 15px;
   color: #2c2626;
 }
+.xe-widget {
+  position: relative;
+}
 .xe-widget.xe-conversations {
+  position: relative;
+  background: #ffffffc7;
+  margin-bottom: 0px;
+  padding: 15px;
   background: #ffffff38 !important;
   backdrop-filter: blur(15px) !important;
 }

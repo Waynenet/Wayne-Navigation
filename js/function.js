@@ -255,7 +255,7 @@ color: rgb(244,167,89);
 let styleContent = `
 color: rgb(30,152,255);
 `
-let title1 = 'WayneのNavigation'
+let title1 = 'WayneのNav'
 let title2 = `
 ==============================
 #   #    #   #   # #   # #####
@@ -266,10 +266,10 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：4.0.2
+版 本 号：4.0.3
 更新日期：2024-10-18
 
-WayneのNavigation: https://
+WayneのNav: https://
 Github:  https://github.com/Waynenet/Wayne-Navigation
 `
 console.log(`%c${title1} %c${title2}
