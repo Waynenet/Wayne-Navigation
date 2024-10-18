@@ -64,10 +64,38 @@ a:focus {
   padding: 0px 6px;
 }
 .tag {
-  background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #fff;
   margin-right: 7px;
+  text-shadow: 
+  0 0 10px skyblue,
+  0 0 20px skyblue,
+  0 0 40px skyblue,
+  0 0 80px skyblue,
+  0 0 160px skyblue;
+  animation: mycolor 5s linear infinite;
+}
+@keyframes mycolor {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+.myinfo p {
+  text-align: center;
+  letter-spacing: 0.2rem;
+  font-size: 1.1rem;
+  background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);  
+  -webkit-text-fill-color: transparent;  
+  -webkit-background-clip: text;  
+  -webkit-background-size: 200% 100%; 
+  -webkit-animation: mycolor2 4s infinite linear;  
+}
+@keyframes mycolor2 {  
+ 0% {  
+  background-position: 0 0;  
+ } 
+ 100% {  
+  background-position: -100% 0;  
+ }  
 }
 .label.label-info {
   background-color: #5a5a5a;
@@ -179,13 +207,15 @@ a:focus {
 }
 /* 关于 */
 .panel-body p {
-  color: #130505;
+  color: #000000;
+  text-decoration: none;
 }
 .poem {
   text-align: center;
-  font-size: 16px;
-  margin: 15px 0 0 0;
-  color: #130505;
+  font-size: 1rem;
+  color: #000000;
+  margin: 30px 0 0 0;
+  text-decoration: none;
 }
 /*搜索框*/
 #search {

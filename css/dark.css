@@ -107,6 +107,13 @@ body.night .go-up a:hover {
     background-color: rgb(123 123 123 0.6) !important;
 }
 
+@media screen and (max-width: 767px) {
+    body.night .user-info-navbar {
+      background-color: #ffffff00 !important;
+      backdrop-filter: blur(0px) !important;
+    }
+}
+
 /* 背景宇宙星光 */
 body.night #starfield{
     display: block;

@@ -7302,12 +7302,12 @@
             <h6 class="tag"><i id="about"></i></h6>
             <div class="row">
                 <div class="col-md-12">
-                    <div class="xe-widget xe-conversations panel panel-default">
+                    <div class="xe-widget xe-conversations panel">
                         <!-- 关于网站 -->
                         <h6 class="tag">关于本站</h6>
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-sm-12" style="text-align: center;font-size: 16px;">
+                                <div class="col-sm-12 myinfo">
                                     <p>自用收藏书签，精挑细选，无任何广告行为</p>
                                     <p>如收藏的书签给您造成各种问题，与本站无关，请与相应站长商讨</p>
                                     <p>如果本站对您有所帮助，请随意打赏，谢谢~</p>
@@ -7355,27 +7355,29 @@
                                     </div>
                                 </div>
                                 <br />
-                                <div class="col-md-8 poem">
-                                    <p>
-                                        <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-                                        <div id="poem_sentence" style="display:inline-block;"></div>
-                                        <div id="poem_info" style="display:inline-block;"></div>
-                                        <script type="text/javascript">
-                                            jinrishici.load(function(result) {
-                                                var sentence = document.querySelector("#poem_sentence")
-                                                var info = document.querySelector("#poem_info")
-                                                sentence.innerHTML = result.data.content
-                                                info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-                                            });
-                                        </script>
-                                    </p>
-                                    <p> 本站项目地址 <a href="https://github.com/Waynenet/Wayne-Navigation" target="_blank">
-                                                        <span class="label label-info" data-bs-toggle="tooltip">
-                                                            <i class="ti ti-brand-github-filled"></i>WayneのNav
-                                                        </span>
-                                                    </a>&nbsp&nbsp
-                                                    <span>欢迎大家提交issue</span>
-                                    </p>
+                                <div class="col-md-8">
+                                    <div class="poem">
+                                        <p>
+                                            <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+                                            <div id="poem_sentence" style="display:inline-block;"></div>
+                                            <div id="poem_info" style="display:inline-block;"></div>
+                                            <script type="text/javascript">
+                                                jinrishici.load(function(result) {
+                                                    var sentence = document.querySelector("#poem_sentence")
+                                                    var info = document.querySelector("#poem_info")
+                                                    sentence.innerHTML = result.data.content
+                                                    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
+                                                });
+                                            </script>
+                                        </p>
+                                        <p> 本站项目地址 <a href="https://github.com/Waynenet/Wayne-Navigation" target="_blank">
+                                                            <span class="label label-info" data-bs-toggle="tooltip">
+                                                                <i class="ti ti-brand-github-filled"></i>WayneのNav
+                                                            </span>
+                                                        </a>&nbsp&nbsp
+                                                        <span>欢迎大家提交issue</span>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

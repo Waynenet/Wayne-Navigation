@@ -266,8 +266,8 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：4.0.1
-更新日期：2024-10-17
+版 本 号：4.0.2
+更新日期：2024-10-18
 
 WayneのNavigation: https://
 Github:  https://github.com/Waynenet/Wayne-Navigation

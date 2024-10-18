@@ -4,13 +4,9 @@
   -o-transition: all 220ms ease-in-out;
   transition: all 220ms ease-in-out;
 }
-lesshat-selector {
-  -lh-property: 0;
-}
 .xe-widget {
   position: relative;
 }
-
 .xe-widget.xe-conversations {
   position: relative;
   background: #ffffffc7;
