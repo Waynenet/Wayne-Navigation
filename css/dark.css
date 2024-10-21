@@ -32,12 +32,12 @@ body.night .text-gray {
     color: #f8f8f8;
 }
 
-body.night .xe-widget.xe-conversations {
+body.night .w-widget.w-conversations {
     background: #464646a6 !important;
     backdrop-filter: blur(0px) !important;
 }
 
-body.night .xe-comment-entry img {
+body.night .w-comment-entry img {
     filter: brightness(95%);
 }
 
@@ -45,11 +45,11 @@ body.night .box2 {
     border: 1px solid #3f4142;
 }
 
-body.night .xe-comment a {
+body.night .w-comment a {
     color: #d8d8d8;
 }
 
-body.night .xe-comment p {
+body.night .w-comment p {
     color: #979898 !important;
 }
 
@@ -75,7 +75,6 @@ body.night .footer-text a {
 body.night .footer-text a:hover,
 body.night .footer-text a:focus {
     color: #ffffff;
-    text-decoration: none
 }
 
 body.night .panel {
@@ -152,8 +151,11 @@ body.night #starfield{
     background: #46464600;
 }
 
-.night .sidebar-menu.collapsed .main-menu > li > ul {
-    background: #464646a6;
+@media screen and (min-width: 768px) {
+    .night .sidebar-menu.collapsed .main-menu > li > ul {
+        background: #464646a6 !important;
+        backdrop-filter: blur(5px) !important;
+    }
 }
 
 .night .sidebar-menu .main-menu li.has-sub > a:before {
@@ -208,6 +210,7 @@ body.night #starfield{
 .night #search-text {
     background-color: #464646a6;
     color: #bdbdbd;
+    backdrop-filter: blur(0px);
 }
 
 /*悬浮窗*/
