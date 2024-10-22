@@ -524,10 +524,10 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：4.1.0
-更新日期：2024-10-21
+版 本 号：4.1.1
+更新日期：2024-10-22
 
-WayneのNav: https://
+WayneのNav: 
 Github:  https://github.com/Waynenet/Wayne-Navigation
 `
 console.log(`%c${title1} %c${title2}

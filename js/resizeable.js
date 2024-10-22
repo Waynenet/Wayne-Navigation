@@ -52,10 +52,6 @@ function resizable(breakpoint)
 	if(isxs())
 	{
 	}
-
-
-	// Trigger Event
-	jQuery(window).trigger('xenon.resize');
 }
 
 
@@ -115,8 +111,4 @@ function trigger_resizable()
 		public_vars.lastBreakpoint = get_current_breakpoint();
 		resizable(public_vars.lastBreakpoint);
 	}
-
-
-	// Trigger Event (Repeated)
-	jQuery(window).trigger('xenon.resized');
 }
