@@ -30,7 +30,7 @@ body {
   border: none;
 }
 body {
-  background-image: url(https://api.nxvav.cn/api/bing/); /* 随机图片API */
+  background-image: url(https://api.vvhan.com/api/wallpaper/views); /* 随机图片API */
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -110,15 +110,6 @@ a:focus {
   margin-bottom: 20px;
   list-style: none;
 }
-@media screen and (max-width: 767px) {
-  .sidebar-menu .main-menu a {
-    color: #540329;
-  }
-  .sidebar-menu .main-menu {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
 .sidebar-menu .main-menu a {
   color: #000000 !important;
   display: block;
@@ -182,16 +173,6 @@ a:focus {
 }
 .sidebar-menu .main-menu ul li {
   position: relative;
-}
-@media screen and (min-width: 768px) {
-  .sidebar-menu .main-menu ul li.is-hidden {
-    left: -20px;
-    zoom: 1;
-    filter: alpha(opacity=0);
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    opacity: 0;
-  }
 }
 .sidebar-menu .main-menu ul li.is-shown {
   left: 0;
@@ -376,6 +357,14 @@ a:focus {
   }
 }
 @media screen and (min-width: 768px) {
+  .sidebar-menu .main-menu ul li.is-hidden {
+    left: -20px;
+    zoom: 1;
+    filter: alpha(opacity=0);
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+  }
   .sidebar-menu.collapsed {
     width: 80px;
     z-index: 10;
@@ -570,12 +559,6 @@ footer.main-footer.fixed {
 .user-info-navbar .user-info-menu {
   margin: 0;
 }
-.user-info-navbar .user-info-menu.left-links {
-  float: left;
-}
-.user-info-navbar .user-info-menu.right-links {
-  float: right;
-}
 .user-info-navbar .user-info-menu li {
   line-height: 1;
 }
@@ -753,7 +736,6 @@ footer.main-footer.fixed {
     > a {
     padding-top: 8px;
     padding-bottom: 32px;
-    margin-right: 8px;
   }
   .page-container .main-content .main-footer {
     position: relative;
@@ -764,6 +746,23 @@ footer.main-footer.fixed {
   }
   .page-container {
     position: relative;
+  }
+  .suspension_ax {
+    display: none;
+  }
+  .suspension {
+    top: 84% !important;
+    right: 2% !important;
+  }
+  #fk-span {
+    display: none;
+  }
+  .sidebar-menu .main-menu a {
+    color: #540329;
+  }
+  .sidebar-menu .main-menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 #starfield{
@@ -798,6 +797,9 @@ ul {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.box2:hover strong {
+  color: #FF0500;
+}
 .navbar {
   position: relative !important;
   min-height: 50px !important;
@@ -819,6 +821,7 @@ ul {
     filter: hue-rotate(360deg);
   }
 }
+.weather,
 .myinfo p {
   text-align: center;
   letter-spacing: 0.2rem;
@@ -1216,21 +1219,14 @@ textarea:-ms-input-placeholder {
   background: rgba(0, 0, 0, 0);
   transition: 0.3s;
 }
-@media screen and (max-width: 767px) {
-  .suspension_ax {
-      display: none;
-  }
-  .suspension {
-      top: 84% !important;
-      right: 2% !important;
-  }
-  #fk-span {
-      display: none;
-  }
-}
 @media screen and (min-width: 991px) {
   .row {
       margin-right: 12px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .weather {
+    display: none;
   }
 }
 @keyframes fade-in {

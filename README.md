@@ -6,7 +6,7 @@
 
 ### Demo
 
-[➡️ WayneのNav 域名过期，访问不了](https://nav.kong.pub/)
+[➡️ WayneのNav](https://waynenav.netlify.app)
 
 ### 原作者项目
 
@@ -17,12 +17,13 @@
 ✅ 丰富资源     
 ✅ 随机背景   
 ✅ 快捷搜索      
+✅ 实时天气          
 ✅ 夜间模式     
 ✅ 星空背景     
 
 ### API
 
-1️⃣ [nuoxian's API](https://api.nxvav.cn/)     
+1️⃣ [韩小韩 WebAPI 接口站](https://api.vvhan.com/)     
 2️⃣ [今日诗词 API](https://www.jinrishici.com/)     
 3️⃣ [新逸Cary API](https://api.xinac.net/)    
 

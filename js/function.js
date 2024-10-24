@@ -499,6 +499,19 @@ function ps_destroy()
 
 })(jQuery, window);
 
+//获取天气
+fetch('https://api.vvhan.com/api/weather')
+    .then(response => response.json())
+    .then(data => {
+        $('#wea_text').html(data.data.type)
+        $('#city_text').html(data.city)
+        $('#tem_low').html(data.data.low)
+        $('#tem_high').html(data.data.high)
+        $('#win_text').html(data.data.fengxiang)
+        $('#win_speed').html(data.data.fengli)
+    })
+    .catch(console.error)
+
 //控制台输出
 console.clear();
 let styleTitle1 = `
@@ -507,7 +520,7 @@ font-weight: 600;
 color: rgb(244,167,89);
 `
 let styleTitle2 = `
-font-size:16px;
+font-size: 16px;
 color: rgb(244,167,89);
 `
 let styleContent = `
@@ -524,8 +537,8 @@ let title2 = `
 ==============================
 `
 let content = `
-版 本 号：4.1.1
-更新日期：2024-10-22
+版 本 号：4.1.2
+更新日期：2024-10-24
 
 WayneのNav: 
 Github:  https://github.com/Waynenet/Wayne-Navigation
